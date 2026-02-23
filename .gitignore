@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.venv/
+.env
+
+data/raw/scrape_cache/
+viz/output/*.html
+
+*.DS_Store
