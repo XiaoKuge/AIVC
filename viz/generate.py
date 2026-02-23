@@ -16,18 +16,20 @@ from aivc.graph import COMPANY, FIRM, INVESTED_IN, PARTNER_AT, PERSONAL_INVESTME
 DATA_DIR = Path(__file__).resolve().parent.parent / "data"
 OUTPUT_DIR = Path(__file__).resolve().parent / "output"
 
-# Color scheme
+# Bloomberg terminal color scheme
 COLORS = {
-    FIRM: "#4A90D9",       # Blue
-    COMPANY: "#50C878",    # Green
-    PERSON: "#FF8C42",     # Orange
+    FIRM: "#FF8C00",       # Amber/Orange – VC firms
+    COMPANY: "#00D67E",    # Terminal green – companies
+    PERSON: "#00BFFF",     # Bright cyan – people
 }
 
 EDGE_COLORS = {
-    INVESTED_IN: "#888888",
-    PARTNER_AT: "#CC8800",
-    PERSONAL_INVESTMENT: "#DD6644",
+    INVESTED_IN: "#5A5A5A",
+    PARTNER_AT: "#B8860B",
+    PERSONAL_INVESTMENT: "#8B4513",
 }
+
+MONO_FONT = "'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace"
 
 
 def generate_html(
@@ -47,7 +49,7 @@ def generate_html(
         height=height,
         width=width,
         directed=True,
-        bgcolor="#FFFFFF",
+        bgcolor="#0A0A0A",
         font_color=True,
         notebook=False,
         cdn_resources="remote",
@@ -59,15 +61,15 @@ def generate_html(
         "nodes": {
             "font": {
                 "size": 14,
-                "color": "#000000"
+                "color": "#C8C8C8"
             }
         },
         "edges": {
             "font": {
                 "size": 12,
-                "color": "#000000",
-                "strokeWidth": 2,
-                "strokeColor": "#ffffff"
+                "color": "#888888",
+                "strokeWidth": 0,
+                "strokeColor": "transparent"
             }
         },
         "physics": {
@@ -115,8 +117,8 @@ def generate_html(
             node_urls[nid] = url
 
         # Build tooltip (HTML for hover popup)
-        name_html = f'<a href="{url}" target="_blank" style="color:inherit;text-decoration:underline;">{name}</a>' if url else name
-        title_parts = [f"<b>{name_html}</b> ({node_type})"]
+        name_html = f'<a href="{url}" target="_blank" style="color:#00D67E;text-decoration:underline;">{name}</a>' if url else name
+        title_parts = [f"<b>{name_html}</b> <span style='color:#888;'>({node_type})</span>"]
         # Build detail label (plain text for focus mode, shown inside node)
         detail_parts = [name]
         if node_type == FIRM:
@@ -153,7 +155,7 @@ def generate_html(
 
         net.add_node(
             nid, label=name, color=color, size=size, title=title,
-            font={"size": 14, "color": "#000000"},
+            font={"size": 14, "color": "#C8C8C8"},
         )
 
     # Add edges and collect metadata for timeline + focus mode
@@ -204,6 +206,44 @@ def generate_html(
     # Build the edge-dates JS data and inject timeline + legend into HTML
     html = output_path.read_text()
 
+    # Remove the card wrapper that pyvis adds (causes a visible border from Bootstrap)
+    html = html.replace('<div class="card" style="width: 100%">', '<div style="width:100%">')
+    html = html.replace('class="card-body"', '')
+
+    # Add page title
+    title_html = """<title>AI VC - What's Going On</title>"""
+    html = html.replace("<head>", "<head>\n" + title_html)
+
+    header_html = """
+<div id="page-header" style="
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(10,10,10,0.97);
+    padding: 10px 24px;
+    z-index: 9999;
+    border-bottom: 1px solid #222;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+">
+    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:baseline; gap:12px;">
+        <span style="font-size:22px; font-weight:700; color:#FF8C00; letter-spacing:2px;">AI VC</span>
+        <span style="font-size:13px; color:#555; letter-spacing:1px; text-transform:uppercase;">What's Going On</span>
+        <span style="flex:1;"></span>
+        <span id="node-count" style="font-size:11px; color:#00D67E;"></span>
+    </div>
+</div>
+<style>
+    body { background: #0A0A0A !important; margin: 0; }
+    #mynetwork { margin-top: 48px !important; background: #0A0A0A !important; }
+    .card { border: none !important; box-shadow: none !important; margin: 0 !important; padding: 0 !important; background: transparent !important; }
+    .card-body { background: transparent !important; }
+    ::selection { background: #FF8C00; color: #000; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #111; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+</style>
+"""
+    html = html.replace("<body>", "<body>\n" + header_html)
+
     inject = _build_timeline_and_legend_html(
         edge_dates, min_year, max_year, node_detail_labels, edge_detail_labels, node_urls
     )
@@ -233,24 +273,24 @@ def _build_timeline_and_legend_html(
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background: rgba(255,255,255,0.95);
-    border: 1px solid #ccc;
-    border-radius: 8px;
+    background: rgba(15,15,15,0.95);
+    border: 1px solid #333;
+    border-radius: 4px;
     padding: 12px 16px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 13px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+    font-size: 11px;
     z-index: 9999;
-    line-height: 1.6;
+    line-height: 1.8;
+    color: #AAA;
 ">
-    <div style="font-weight: 600; margin-bottom: 6px; font-size: 14px;">Legend</div>
-    <div><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#4A90D9;margin-right:6px;vertical-align:middle;"></span>VC Firm</div>
-    <div><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#50C878;margin-right:6px;vertical-align:middle;"></span>Company</div>
-    <div><span style="display:inline-block;width:12px;height:12px;border-radius:50%;background:#FF8C42;margin-right:6px;vertical-align:middle;"></span>Person</div>
-    <hr style="margin:6px 0;border:none;border-top:1px solid #eee;">
-    <div><span style="display:inline-block;width:16px;height:2px;background:#888888;margin-right:6px;vertical-align:middle;"></span>Invested in</div>
-    <div><span style="display:inline-block;width:16px;height:2px;background:#CC8800;margin-right:6px;vertical-align:middle;"></span>Partner at</div>
-    <div><span style="display:inline-block;width:16px;height:2px;background:#DD6644;margin-right:6px;vertical-align:middle;"></span>Personal inv.</div>
+    <div style="font-weight: 600; margin-bottom: 4px; font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Legend</div>
+    <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#FF8C00;margin-right:8px;vertical-align:middle;"></span><span style="color:#FF8C00;">VC Firm</span></div>
+    <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00D67E;margin-right:8px;vertical-align:middle;"></span><span style="color:#00D67E;">Company</span></div>
+    <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00BFFF;margin-right:8px;vertical-align:middle;"></span><span style="color:#00BFFF;">Person</span></div>
+    <hr style="margin:6px 0;border:none;border-top:1px solid #2A2A2A;">
+    <div><span style="display:inline-block;width:16px;height:1px;background:#5A5A5A;margin-right:8px;vertical-align:middle;"></span>Invested in</div>
+    <div><span style="display:inline-block;width:16px;height:1px;background:#B8860B;margin-right:8px;vertical-align:middle;"></span>Partner at</div>
+    <div><span style="display:inline-block;width:16px;height:1px;background:#8B4513;margin-right:8px;vertical-align:middle;"></span>Personal inv.</div>
 </div>
 
 <!-- Timeline Bar -->
@@ -258,13 +298,13 @@ def _build_timeline_and_legend_html(
     #timeline-bar {{
         position: fixed;
         bottom: 0; left: 0; right: 0;
-        background: rgba(255,255,255,0.97);
-        border-top: 1px solid #ccc;
-        padding: 12px 24px 16px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-size: 13px;
+        background: rgba(10,10,10,0.97);
+        border-top: 1px solid #222;
+        padding: 10px 24px 14px;
+        font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+        font-size: 11px;
         z-index: 9999;
-        box-shadow: 0 -2px 8px rgba(0,0,0,0.1);
+        color: #AAA;
     }}
     .range-slider {{
         position: relative;
@@ -274,16 +314,16 @@ def _build_timeline_and_legend_html(
     .range-slider .track {{
         position: absolute;
         top: 12px; left: 0; right: 0;
-        height: 4px;
-        background: #ddd;
-        border-radius: 2px;
+        height: 2px;
+        background: #333;
+        border-radius: 1px;
     }}
     .range-slider .highlight {{
         position: absolute;
         top: 12px;
-        height: 4px;
-        background: #4A90D9;
-        border-radius: 2px;
+        height: 2px;
+        background: #FF8C00;
+        border-radius: 1px;
     }}
     .range-slider input[type=range] {{
         position: absolute;
@@ -300,20 +340,20 @@ def _build_timeline_and_legend_html(
     .range-slider input[type=range]::-webkit-slider-thumb {{
         -webkit-appearance: none;
         appearance: none;
-        width: 18px; height: 18px;
+        width: 14px; height: 14px;
         border-radius: 50%;
-        background: #4A90D9;
-        border: 2px solid #fff;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        background: #FF8C00;
+        border: 2px solid #0A0A0A;
+        box-shadow: 0 0 6px rgba(255,140,0,0.4);
         cursor: pointer;
         pointer-events: auto;
     }}
     .range-slider input[type=range]::-moz-range-thumb {{
-        width: 18px; height: 18px;
+        width: 14px; height: 14px;
         border-radius: 50%;
-        background: #4A90D9;
-        border: 2px solid #fff;
-        box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        background: #FF8C00;
+        border: 2px solid #0A0A0A;
+        box-shadow: 0 0 6px rgba(255,140,0,0.4);
         cursor: pointer;
         pointer-events: auto;
     }}
@@ -324,28 +364,29 @@ def _build_timeline_and_legend_html(
         margin-top: 2px;
     }}
     .tl-ticks span {{
-        font-size: 10px;
-        color: #999;
+        font-size: 9px;
+        color: #444;
         min-width: 0;
         text-align: center;
     }}
 </style>
 <div id="timeline-bar">
     <div style="display:flex; align-items:center; gap:14px; max-width:1200px; margin:0 auto;">
-        <span style="font-weight:600; white-space:nowrap;">Timeline</span>
-        <span id="year-min-label" style="min-width:36px; text-align:right; font-variant-numeric:tabular-nums; font-weight:500;">{min_year}</span>
+        <span style="font-weight:600; white-space:nowrap; color:#666; text-transform:uppercase; letter-spacing:1px; font-size:10px;">Timeline</span>
+        <span id="year-min-label" style="min-width:36px; text-align:right; font-variant-numeric:tabular-nums; font-weight:500; color:#FF8C00;">{min_year}</span>
         <div class="range-slider">
             <div class="track"></div>
             <div class="highlight" id="range-highlight"></div>
             <input type="range" id="year-min" min="{min_year}" max="{max_year}" value="{min_year}">
             <input type="range" id="year-max" min="{min_year}" max="{max_year}" value="{max_year}">
         </div>
-        <span id="year-max-label" style="min-width:36px; font-variant-numeric:tabular-nums; font-weight:500;">{max_year}</span>
-        <span id="timeline-info" style="color:#666; white-space:nowrap; min-width:140px;"></span>
+        <span id="year-max-label" style="min-width:36px; font-variant-numeric:tabular-nums; font-weight:500; color:#FF8C00;">{max_year}</span>
+        <span id="timeline-info" style="color:#00D67E; white-space:nowrap; min-width:140px; font-size:11px;"></span>
         <button id="timeline-reset" style="
-            padding: 4px 12px; border: 1px solid #ccc; border-radius: 4px;
-            background: #f5f5f5; cursor: pointer; font-size: 12px; white-space: nowrap;
-        ">Reset</button>
+            padding: 3px 10px; border: 1px solid #333; border-radius: 2px;
+            background: #1A1A1A; color: #AAA; cursor: pointer; font-size: 10px;
+            white-space: nowrap; font-family: inherit; text-transform: uppercase; letter-spacing: 0.5px;
+        " onmouseover="this.style.borderColor='#FF8C00';this.style.color='#FF8C00'" onmouseout="this.style.borderColor='#333';this.style.color='#AAA'">Reset</button>
     </div>
     <div class="tl-ticks" style="max-width:1200px; margin:0 auto; padding-left:104px; padding-right:232px;">
         {''.join(f'<span>{y}</span>' for y in range(min_year, max_year + 1, max(1, (max_year - min_year) // 10)))}
@@ -440,7 +481,7 @@ def _build_timeline_and_legend_html(
                 if (visibleNodes.has(n.id)) {{
                     nodeUpdates.push({{ id: n.id, hidden: false, opacity: 1, color: originalNodes[n.id].color }});
                 }} else {{
-                    nodeUpdates.push({{ id: n.id, hidden: false, opacity: 0.1, color: '#e0e0e0' }});
+                    nodeUpdates.push({{ id: n.id, hidden: false, opacity: 0.1, color: '#1A1A1A' }});
                 }}
             }});
             nodes.update(nodeUpdates);
@@ -479,25 +520,29 @@ def _build_timeline_and_legend_html(
     #custom-tooltip {{
         position: absolute;
         display: none;
-        background: rgba(255,255,255,0.97);
-        border: 1px solid #ccc;
-        border-radius: 6px;
+        background: rgba(20,20,20,0.97);
+        border: 1px solid #333;
+        border-left: 3px solid #FF8C00;
+        border-radius: 2px;
         padding: 8px 12px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-        font-size: 13px;
-        line-height: 1.5;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-        max-width: 400px;
-        color: #333;
+        font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace;
+        font-size: 12px;
+        line-height: 1.6;
+        max-width: 420px;
+        color: #CCC;
         pointer-events: auto;
         z-index: 10000;
     }}
+    #custom-tooltip b {{
+        color: #EEE;
+    }}
     #custom-tooltip a {{
-        color: #1a6dca;
-        text-decoration: underline;
+        color: #00D67E;
+        text-decoration: none;
     }}
     #custom-tooltip a:hover {{
-        color: #0d4d8b;
+        color: #00FFB0;
+        text-decoration: underline;
     }}
 </style>
 <div id="custom-tooltip"></div>
@@ -655,10 +700,10 @@ def _build_timeline_and_legend_html(
                         id: n.id,
                         label: nodeDetailLabels[n.id] || origNode[n.id].label,
                         size: Math.max(40, (origNode[n.id].size || 15) * 2.5),
-                        color: {{ background: origNode[n.id].color, border: '#333' }},
+                        color: {{ background: '#1A1A1A', border: origNode[n.id].color }},
                         borderWidth: 3,
                         shape: 'box',
-                        font: {{ size: 22, color: '#000', face: 'arial', multi: false, align: 'center', strokeWidth: 0 }},
+                        font: {{ size: 22, color: '#EEE', face: "'SF Mono','Consolas',monospace", multi: false, align: 'center', strokeWidth: 0 }},
                         opacity: 1
                     }});
                 }} else if (neighborSet.has(n.id)) {{
@@ -666,10 +711,10 @@ def _build_timeline_and_legend_html(
                         id: n.id,
                         label: nodeDetailLabels[n.id] || origNode[n.id].label,
                         size: Math.max(30, (origNode[n.id].size || 15) * 1.5),
-                        color: {{ background: origNode[n.id].color, border: '#666' }},
+                        color: {{ background: '#111', border: origNode[n.id].color }},
                         borderWidth: 2,
                         shape: 'box',
-                        font: {{ size: 18, color: '#222', face: 'arial', multi: false, align: 'center', strokeWidth: 0 }},
+                        font: {{ size: 18, color: '#CCC', face: "'SF Mono','Consolas',monospace", multi: false, align: 'center', strokeWidth: 0 }},
                         opacity: 1
                     }});
                 }} else {{
@@ -677,11 +722,11 @@ def _build_timeline_and_legend_html(
                         id: n.id,
                         label: '',
                         size: origNode[n.id].size,
-                        color: '#e8e8e8',
+                        color: '#111',
                         borderWidth: 0,
                         shape: origNode[n.id].shape,
                         font: {{ color: 'rgba(0,0,0,0)' }},
-                        opacity: 0.08
+                        opacity: 0.05
                     }});
                 }}
             }});
@@ -698,13 +743,13 @@ def _build_timeline_and_legend_html(
                         color: {{ color: origEdge[e.id].color, highlight: origEdge[e.id].color }},
                         width: 3,
                         label: lbl,
-                        font: {{ size: 16, color: '#000', strokeWidth: 0, align: 'top' }},
+                        font: {{ size: 16, color: '#888', strokeWidth: 0, align: 'top' }},
                         hidden: false
                     }});
                 }} else {{
                     edgeUpdates.push({{
                         id: e.id,
-                        color: 'rgba(220,220,220,0.1)',
+                        color: 'rgba(30,30,30,0.2)',
                         width: 0.3,
                         label: undefined,
                         font: {{ color: 'rgba(0,0,0,0)' }},
@@ -773,6 +818,28 @@ def _build_timeline_and_legend_html(
     }}
 }})();
 </script>
+
+<!-- Node/edge counter in header -->
+<script>
+(function() {{
+    function updateCount() {{
+        if (typeof nodes === 'undefined' || typeof edges === 'undefined') {{
+            setTimeout(updateCount, 300);
+            return;
+        }}
+        var el = document.getElementById('node-count');
+        if (el) el.textContent = nodes.length + ' nodes | ' + edges.length + ' edges';
+    }}
+    updateCount();
+}})();
+</script>
+
+<!-- Loading bar override for dark theme -->
+<style>
+    .vis-loading-bar {{ background: #0A0A0A !important; }}
+    .vis-loading-bar .bar {{ background: #FF8C00 !important; }}
+    .vis-loading-bar .text {{ color: #666 !important; font-family: 'SF Mono','Consolas',monospace !important; }}
+</style>
 """
 
 

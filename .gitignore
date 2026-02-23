@@ -10,3 +10,4 @@ data/raw/scrape_cache/
 viz/output/*.html
 
 *.DS_Store
+.vercel
