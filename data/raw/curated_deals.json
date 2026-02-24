@@ -1,0 +1,362 @@
+[
+  {
+    "investor": "SoftBank",
+    "company": "OpenAI",
+    "amount": "$40B",
+    "round": "Equity",
+    "date": "2025-03",
+    "source_url": "https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
+    "company_sector": "Foundation Models"
+  },
+  {
+    "investor": "Iconiq Capital",
+    "company": "Anthropic",
+    "amount": "$13B",
+    "round": "Series F",
+    "date": "2025-09",
+    "source_url": "https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
+    "company_sector": "Foundation Models / AI Safety"
+  },
+  {
+    "investor": "Lightspeed Venture Partners",
+    "company": "Anthropic",
+    "amount": "$3.5B",
+    "round": "Series E",
+    "date": "2025-03",
+    "source_url": "https://news.crunchbase.com/venture/largest-funding-rounds-genai-defense-eoy-2025/",
+    "company_sector": "Foundation Models / AI Safety"
+  },
+  {
+    "investor": "Valor Capital",
+    "company": "xAI",
+    "amount": "$10B",
+    "round": "Equity",
+    "date": "2025",
+    "source_url": "https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
+    "company_sector": "Foundation Models"
+  },
+  {
+    "investor": "Jeff Bezos",
+    "company": "Project Prometheus",
+    "amount": "$6.2B",
+    "round": "Initial Funding",
+    "date": "2025-11",
+    "source_url": "https://news.crunchbase.com/venture/largest-funding-rounds-genai-defense-eoy-2025/",
+    "company_sector": "AI / Robotics"
+  },
+  {
+    "investor": "Andreessen Horowitz (a16z)",
+    "company": "Databricks",
+    "amount": "$5B",
+    "round": "Series L",
+    "date": "2025-12",
+    "source_url": "https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
+    "company_sector": "Data & AI Platform"
+  },
+  {
+    "investor": "Founders Fund",
+    "company": "Anduril Industries",
+    "amount": "$2.5B",
+    "round": "Series G",
+    "date": "2025-06",
+    "source_url": "https://news.crunchbase.com/venture/largest-funding-rounds-genai-defense-eoy-2025/",
+    "company_sector": "Defense Tech / AI"
+  },
+  {
+    "investor": "Accel",
+    "company": "Anysphere (Cursor)",
+    "amount": "$2.3B",
+    "round": "Series D",
+    "date": "2025-11",
+    "source_url": "https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
+    "company_sector": "AI Code"
+  },
+  {
+    "investor": "Lightspeed Venture Partners",
+    "company": "Reflection AI",
+    "amount": "$2B",
+    "round": "Series B",
+    "date": "2025-10",
+    "source_url": "https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
+    "company_sector": "Foundation Models"
+  },
+  {
+    "investor": "Greenoaks Capital",
+    "company": "Safe Superintelligence",
+    "amount": "$2B",
+    "round": "Equity",
+    "date": "2025-04",
+    "source_url": "https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
+    "company_sector": "AI Safety"
+  },
+  {
+    "investor": "Andreessen Horowitz (a16z)",
+    "company": "Thinking Machines Lab",
+    "amount": "$2B",
+    "round": "Seed",
+    "date": "2025",
+    "source_url": "https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
+    "company_sector": "Foundation Models"
+  },
+  {
+    "investor": "ASML",
+    "company": "Mistral AI",
+    "amount": "$2B",
+    "round": "Equity",
+    "date": "2025-09",
+    "source_url": "https://news.crunchbase.com/venture/largest-funding-rounds-genai-defense-eoy-2025/",
+    "company_sector": "Foundation Models"
+  },
+  {
+    "investor": "Accel",
+    "company": "Perplexity",
+    "amount": "$500M",
+    "round": "Series C",
+    "date": "2025-06",
+    "source_url": "https://www.cnbc.com/2025/05/12/perplexity-funding-round-comet.html",
+    "company_sector": "AI Search"
+  },
+  {
+    "investor": "IVP",
+    "company": "Perplexity",
+    "amount": "$200M",
+    "round": "Series D",
+    "date": "2025-09",
+    "source_url": "https://techcrunch.com/2025/09/10/perplexity-reportedly-raised-200m-at-20b-valuation/",
+    "company_sector": "AI Search"
+  },
+  {
+    "investor": "CapitalG",
+    "company": "Figure AI",
+    "amount": "$1B",
+    "round": "Series C",
+    "date": "2025-09",
+    "source_url": "https://www.figure.ai/news/series-c",
+    "company_sector": "Robotics"
+  },
+  {
+    "investor": "CapitalG",
+    "company": "Physical Intelligence (Pi)",
+    "amount": "$600M",
+    "round": "Series B",
+    "date": "2025-11",
+    "source_url": "https://www.therobotreport.com/physical-intelligence-raises-600m-advance-robot-foundation-models/",
+    "company_sector": "Robotics / AI"
+  },
+  {
+    "investor": "Sequoia Capital",
+    "company": "Harvey",
+    "amount": "$300M",
+    "round": "Series D",
+    "date": "2025",
+    "source_url": "https://www.harvey.ai/blog/harvey-raises-series-d",
+    "company_sector": "AI Legal"
+  },
+  {
+    "investor": "General Atlantic",
+    "company": "Runway",
+    "amount": "$308M",
+    "round": "Series E",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Video"
+  },
+  {
+    "investor": "General Catalyst",
+    "company": "Together AI",
+    "amount": "$305M",
+    "round": "Series B",
+    "date": "2025-02",
+    "source_url": "https://www.together.ai/blog/together-ai-announcing-305m-series-b",
+    "company_sector": "AI Infrastructure"
+  },
+  {
+    "investor": "Andra Capital",
+    "company": "Lambda",
+    "amount": "$480M",
+    "round": "Series D",
+    "date": "2025-02",
+    "source_url": "https://lambda.ai/blog/lambda-raises-480m-to-expand-ai-cloud-platform",
+    "company_sector": "AI Infrastructure"
+  },
+  {
+    "investor": "T. Rowe Price",
+    "company": "SandboxAQ",
+    "amount": "$450M",
+    "round": "Series E",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI / Quantum"
+  },
+  {
+    "investor": "Andreessen Horowitz (a16z)",
+    "company": "ElevenLabs",
+    "amount": "$180M",
+    "round": "Series C",
+    "date": "2025-01",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Audio"
+  },
+  {
+    "investor": "Wellington Management",
+    "company": "Glean",
+    "amount": "$150M",
+    "round": "Series F",
+    "date": "2025-06",
+    "source_url": "https://www.cnbc.com/2025/06/10/glean-gen-ai-search-startup-raises-150-million-at-7-billion-value.html",
+    "company_sector": "Enterprise AI Search"
+  },
+  {
+    "investor": "Elad Gil",
+    "company": "Abridge",
+    "amount": "$300M",
+    "round": "Series E",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Healthcare"
+  },
+  {
+    "investor": "Coatue",
+    "company": "Shield AI",
+    "amount": "$240M",
+    "round": "Series F",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "Defense Tech / AI"
+  },
+  {
+    "investor": "Sapphire Ventures",
+    "company": "EliseAI",
+    "amount": "$250M",
+    "round": "Series E",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Conversational"
+  },
+  {
+    "investor": "Koch Disruptive Technologies",
+    "company": "Celestial AI",
+    "amount": "$250M",
+    "round": "Series C",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Chips / Photonics"
+  },
+  {
+    "investor": "Eric Schmidt",
+    "company": "Lila Sciences",
+    "amount": "$200M",
+    "round": "Equity",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Drug Discovery"
+  },
+  {
+    "investor": "General Catalyst",
+    "company": "Eudia",
+    "amount": "$105M",
+    "round": "Series A",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Legal"
+  },
+  {
+    "investor": "Kleiner Perkins",
+    "company": "Hippocratic AI",
+    "amount": "$141M",
+    "round": "Series B",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Healthcare"
+  },
+  {
+    "investor": "Meritech",
+    "company": "Fal",
+    "amount": "$125M",
+    "round": "Series C",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Infrastructure"
+  },
+  {
+    "investor": "Magnetar",
+    "company": "TensorWave",
+    "amount": "$100M",
+    "round": "Series A",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Infrastructure"
+  },
+  {
+    "investor": "Lightspeed Venture Partners",
+    "company": "Snorkel AI",
+    "amount": "$100M",
+    "round": "Series D",
+    "date": "2025",
+    "source_url": "https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+    "company_sector": "AI Data Platform"
+  },
+  {
+    "investor": "Alibaba",
+    "company": "Moonshot AI (Kimi)",
+    "amount": "$700M",
+    "round": "Series C",
+    "date": "2025-12",
+    "source_url": "https://kr-asia.com/moonshot-ai-sparks-investor-frenzy-as-z-ai-and-minimax-reset-valuation-benchmarks",
+    "company_sector": "Foundation Models"
+  },
+  {
+    "investor": "Alibaba",
+    "company": "MiniMax",
+    "amount": "$600M",
+    "round": "Equity",
+    "date": "2025",
+    "source_url": "https://www.rhinotechmedia.com/the-ai-tigers-boom-a-deep-dive-into-zhipu-ai-minimax-and-moonshot-ai-the-startups-currently-redefining-chinas-llm-large-language-model-landscape/",
+    "company_sector": "Foundation Models"
+  },
+  {
+    "investor": "Tencent",
+    "company": "Zhipu AI",
+    "amount": "$140M",
+    "round": "Equity",
+    "date": "2025",
+    "source_url": "https://www.technologyreview.com/2025/02/04/1110942/four-chinese-ai-startups-deepseek/",
+    "company_sector": "Foundation Models"
+  },
+  {
+    "investor": "Coatue",
+    "company": "Anthropic",
+    "amount": "$30B",
+    "round": "Series G",
+    "date": "2026-02",
+    "source_url": "https://www.cnbc.com/2026/02/12/anthropic-closes-30-billion-funding-round-at-380-billion-valuation.html",
+    "company_sector": "Foundation Models / AI Safety"
+  },
+  {
+    "investor": "Qatar Investment Authority",
+    "company": "xAI",
+    "amount": "$20B",
+    "round": "Series E",
+    "date": "2026-01",
+    "source_url": "https://www.cnbc.com/video/2026/01/07/xai-closes-20-billion-funding-round-as-anthropic-secures-10-billion.html",
+    "company_sector": "Foundation Models"
+  },
+  {
+    "investor": "Sequoia Capital",
+    "company": "ElevenLabs",
+    "amount": "$500M",
+    "round": "Series D",
+    "date": "2026-02",
+    "source_url": "https://techstartups.com/2026/02/04/elevenlabs-raises-500m-series-d-led-by-sequoia-capital-triples-valuation-to-11b-in-one-year-eyes-ipo/",
+    "company_sector": "AI Audio"
+  },
+  {
+    "investor": "Institutional Venture Partners (IVP)",
+    "company": "Perplexity",
+    "amount": "$400M",
+    "round": "Series E",
+    "date": "2026-01",
+    "source_url": "https://www.pymnts.com/artificial-intelligence-2/2025/perplexity-valuation-hits-20-billion-following-new-funding-round/",
+    "company_sector": "AI Search"
+  }
+]

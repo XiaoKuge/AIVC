@@ -213,6 +213,68 @@ def get_news_sources(xlsx_path: str | Path | None = None) -> list[dict]:
     return sources
 
 
+def ingest_deals_json(
+    kg: KnowledgeGraph,
+    deals_path: str | Path | None = None,
+) -> int:
+    """Ingest curated deals from a JSON file into the knowledge graph.
+
+    Each deal record should have:
+      - investor: str (VC firm name)
+      - company: str (company name)
+      - amount: str (e.g. "$500M")
+      - round: str (e.g. "Series B")
+      - date: str (e.g. "2025-06-15")
+      - source_url: str (article URL where deal was reported)
+      - company_sector: str (optional, e.g. "Foundation Models")
+
+    Returns the number of deals ingested.
+    """
+    deals_path = Path(deals_path) if deals_path else DATA_DIR / "raw" / "curated_deals.json"
+    if not deals_path.exists():
+        return 0
+
+    with open(deals_path) as f:
+        deals_list = json.load(f)
+
+    if not isinstance(deals_list, list):
+        return 0
+
+    aliases = load_aliases()
+    count = 0
+
+    for record in deals_list:
+        investor = record.get("investor", "").strip()
+        company = record.get("company", "").strip()
+        if not investor or not company:
+            continue
+
+        investor = normalize_name(investor, aliases)
+        company = normalize_name(company, aliases)
+
+        source_url = record.get("source_url", "")
+        source = f"curated:{source_url}" if source_url else "curated"
+
+        # Add/merge the VC firm node
+        kg.add_firm(VCFirm(name=investor, source=source))
+
+        # Add/merge the company node (with optional sector)
+        sector = record.get("company_sector", "")
+        kg.add_company(Company(name=company, sector=sector, source=source))
+
+        # Add the investment edge with deal details
+        deal = Deal(
+            amount=record.get("amount", ""),
+            round=record.get("round", ""),
+            date=record.get("date", ""),
+            source=source,
+        )
+        kg.add_investment(investor, company, deal)
+        count += 1
+
+    return count
+
+
 def _cell(row: tuple, idx: int) -> str:
     """Safely extract a cell value as a string."""
     if idx >= len(row) or row[idx] is None:

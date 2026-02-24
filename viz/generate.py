@@ -5,7 +5,9 @@ from __future__ import annotations
 
 import json
 import sys
+from datetime import datetime, timedelta
 from pathlib import Path
+from urllib.parse import quote
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
@@ -74,15 +76,18 @@ def generate_html(
         },
         "physics": {
             "forceAtlas2Based": {
-                "gravitationalConstant": -100,
-                "centralGravity": 0.01,
-                "springLength": 200,
-                "springConstant": 0.02
+                "gravitationalConstant": -150,
+                "centralGravity": 0.008,
+                "springLength": 250,
+                "springConstant": 0.015,
+                "damping": 0.4
             },
             "solver": "forceAtlas2Based",
             "stabilization": {
-                "iterations": 150
-            }
+                "iterations": 300
+            },
+            "maxVelocity": 50,
+            "minVelocity": 0.75
         },
         "interaction": {
             "hover": true,
@@ -91,8 +96,36 @@ def generate_html(
     }
     """)
 
+    # Identify edges and companies with investments dated within the last 7 days
+    now = datetime.now()
+    recent_cutoff = now - timedelta(days=7)
+    recent_edges: set[tuple[str, str]] = set()   # (src, dst) pairs
+    recent_company_ids: set[str] = set()
+    for src, dst, data in kg.g.edges(data=True):
+        if data.get("edge_type") != INVESTED_IN:
+            continue
+        date_str = data.get("date", "")
+        if not date_str:
+            continue
+        try:
+            is_recent = False
+            if len(date_str) >= 10:
+                edge_date = datetime.strptime(date_str[:10], "%Y-%m-%d")
+                is_recent = edge_date >= recent_cutoff
+            elif len(date_str) >= 7:
+                y, m = int(date_str[:4]), int(date_str[5:7])
+                is_recent = (y == now.year and m == now.month)
+            if is_recent:
+                recent_edges.add((src, dst))
+                recent_company_ids.add(dst)
+        except ValueError:
+            pass
+
+    RECENT_COLOR = "#FF2020"  # bright red for recent investments
+
     # Add nodes and build metadata labels for focus mode
     node_detail_labels = {}  # nid -> multi-line detail label (for focus mode)
+    node_images = {}  # nid -> {image, brokenImage} for focus mode
     node_urls = {}  # nid -> URL (for clickable links)
     for nid, attrs in kg.g.nodes(data=True):
         node_type = attrs.get("node_type", "unknown")
@@ -102,6 +135,12 @@ def generate_html(
         # Size based on connectivity
         degree = kg.g.degree(nid)
         size = max(10, min(50, 8 + degree * 3))
+
+        # Highlight companies with investments in the last 7 days
+        is_recent = nid in recent_company_ids and node_type == COMPANY
+        if is_recent:
+            color = RECENT_COLOR
+            size = max(size, 35)  # ensure visibility
 
         # Resolve URL for this node
         url = ""
@@ -116,9 +155,26 @@ def generate_html(
         if url:
             node_urls[nid] = url
 
-        # Build tooltip (HTML for hover popup)
+        # Derive node image (logo or avatar)
+        website = attrs.get("website", "")
+        domain = website.strip().removeprefix("https://").removeprefix("http://").split("/")[0] if website else ""
+        bg_hex = color.lstrip("#")
+        encoded_name = quote(name)
+        fallback_url = f"https://ui-avatars.com/api/?name={encoded_name}&background={bg_hex}&color=fff&size=128&bold=true"
+
+        if node_type == PERSON:
+            image_url = fallback_url
+        elif domain:
+            image_url = f"https://www.google.com/s2/favicons?domain={domain}&sz=128"
+        else:
+            image_url = fallback_url
+
+        node_images[nid] = {"image": image_url, "brokenImage": fallback_url}
+
+        # Build tooltip (HTML for hover popup) — includes logo/avatar image
+        logo_img = f'<img src="{image_url}" onerror="this.src=\'{fallback_url}\'" style="width:36px;height:36px;border-radius:50%;vertical-align:middle;margin-right:8px;border:2px solid {color};background:#111;">'
         name_html = f'<a href="{url}" target="_blank" style="color:#00D67E;text-decoration:underline;">{name}</a>' if url else name
-        title_parts = [f"<b>{name_html}</b> <span style='color:#888;'>({node_type})</span>"]
+        title_parts = [f"{logo_img}<b>{name_html}</b> <span style='color:#888;'>({node_type})</span>"]
         # Build detail label (plain text for focus mode, shown inside node)
         detail_parts = [name]
         if node_type == FIRM:
@@ -183,7 +239,13 @@ def generate_html(
         edge_key = f"{src}||{dst}"
         edge_detail_labels[edge_key] = " | ".join(label_parts) if label_parts else edge_type.replace("_", " ")
 
-        net.add_edge(src, dst, color=color, title=title, arrows="to", width=1)
+        # Highlight only the specific recent investment edges
+        edge_width = 1
+        if (src, dst) in recent_edges:
+            color = RECENT_COLOR
+            edge_width = 3
+
+        net.add_edge(src, dst, color=color, title=title, arrows="to", width=edge_width)
 
         # Track date for timeline
         date_str = data.get("date", "")
@@ -200,6 +262,9 @@ def generate_html(
         max_year = max(edge_dates.values())
     else:
         min_year, max_year = 2000, 2025
+
+    # Default lower-bound at 2025 (clamped to actual range)
+    default_min_year = max(min_year, min(2025, max_year))
 
     net.save_graph(str(output_path))
 
@@ -245,7 +310,7 @@ def generate_html(
     html = html.replace("<body>", "<body>\n" + header_html)
 
     inject = _build_timeline_and_legend_html(
-        edge_dates, min_year, max_year, node_detail_labels, edge_detail_labels, node_urls
+        edge_dates, min_year, max_year, default_min_year, node_detail_labels, edge_detail_labels, node_urls, node_images
     )
     html = html.replace("</body>", inject + "</body>")
     output_path.write_text(html)
@@ -257,15 +322,18 @@ def _build_timeline_and_legend_html(
     edge_dates: dict[str, int],
     min_year: int,
     max_year: int,
+    default_min_year: int,
     node_detail_labels: dict[str, str],
     edge_detail_labels: dict[str, str],
     node_urls: dict[str, str],
+    node_images: dict[str, dict[str, str]],
 ) -> str:
     """Build the HTML/CSS/JS for the timeline slider, legend, and interactions."""
     edge_dates_json = json.dumps(edge_dates)
     node_labels_json = json.dumps(node_detail_labels, ensure_ascii=False)
     edge_labels_json = json.dumps(edge_detail_labels, ensure_ascii=False)
     node_urls_json = json.dumps(node_urls, ensure_ascii=False)
+    node_images_json = json.dumps(node_images, ensure_ascii=False)
 
     return f"""
 <!-- Legend -->
@@ -286,6 +354,7 @@ def _build_timeline_and_legend_html(
     <div style="font-weight: 600; margin-bottom: 4px; font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 1px;">Legend</div>
     <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#FF8C00;margin-right:8px;vertical-align:middle;"></span><span style="color:#FF8C00;">VC Firm</span></div>
     <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00D67E;margin-right:8px;vertical-align:middle;"></span><span style="color:#00D67E;">Company</span></div>
+    <div><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#FF2020;margin-right:6px;vertical-align:middle;box-shadow:0 0 8px rgba(255,32,32,0.6);"></span><span style="color:#FF2020;">Recent (7d)</span></div>
     <div><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00BFFF;margin-right:8px;vertical-align:middle;"></span><span style="color:#00BFFF;">Person</span></div>
     <hr style="margin:6px 0;border:none;border-top:1px solid #2A2A2A;">
     <div><span style="display:inline-block;width:16px;height:1px;background:#5A5A5A;margin-right:8px;vertical-align:middle;"></span>Invested in</div>
@@ -373,11 +442,11 @@ def _build_timeline_and_legend_html(
 <div id="timeline-bar">
     <div style="display:flex; align-items:center; gap:14px; max-width:1200px; margin:0 auto;">
         <span style="font-weight:600; white-space:nowrap; color:#666; text-transform:uppercase; letter-spacing:1px; font-size:10px;">Timeline</span>
-        <span id="year-min-label" style="min-width:36px; text-align:right; font-variant-numeric:tabular-nums; font-weight:500; color:#FF8C00;">{min_year}</span>
+        <span id="year-min-label" style="min-width:36px; text-align:right; font-variant-numeric:tabular-nums; font-weight:500; color:#FF8C00;">{default_min_year}</span>
         <div class="range-slider">
             <div class="track"></div>
             <div class="highlight" id="range-highlight"></div>
-            <input type="range" id="year-min" min="{min_year}" max="{max_year}" value="{min_year}">
+            <input type="range" id="year-min" min="{min_year}" max="{max_year}" value="{default_min_year}">
             <input type="range" id="year-max" min="{min_year}" max="{max_year}" value="{max_year}">
         </div>
         <span id="year-max-label" style="min-width:36px; font-variant-numeric:tabular-nums; font-weight:500; color:#FF8C00;">{max_year}</span>
@@ -632,9 +701,10 @@ def _build_timeline_and_legend_html(
 <!-- Click-to-focus: zoom into subgraph, show metadata in nodes and on edges -->
 <script>
 (function() {{
-    // Detail labels for focus mode
+    // Detail labels and images for focus mode
     var nodeDetailLabels = {node_labels_json};
     var edgeDetailLabels = {edge_labels_json};
+    var nodeImages = {node_images_json};
 
     function checkReady() {{
         if (typeof network === 'undefined' || typeof nodes === 'undefined' || typeof edges === 'undefined') {{
@@ -695,28 +765,43 @@ def _build_timeline_and_legend_html(
             // Update nodes: show metadata labels
             var nodeUpdates = [];
             allNodes.forEach(function(n) {{
+                var img = nodeImages[n.id];
                 if (n.id === nodeId) {{
-                    nodeUpdates.push({{
+                    var upd = {{
                         id: n.id,
                         label: nodeDetailLabels[n.id] || origNode[n.id].label,
                         size: Math.max(40, (origNode[n.id].size || 15) * 2.5),
                         color: {{ background: '#1A1A1A', border: origNode[n.id].color }},
                         borderWidth: 3,
-                        shape: 'box',
                         font: {{ size: 22, color: '#EEE', face: "'SF Mono','Consolas',monospace", multi: false, align: 'center', strokeWidth: 0 }},
                         opacity: 1
-                    }});
+                    }};
+                    if (img) {{
+                        upd.shape = 'circularImage';
+                        upd.image = img.image;
+                        upd.brokenImage = img.brokenImage;
+                    }} else {{
+                        upd.shape = 'box';
+                    }}
+                    nodeUpdates.push(upd);
                 }} else if (neighborSet.has(n.id)) {{
-                    nodeUpdates.push({{
+                    var upd2 = {{
                         id: n.id,
                         label: nodeDetailLabels[n.id] || origNode[n.id].label,
                         size: Math.max(30, (origNode[n.id].size || 15) * 1.5),
                         color: {{ background: '#111', border: origNode[n.id].color }},
                         borderWidth: 2,
-                        shape: 'box',
                         font: {{ size: 18, color: '#CCC', face: "'SF Mono','Consolas',monospace", multi: false, align: 'center', strokeWidth: 0 }},
                         opacity: 1
-                    }});
+                    }};
+                    if (img) {{
+                        upd2.shape = 'circularImage';
+                        upd2.image = img.image;
+                        upd2.brokenImage = img.brokenImage;
+                    }} else {{
+                        upd2.shape = 'box';
+                    }}
+                    nodeUpdates.push(upd2);
                 }} else {{
                     nodeUpdates.push({{
                         id: n.id,
@@ -777,6 +862,8 @@ def _build_timeline_and_legend_html(
                     borderWidth: origNode[n.id].borderWidth,
                     font: origNode[n.id].font,
                     shape: origNode[n.id].shape,
+                    image: undefined,
+                    brokenImage: undefined,
                     opacity: 1
                 }};
             }});
