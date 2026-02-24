@@ -310,7 +310,7 @@ def generate_html(
     html = html.replace("<body>", "<body>\n" + header_html)
 
     inject = _build_timeline_and_legend_html(
-        edge_dates, min_year, max_year, default_min_year, node_detail_labels, edge_detail_labels, node_urls, node_images
+        edge_dates, min_year, max_year, default_min_year, node_detail_labels, edge_detail_labels, node_urls, node_images, recent_company_ids
     )
     html = html.replace("</body>", inject + "</body>")
     output_path.write_text(html)
@@ -327,6 +327,7 @@ def _build_timeline_and_legend_html(
     edge_detail_labels: dict[str, str],
     node_urls: dict[str, str],
     node_images: dict[str, dict[str, str]],
+    recent_company_ids: set[str] | None = None,
 ) -> str:
     """Build the HTML/CSS/JS for the timeline slider, legend, and interactions."""
     edge_dates_json = json.dumps(edge_dates)
@@ -334,6 +335,7 @@ def _build_timeline_and_legend_html(
     edge_labels_json = json.dumps(edge_detail_labels, ensure_ascii=False)
     node_urls_json = json.dumps(node_urls, ensure_ascii=False)
     node_images_json = json.dumps(node_images, ensure_ascii=False)
+    recent_ids_json = json.dumps(sorted(recent_company_ids or []))
 
     return f"""
 <!-- Legend -->
@@ -927,6 +929,69 @@ def _build_timeline_and_legend_html(
     .vis-loading-bar .bar {{ background: #FF8C00 !important; }}
     .vis-loading-bar .text {{ color: #666 !important; font-family: 'SF Mono','Consolas',monospace !important; }}
 </style>
+
+<!-- Breathing/pulsing glow animation for recent nodes -->
+<script>
+(function() {{
+    var recentIds = new Set({recent_ids_json});
+    if (recentIds.size === 0) return;
+
+    var phase = 0;
+    var lastRedraw = 0;
+    var REDRAW_INTERVAL = 50; // ms between redraws (~20fps)
+
+    function checkReady() {{
+        if (typeof network === 'undefined' || typeof nodes === 'undefined') {{
+            setTimeout(checkReady, 200);
+            return;
+        }}
+        initBreathing();
+    }}
+    checkReady();
+
+    function initBreathing() {{
+        // Draw pulsing glow rings behind recent nodes
+        network.on('afterDrawing', function(ctx) {{
+            phase += 0.04;
+            var pulse = (Math.sin(phase) + 1) / 2; // 0..1
+
+            recentIds.forEach(function(nid) {{
+                var pos = network.getPositions([nid])[nid];
+                if (!pos) return;
+
+                // Get the node's current rendered size
+                var nodeData = nodes.get(nid);
+                if (!nodeData || nodeData.hidden) return;
+                var baseRadius = (nodeData.size || 20) * 0.5;
+
+                // Outer glow ring (large, faint)
+                var outerR = baseRadius + 12 + 10 * pulse;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, outerR, 0, 2 * Math.PI);
+                ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.06 + 0.08 * pulse).toFixed(3) + ')';
+                ctx.fill();
+
+                // Inner glow ring (tight, brighter)
+                var innerR = baseRadius + 4 + 5 * pulse;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, innerR, 0, 2 * Math.PI);
+                ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.12 + 0.15 * pulse).toFixed(3) + ')';
+                ctx.fill();
+            }});
+        }});
+
+        // Continuously trigger redraws for animation
+        function animLoop(ts) {{
+            if (ts - lastRedraw >= REDRAW_INTERVAL) {{
+                lastRedraw = ts;
+                network.redraw();
+            }}
+            requestAnimationFrame(animLoop);
+        }}
+        requestAnimationFrame(animLoop);
+    }}
+}})();
+</script>
 """
 
 

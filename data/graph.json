@@ -15,7 +15,7 @@
       "amount": "$5B",
       "date": "2025-12",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series L",
       "source": "andreessen-horowitz-(a16z)",
       "target": "databricks"
@@ -51,7 +51,7 @@
       "amount": "$2B",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Seed",
       "source": "andreessen-horowitz-(a16z)",
       "target": "thinking-machines-lab"
@@ -60,10 +60,28 @@
       "amount": "$180M",
       "date": "2025-01",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series C",
       "source": "andreessen-horowitz-(a16z)",
       "target": "elevenlabs"
+    },
+    {
+      "amount": "$475M",
+      "date": "2025-12",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Seed",
+      "source": "andreessen-horowitz-(a16z)",
+      "target": "unconventional-ai"
+    },
+    {
+      "amount": "$25M",
+      "date": "2025-10",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "andreessen-horowitz-(a16z)",
+      "target": "furtherai"
     },
     {
       "amount": "",
@@ -96,7 +114,7 @@
       "amount": "$300M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series D",
       "source": "sequoia-capital",
       "target": "harvey"
@@ -105,17 +123,26 @@
       "amount": "$500M",
       "date": "2026-02",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series D",
       "source": "sequoia-capital",
       "target": "elevenlabs"
     },
     {
-      "amount": "",
-      "date": "2024",
+      "amount": "$925M",
+      "date": "2025-02",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T05:47:18Z",
-      "round": "",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "sequoia-capital",
+      "target": "openevidence"
+    },
+    {
+      "amount": "$175M",
+      "date": "2025-09",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Equity",
       "source": "lightspeed-venture-partners",
       "target": "distyl-ai"
     },
@@ -150,7 +177,7 @@
       "amount": "$3.5B",
       "date": "2025-03",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series E",
       "source": "lightspeed-venture-partners",
       "target": "anthropic"
@@ -159,7 +186,7 @@
       "amount": "$2B",
       "date": "2025-10",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series B",
       "source": "lightspeed-venture-partners",
       "target": "reflection-ai"
@@ -168,10 +195,28 @@
       "amount": "$100M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series D",
       "source": "lightspeed-venture-partners",
       "target": "snorkel-ai"
+    },
+    {
+      "amount": "$110M",
+      "date": "2025-03",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Seed",
+      "source": "lightspeed-venture-partners",
+      "target": "nexthop-ai"
+    },
+    {
+      "amount": "$21M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "lightspeed-venture-partners",
+      "target": "peec-ai"
     },
     {
       "amount": "",
@@ -213,7 +258,7 @@
       "amount": "$2.5B",
       "date": "2025-06",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series G",
       "source": "founders-fund",
       "target": "anduril-industries"
@@ -291,6 +336,15 @@
       "target": "stripe"
     },
     {
+      "amount": "$600M",
+      "date": "2025-03",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series",
+      "source": "thrive-capital",
+      "target": "isomorphic-labs"
+    },
+    {
       "amount": "",
       "date": "2023",
       "edge_type": "invested_in",
@@ -330,7 +384,7 @@
       "amount": "$305M",
       "date": "2025-02",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series B",
       "source": "general-catalyst",
       "target": "together-ai"
@@ -339,10 +393,19 @@
       "amount": "$105M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series A",
       "source": "general-catalyst",
       "target": "eudia"
+    },
+    {
+      "amount": "$126M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series C",
+      "source": "general-catalyst",
+      "target": "hippocratic-ai"
     },
     {
       "amount": "",
@@ -420,7 +483,7 @@
       "amount": "$2.3B",
       "date": "2025-11",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series D",
       "source": "accel",
       "target": "anysphere-(cursor)"
@@ -429,7 +492,7 @@
       "amount": "$500M",
       "date": "2025-06",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series C",
       "source": "accel",
       "target": "perplexity"
@@ -507,6 +570,15 @@
       "target": "canva"
     },
     {
+      "amount": "$150M",
+      "date": "2025-10",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series E",
+      "source": "bessemer-venture-partners",
+      "target": "evenup"
+    },
+    {
       "amount": "",
       "date": "2019",
       "edge_type": "invested_in",
@@ -577,6 +649,15 @@
       "round": "",
       "source": "benchmark",
       "target": "ebay"
+    },
+    {
+      "amount": "$85M",
+      "date": "2025-09",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series B",
+      "source": "benchmark",
+      "target": "exa"
     },
     {
       "amount": "",
@@ -685,6 +766,15 @@
       "round": "",
       "source": "insight-partners",
       "target": "armis"
+    },
+    {
+      "amount": "$150M",
+      "date": "2025-07",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Equity",
+      "source": "insight-partners",
+      "target": "motive"
     },
     {
       "amount": "",
@@ -1029,6 +1119,24 @@
       "target": "palo-alto-networks"
     },
     {
+      "amount": "$50M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Seed",
+      "source": "menlo-ventures",
+      "target": "inception"
+    },
+    {
+      "amount": "$250M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series C",
+      "source": "menlo-ventures",
+      "target": "suno"
+    },
+    {
       "amount": "",
       "date": "2016",
       "edge_type": "invested_in",
@@ -1101,6 +1209,15 @@
       "target": "kustomer"
     },
     {
+      "amount": "$61M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "redpoint-ventures",
+      "target": "giga"
+    },
+    {
       "amount": "",
       "date": "2019",
       "edge_type": "invested_in",
@@ -1155,11 +1272,11 @@
       "target": "vicarious"
     },
     {
-      "amount": "",
-      "date": "2019",
+      "amount": "$500M",
+      "date": "2025-08",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T05:47:18Z",
-      "round": "",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Equity",
       "source": "radical-ventures",
       "target": "cohere"
     },
@@ -1281,6 +1398,24 @@
       "target": "deliveroo"
     },
     {
+      "amount": "$100M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "index-ventures",
+      "target": "wonderful"
+    },
+    {
+      "amount": "$41M",
+      "date": "2025-12",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Seed",
+      "source": "index-ventures",
+      "target": "mirelo"
+    },
+    {
       "amount": "",
       "date": "2017",
       "edge_type": "invested_in",
@@ -1290,11 +1425,11 @@
       "target": "revolut"
     },
     {
-      "amount": "",
-      "date": "2023",
+      "amount": "$70M",
+      "date": "2025-12",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T05:47:18Z",
-      "round": "",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Seed",
       "source": "balderton-capital",
       "target": "gradium"
     },
@@ -1450,6 +1585,15 @@
       "round": "",
       "source": "hv-capital",
       "target": "scalable-capital"
+    },
+    {
+      "amount": "€160M",
+      "date": "2025-05",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Equity",
+      "source": "hv-capital",
+      "target": "quantum-systems"
     },
     {
       "amount": "",
@@ -1689,7 +1833,7 @@
       "amount": "$140M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Equity",
       "source": "tencent",
       "target": "zhipu-ai"
@@ -1770,7 +1914,7 @@
       "amount": "$700M",
       "date": "2025-12",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series C",
       "source": "alibaba",
       "target": "moonshot-ai-(kimi)"
@@ -1779,7 +1923,7 @@
       "amount": "$600M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Equity",
       "source": "alibaba",
       "target": "minimax"
@@ -2680,7 +2824,7 @@
       "amount": "$300M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series E",
       "source": "elad-gil",
       "target": "abridge"
@@ -3011,7 +3155,7 @@
       "amount": "$40B",
       "date": "2025-03",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Equity",
       "source": "softbank",
       "target": "openai"
@@ -3020,7 +3164,7 @@
       "amount": "$13B",
       "date": "2025-09",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series F",
       "source": "iconiq-capital",
       "target": "anthropic"
@@ -3029,7 +3173,7 @@
       "amount": "$10B",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Equity",
       "source": "valor-capital",
       "target": "xai"
@@ -3038,7 +3182,7 @@
       "amount": "$6.2B",
       "date": "2025-11",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Initial Funding",
       "source": "jeff-bezos",
       "target": "project-prometheus"
@@ -3047,16 +3191,25 @@
       "amount": "$2B",
       "date": "2025-04",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Equity",
       "source": "greenoaks-capital",
       "target": "safe-superintelligence"
     },
     {
+      "amount": "$150M",
+      "date": "2025",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Equity",
+      "source": "greenoaks-capital",
+      "target": "the-bot-co."
+    },
+    {
       "amount": "$2B",
       "date": "2025-09",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Equity",
       "source": "asml",
       "target": "mistral-ai"
@@ -3065,7 +3218,7 @@
       "amount": "$400M",
       "date": "2026-01",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series E",
       "source": "institutional-venture-partners-(ivp)",
       "target": "perplexity"
@@ -3074,7 +3227,7 @@
       "amount": "$1B",
       "date": "2025-09",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series C",
       "source": "capitalg",
       "target": "figure-ai"
@@ -3083,7 +3236,7 @@
       "amount": "$600M",
       "date": "2025-11",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series B",
       "source": "capitalg",
       "target": "physical-intelligence-(pi)"
@@ -3092,7 +3245,7 @@
       "amount": "$308M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series E",
       "source": "general-atlantic",
       "target": "runway"
@@ -3101,7 +3254,7 @@
       "amount": "$480M",
       "date": "2025-02",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series D",
       "source": "andra-capital",
       "target": "lambda"
@@ -3110,7 +3263,7 @@
       "amount": "$450M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series E",
       "source": "t.-rowe-price",
       "target": "sandboxaq"
@@ -3119,7 +3272,7 @@
       "amount": "$150M",
       "date": "2025-06",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series F",
       "source": "wellington-management",
       "target": "glean"
@@ -3128,7 +3281,7 @@
       "amount": "$240M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series F",
       "source": "coatue",
       "target": "shield-ai"
@@ -3137,16 +3290,25 @@
       "amount": "$30B",
       "date": "2026-02",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series G",
       "source": "coatue",
       "target": "anthropic"
     },
     {
+      "amount": "$43.5M",
+      "date": "2025-05",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Seed",
+      "source": "coatue",
+      "target": "samaya"
+    },
+    {
       "amount": "$250M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series E",
       "source": "sapphire-ventures",
       "target": "eliseai"
@@ -3155,7 +3317,7 @@
       "amount": "$250M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series C",
       "source": "koch-disruptive-technologies",
       "target": "celestial-ai"
@@ -3164,7 +3326,7 @@
       "amount": "$200M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Equity",
       "source": "eric-schmidt",
       "target": "lila-sciences"
@@ -3173,7 +3335,7 @@
       "amount": "$141M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series B",
       "source": "kleiner-perkins",
       "target": "hippocratic-ai"
@@ -3182,7 +3344,7 @@
       "amount": "$125M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series C",
       "source": "meritech",
       "target": "fal"
@@ -3191,7 +3353,7 @@
       "amount": "$100M",
       "date": "2025",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series A",
       "source": "magnetar",
       "target": "tensorwave"
@@ -3200,10 +3362,289 @@
       "amount": "$20B",
       "date": "2026-01",
       "edge_type": "invested_in",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "round": "Series E",
       "source": "qatar-investment-authority",
       "target": "xai"
+    },
+    {
+      "amount": "$403M",
+      "date": "2025",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "b-capital",
+      "target": "apptronik"
+    },
+    {
+      "amount": "$64M",
+      "date": "2025-10",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Seed",
+      "source": "b-capital",
+      "target": "axiom-math"
+    },
+    {
+      "amount": "$135M",
+      "date": "2025-06",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series B",
+      "source": "nvidia",
+      "target": "skild-ai"
+    },
+    {
+      "amount": "$125M",
+      "date": "2025-06",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series B",
+      "source": "eclipse-ventures",
+      "target": "forsight-robotics"
+    },
+    {
+      "amount": "$405M",
+      "date": "2025-08",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Equity",
+      "source": "bezos-expeditions",
+      "target": "fieldai"
+    },
+    {
+      "amount": "$243M",
+      "date": "2025",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series C",
+      "source": "oak-hc/ft",
+      "target": "ambience-healthcare"
+    },
+    {
+      "amount": "$130M",
+      "date": "2025-10",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Growth Equity",
+      "source": "ftv-capital",
+      "target": "duos"
+    },
+    {
+      "amount": "$372.5M",
+      "date": "2025-07",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series D",
+      "source": "novo-holdings",
+      "target": "maplight-therapeutics"
+    },
+    {
+      "amount": "$750M",
+      "date": "2025-09",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series E",
+      "source": "disruptive",
+      "target": "groq"
+    },
+    {
+      "amount": "$500M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series D",
+      "source": "multiple",
+      "target": "metropolis"
+    },
+    {
+      "amount": "$435M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Pre-IPO",
+      "source": "multiple",
+      "target": "armis"
+    },
+    {
+      "amount": "$250M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series B",
+      "source": "multiple",
+      "target": "beacon-software"
+    },
+    {
+      "amount": "$200M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series D",
+      "source": "multiple",
+      "target": "synchron"
+    },
+    {
+      "amount": "$185M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "multiple",
+      "target": "braveheart-bio"
+    },
+    {
+      "amount": "$133.7M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Seed",
+      "source": "multiple",
+      "target": "general-intuition"
+    },
+    {
+      "amount": "$131M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series C",
+      "source": "multiple",
+      "target": "decagon"
+    },
+    {
+      "amount": "$100M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series B",
+      "source": "multiple",
+      "target": "iambic-therapeutics"
+    },
+    {
+      "amount": "$68M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series B",
+      "source": "multiple",
+      "target": "gamma"
+    },
+    {
+      "amount": "$75M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series C",
+      "source": "multiple",
+      "target": "scribe"
+    },
+    {
+      "amount": "$100M",
+      "date": "2025-11",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "bow-wave-capital",
+      "target": "majestic-labs"
+    },
+    {
+      "amount": "$1.38B",
+      "date": "2025-10",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series E",
+      "source": "valor-equity",
+      "target": "crusoe"
+    },
+    {
+      "amount": "$150M",
+      "date": "2025-09",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series D",
+      "source": "bond",
+      "target": "baseten"
+    },
+    {
+      "amount": "$100M",
+      "date": "2025-09",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "new-enterprise-associates-(nea)",
+      "target": "cuspai"
+    },
+    {
+      "amount": "$86M",
+      "date": "2025-12",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series D",
+      "source": "georgian",
+      "target": "polyai"
+    },
+    {
+      "amount": "$230M",
+      "date": "2025-08",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series C",
+      "source": "kkr",
+      "target": "ontic"
+    },
+    {
+      "amount": "$108M",
+      "date": "2025-05",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series C",
+      "source": "vintage",
+      "target": "cast-ai"
+    },
+    {
+      "amount": "$58M",
+      "date": "2025-10",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series C",
+      "source": "eurazeo",
+      "target": "filigran"
+    },
+    {
+      "amount": "$50M",
+      "date": "2025-12",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series A",
+      "source": "dawn-capital",
+      "target": "runware"
+    },
+    {
+      "amount": "$25M",
+      "date": "2025-10",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Series B",
+      "source": "dtcp",
+      "target": "resistant-ai"
+    },
+    {
+      "amount": "$75M",
+      "date": "2025-02",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Equity",
+      "source": "lightrock",
+      "target": "augury"
+    },
+    {
+      "amount": "$100M",
+      "date": "2025-07",
+      "edge_type": "invested_in",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "round": "Equity",
+      "source": "cox-enterprises",
+      "target": "carbyne"
     }
   ],
   "multigraph": false,
@@ -3215,10 +3656,10 @@
       "hq_city": "Menlo Park, USA",
       "hq_region": "North America",
       "id": "andreessen-horowitz-(a16z)",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Andreessen Horowitz (a16z)",
       "node_type": "VCFirm",
-      "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Seed → Growth",
       "type": "VC",
       "website": "https://a16z.com"
@@ -3226,7 +3667,7 @@
     {
       "founded_year": 2015,
       "id": "openai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "OpenAI",
       "node_type": "Company",
       "sector": "Foundation Models",
@@ -3236,7 +3677,7 @@
     {
       "founded_year": 2013,
       "id": "databricks",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Databricks",
       "node_type": "Company",
       "sector": "Data & AI Platform",
@@ -3280,10 +3721,10 @@
       "hq_city": "Menlo Park, USA",
       "hq_region": "North America",
       "id": "sequoia-capital",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Sequoia Capital",
       "node_type": "VCFirm",
-      "source": "curated:https://techstartups.com/2026/02/04/elevenlabs-raises-500m-series-d-led-by-sequoia-capital-triples-valuation-to-11b-in-one-year-eyes-ipo/",
+      "source": "curated:https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
       "stage_focus": "Seed → Growth",
       "type": "VC",
       "website": "https://sequoiacap.com"
@@ -3311,7 +3752,7 @@
     {
       "founded_year": 2022,
       "id": "harvey",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Harvey",
       "node_type": "Company",
       "sector": "AI Legal",
@@ -3325,10 +3766,10 @@
       "hq_city": "Menlo Park, USA",
       "hq_region": "North America",
       "id": "lightspeed-venture-partners",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Lightspeed Venture Partners",
       "node_type": "VCFirm",
-      "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Series A → C",
       "type": "VC",
       "website": "https://lsvp.com"
@@ -3336,11 +3777,11 @@
     {
       "founded_year": 2023,
       "id": "distyl-ai",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Distyl AI",
       "node_type": "Company",
       "sector": "Enterprise AI",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "website": "distyl.ai"
     },
     {
@@ -3380,7 +3821,7 @@
       "hq_city": "San Francisco, USA",
       "hq_region": "North America",
       "id": "founders-fund",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Founders Fund",
       "node_type": "VCFirm",
       "source": "curated:https://news.crunchbase.com/venture/largest-funding-rounds-genai-defense-eoy-2025/",
@@ -3391,7 +3832,7 @@
     {
       "founded_year": 2021,
       "id": "anthropic",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Anthropic",
       "node_type": "Company",
       "sector": "Foundation Models / AI Safety",
@@ -3446,7 +3887,7 @@
     {
       "founded_year": 2023,
       "id": "mistral-ai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Mistral AI",
       "node_type": "Company",
       "sector": "Foundation Models",
@@ -3456,7 +3897,7 @@
     {
       "founded_year": 2022,
       "id": "together-ai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Together AI",
       "node_type": "Company",
       "sector": "AI Infrastructure",
@@ -3470,10 +3911,10 @@
       "hq_city": "New York, USA",
       "hq_region": "North America",
       "id": "thrive-capital",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Thrive Capital",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
       "stage_focus": "Early → Growth",
       "type": "VC",
       "website": "https://thrivecap.com"
@@ -3515,10 +3956,10 @@
       "hq_city": "Cambridge, USA",
       "hq_region": "North America",
       "id": "general-catalyst",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "General Catalyst",
       "node_type": "VCFirm",
-      "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Seed → Growth",
       "type": "VC",
       "website": "https://generalcatalyst.com"
@@ -3585,7 +4026,7 @@
       "hq_city": "Palo Alto, USA",
       "hq_region": "North America",
       "id": "accel",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Accel",
       "node_type": "VCFirm",
       "source": "curated:https://www.cnbc.com/2025/05/12/perplexity-funding-round-comet.html",
@@ -3685,10 +4126,10 @@
       "hq_city": "San Francisco, USA",
       "hq_region": "North America",
       "id": "bessemer-venture-partners",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Bessemer Venture Partners",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Seed → Growth",
       "type": "VC",
       "website": "https://bvp.com"
@@ -3785,10 +4226,10 @@
       "hq_city": "San Francisco, USA",
       "hq_region": "North America",
       "id": "benchmark",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Benchmark",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Seed → Series A",
       "type": "VC",
       "website": "https://benchmark.com"
@@ -3910,12 +4351,12 @@
       "hq_city": "New York, USA",
       "hq_region": "North America",
       "id": "insight-partners",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Insight Partners",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Growth → Late",
-      "type": "Growth PE/VC",
+      "type": "VC",
       "website": "https://insightpartners.com"
     },
     {
@@ -3951,11 +4392,11 @@
     {
       "founded_year": null,
       "id": "armis",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Armis",
       "node_type": "Company",
-      "sector": "",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "sector": "AI Cybersecurity",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
       "website": ""
     },
     {
@@ -4071,7 +4512,7 @@
     {
       "founded_year": 2024,
       "id": "reflection-ai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Reflection AI",
       "node_type": "Company",
       "sector": "Foundation Models",
@@ -4166,11 +4607,11 @@
     {
       "founded_year": 2019,
       "id": "cohere",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Cohere",
       "node_type": "Company",
-      "sector": "Enterprise LLM",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "sector": "Enterprise AI / Foundation Models",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "website": "cohere.com"
     },
     {
@@ -4275,10 +4716,10 @@
       "hq_city": "Menlo Park, USA",
       "hq_region": "North America",
       "id": "menlo-ventures",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Menlo Ventures",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Seed → Growth",
       "type": "VC",
       "website": "https://menlovc.com"
@@ -4355,10 +4796,10 @@
       "hq_city": "San Francisco, USA",
       "hq_region": "North America",
       "id": "redpoint-ventures",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Redpoint Ventures",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
       "stage_focus": "Seed → Growth",
       "type": "VC",
       "website": "https://redpoint.com"
@@ -4480,10 +4921,10 @@
       "hq_city": "Toronto, Canada",
       "hq_region": "North America",
       "id": "radical-ventures",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Radical Ventures",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Seed → Series B",
       "type": "VC",
       "website": "https://radical.vc"
@@ -4605,10 +5046,10 @@
       "hq_city": "London / SF",
       "hq_region": "Europe",
       "id": "index-ventures",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Index Ventures",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Seed → Growth",
       "type": "VC",
       "website": "https://indexventures.com"
@@ -4640,10 +5081,10 @@
       "hq_city": "London, UK",
       "hq_region": "Europe",
       "id": "balderton-capital",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Balderton Capital",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Seed → Series B",
       "type": "VC",
       "website": "https://balderton.com"
@@ -4651,11 +5092,11 @@
     {
       "founded_year": null,
       "id": "gradium",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Gradium",
       "node_type": "Company",
-      "sector": "",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "sector": "AI Voice",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "website": ""
     },
     {
@@ -4800,10 +5241,10 @@
       "hq_city": "Munich, Germany",
       "hq_region": "Europe",
       "id": "hv-capital",
-      "last_updated": "2026-02-23T05:47:18Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "HV Capital",
       "node_type": "VCFirm",
-      "source": "xlsx:ai_vc_firms_worldwide.xlsx",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "Seed → Series C",
       "type": "VC",
       "website": "https://hvcapital.com"
@@ -5176,7 +5617,7 @@
     {
       "founded_year": 1998,
       "id": "tencent",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Tencent",
       "node_type": "VCFirm",
       "sector": "Internet / Gaming",
@@ -5267,7 +5708,7 @@
     {
       "founded_year": 1999,
       "id": "alibaba",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Alibaba",
       "node_type": "VCFirm",
       "sector": "E-commerce / Cloud",
@@ -5348,7 +5789,7 @@
     {
       "founded_year": 2021,
       "id": "minimax",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "MiniMax",
       "node_type": "Company",
       "sector": "Foundation Models",
@@ -5358,7 +5799,7 @@
     {
       "founded_year": 2019,
       "id": "zhipu-ai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Zhipu AI",
       "node_type": "Company",
       "sector": "Foundation Models",
@@ -6220,7 +6661,7 @@
     {
       "founded_year": 2023,
       "id": "xai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "xAI",
       "node_type": "Company",
       "sector": "Foundation Models",
@@ -6360,7 +6801,7 @@
     {
       "founded_year": 2022,
       "id": "elevenlabs",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "ElevenLabs",
       "node_type": "Company",
       "sector": "AI Audio",
@@ -6379,7 +6820,7 @@
     },
     {
       "id": "elad-gil",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "linkedin": "https://www.linkedin.com/in/eladgil/",
       "name": "Elad Gil",
       "node_type": "VCFirm",
@@ -6750,7 +7191,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "softbank",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "SoftBank",
       "node_type": "VCFirm",
       "source": "curated:https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
@@ -6765,7 +7206,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "iconiq-capital",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Iconiq Capital",
       "node_type": "VCFirm",
       "source": "curated:https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
@@ -6780,7 +7221,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "valor-capital",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Valor Capital",
       "node_type": "VCFirm",
       "source": "curated:https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
@@ -6795,7 +7236,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "jeff-bezos",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Jeff Bezos",
       "node_type": "VCFirm",
       "source": "curated:https://news.crunchbase.com/venture/largest-funding-rounds-genai-defense-eoy-2025/",
@@ -6806,7 +7247,7 @@
     {
       "founded_year": null,
       "id": "project-prometheus",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Project Prometheus",
       "node_type": "Company",
       "sector": "AI / Robotics",
@@ -6816,7 +7257,7 @@
     {
       "founded_year": null,
       "id": "anduril-industries",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Anduril Industries",
       "node_type": "Company",
       "sector": "Defense Tech / AI",
@@ -6826,7 +7267,7 @@
     {
       "founded_year": null,
       "id": "anysphere-(cursor)",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Anysphere (Cursor)",
       "node_type": "Company",
       "sector": "AI Code",
@@ -6840,10 +7281,10 @@
       "hq_city": "",
       "hq_region": "",
       "id": "greenoaks-capital",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Greenoaks Capital",
       "node_type": "VCFirm",
-      "source": "curated:https://techfundingnews.com/openai-anthropic-xai-ai-funding-trends-2025/",
+      "source": "curated:https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
       "stage_focus": "",
       "type": "VC",
       "website": ""
@@ -6851,7 +7292,7 @@
     {
       "founded_year": null,
       "id": "safe-superintelligence",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Safe Superintelligence",
       "node_type": "Company",
       "sector": "AI Safety",
@@ -6861,7 +7302,7 @@
     {
       "founded_year": null,
       "id": "thinking-machines-lab",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Thinking Machines Lab",
       "node_type": "Company",
       "sector": "Foundation Models",
@@ -6875,7 +7316,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "asml",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "ASML",
       "node_type": "VCFirm",
       "source": "curated:https://news.crunchbase.com/venture/largest-funding-rounds-genai-defense-eoy-2025/",
@@ -6886,7 +7327,7 @@
     {
       "founded_year": null,
       "id": "perplexity",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Perplexity",
       "node_type": "Company",
       "sector": "AI Search",
@@ -6900,7 +7341,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "institutional-venture-partners-(ivp)",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Institutional Venture Partners (IVP)",
       "node_type": "VCFirm",
       "source": "curated:https://www.pymnts.com/artificial-intelligence-2/2025/perplexity-valuation-hits-20-billion-following-new-funding-round/",
@@ -6915,7 +7356,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "capitalg",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "CapitalG",
       "node_type": "VCFirm",
       "source": "curated:https://www.therobotreport.com/physical-intelligence-raises-600m-advance-robot-foundation-models/",
@@ -6926,7 +7367,7 @@
     {
       "founded_year": null,
       "id": "figure-ai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Figure AI",
       "node_type": "Company",
       "sector": "Robotics",
@@ -6936,7 +7377,7 @@
     {
       "founded_year": null,
       "id": "physical-intelligence-(pi)",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Physical Intelligence (Pi)",
       "node_type": "Company",
       "sector": "Robotics / AI",
@@ -6950,7 +7391,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "general-atlantic",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "General Atlantic",
       "node_type": "VCFirm",
       "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
@@ -6961,7 +7402,7 @@
     {
       "founded_year": null,
       "id": "runway",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Runway",
       "node_type": "Company",
       "sector": "AI Video",
@@ -6975,7 +7416,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "andra-capital",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Andra Capital",
       "node_type": "VCFirm",
       "source": "curated:https://lambda.ai/blog/lambda-raises-480m-to-expand-ai-cloud-platform",
@@ -6986,7 +7427,7 @@
     {
       "founded_year": null,
       "id": "lambda",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Lambda",
       "node_type": "Company",
       "sector": "AI Infrastructure",
@@ -7000,7 +7441,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "t.-rowe-price",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "T. Rowe Price",
       "node_type": "VCFirm",
       "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
@@ -7011,7 +7452,7 @@
     {
       "founded_year": null,
       "id": "sandboxaq",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "SandboxAQ",
       "node_type": "Company",
       "sector": "AI / Quantum",
@@ -7025,7 +7466,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "wellington-management",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Wellington Management",
       "node_type": "VCFirm",
       "source": "curated:https://www.cnbc.com/2025/06/10/glean-gen-ai-search-startup-raises-150-million-at-7-billion-value.html",
@@ -7036,7 +7477,7 @@
     {
       "founded_year": null,
       "id": "glean",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Glean",
       "node_type": "Company",
       "sector": "Enterprise AI Search",
@@ -7046,7 +7487,7 @@
     {
       "founded_year": null,
       "id": "abridge",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Abridge",
       "node_type": "Company",
       "sector": "AI Healthcare",
@@ -7060,10 +7501,10 @@
       "hq_city": "",
       "hq_region": "",
       "id": "coatue",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Coatue",
       "node_type": "VCFirm",
-      "source": "curated:https://www.cnbc.com/2026/02/12/anthropic-closes-30-billion-funding-round-at-380-billion-valuation.html",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "stage_focus": "",
       "type": "VC",
       "website": ""
@@ -7071,7 +7512,7 @@
     {
       "founded_year": null,
       "id": "shield-ai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Shield AI",
       "node_type": "Company",
       "sector": "Defense Tech / AI",
@@ -7085,7 +7526,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "sapphire-ventures",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Sapphire Ventures",
       "node_type": "VCFirm",
       "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
@@ -7096,7 +7537,7 @@
     {
       "founded_year": null,
       "id": "eliseai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "EliseAI",
       "node_type": "Company",
       "sector": "AI Conversational",
@@ -7110,7 +7551,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "koch-disruptive-technologies",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Koch Disruptive Technologies",
       "node_type": "VCFirm",
       "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
@@ -7121,7 +7562,7 @@
     {
       "founded_year": null,
       "id": "celestial-ai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Celestial AI",
       "node_type": "Company",
       "sector": "AI Chips / Photonics",
@@ -7135,7 +7576,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "eric-schmidt",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Eric Schmidt",
       "node_type": "VCFirm",
       "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
@@ -7146,7 +7587,7 @@
     {
       "founded_year": null,
       "id": "lila-sciences",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Lila Sciences",
       "node_type": "Company",
       "sector": "AI Drug Discovery",
@@ -7156,7 +7597,7 @@
     {
       "founded_year": null,
       "id": "eudia",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Eudia",
       "node_type": "Company",
       "sector": "AI Legal",
@@ -7170,7 +7611,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "kleiner-perkins",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Kleiner Perkins",
       "node_type": "VCFirm",
       "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
@@ -7181,11 +7622,11 @@
     {
       "founded_year": null,
       "id": "hippocratic-ai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Hippocratic AI",
       "node_type": "Company",
       "sector": "AI Healthcare",
-      "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "website": ""
     },
     {
@@ -7195,7 +7636,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "meritech",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Meritech",
       "node_type": "VCFirm",
       "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
@@ -7206,7 +7647,7 @@
     {
       "founded_year": null,
       "id": "fal",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Fal",
       "node_type": "Company",
       "sector": "AI Infrastructure",
@@ -7220,7 +7661,7 @@
       "hq_city": "",
       "hq_region": "",
       "id": "magnetar",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Magnetar",
       "node_type": "VCFirm",
       "source": "curated:https://www.sevensquaretech.com/top-us-ai-startups-raised-100m-funding-2025/",
@@ -7231,7 +7672,7 @@
     {
       "founded_year": null,
       "id": "tensorwave",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "TensorWave",
       "node_type": "Company",
       "sector": "AI Infrastructure",
@@ -7241,7 +7682,7 @@
     {
       "founded_year": null,
       "id": "snorkel-ai",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Snorkel AI",
       "node_type": "Company",
       "sector": "AI Data Platform",
@@ -7251,7 +7692,7 @@
     {
       "founded_year": null,
       "id": "moonshot-ai-(kimi)",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Moonshot AI (Kimi)",
       "node_type": "Company",
       "sector": "Foundation Models",
@@ -7265,12 +7706,797 @@
       "hq_city": "",
       "hq_region": "",
       "id": "qatar-investment-authority",
-      "last_updated": "2026-02-23T22:59:57Z",
+      "last_updated": "2026-02-24T00:42:02Z",
       "name": "Qatar Investment Authority",
       "node_type": "VCFirm",
       "source": "curated:https://www.cnbc.com/video/2026/01/07/xai-closes-20-billion-funding-round-as-anthropic-secures-10-billion.html",
       "stage_focus": "",
       "type": "VC",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "b-capital",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "B Capital",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "apptronik",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Apptronik",
+      "node_type": "Company",
+      "sector": "Humanoid Robotics",
+      "source": "curated:https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "the-bot-co.",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "The Bot Co.",
+      "node_type": "Company",
+      "sector": "Humanoid Robotics",
+      "source": "curated:https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "nvidia",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Nvidia",
+      "node_type": "VCFirm",
+      "source": "curated:https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "skild-ai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Skild AI",
+      "node_type": "Company",
+      "sector": "AI / Autonomy",
+      "source": "curated:https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "eclipse-ventures",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Eclipse Ventures",
+      "node_type": "VCFirm",
+      "source": "curated:https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "forsight-robotics",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "ForSight Robotics",
+      "node_type": "Company",
+      "sector": "Surgical Robotics",
+      "source": "curated:https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "bezos-expeditions",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Bezos Expeditions",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "fieldai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "FieldAI",
+      "node_type": "Company",
+      "sector": "Robotics / Embodied AI",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "isomorphic-labs",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Isomorphic Labs",
+      "node_type": "Company",
+      "sector": "AI Drug Discovery",
+      "source": "curated:https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "openevidence",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "OpenEvidence",
+      "node_type": "Company",
+      "sector": "AI Medical Search",
+      "source": "curated:https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "oak-hc/ft",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Oak HC/FT",
+      "node_type": "VCFirm",
+      "source": "curated:https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "ambience-healthcare",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Ambience Healthcare",
+      "node_type": "Company",
+      "sector": "AI Healthcare",
+      "source": "curated:https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "ftv-capital",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "FTV Capital",
+      "node_type": "VCFirm",
+      "source": "curated:https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "duos",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Duos",
+      "node_type": "Company",
+      "sector": "AI Healthcare",
+      "source": "curated:https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "novo-holdings",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Novo Holdings",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "maplight-therapeutics",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "MapLight Therapeutics",
+      "node_type": "Company",
+      "sector": "AI Drug Discovery",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "disruptive",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Disruptive",
+      "node_type": "VCFirm",
+      "source": "curated:https://news.crunchbase.com/venture/record-high-us-semiconductor-startup-funding-eoy-2025/",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "groq",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Groq",
+      "node_type": "Company",
+      "sector": "AI Chips / Inference",
+      "source": "curated:https://news.crunchbase.com/venture/record-high-us-semiconductor-startup-funding-eoy-2025/",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "multiple",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Multiple",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "metropolis",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Metropolis",
+      "node_type": "Company",
+      "sector": "AI / Computer Vision",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "beacon-software",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Beacon Software",
+      "node_type": "Company",
+      "sector": "AI SaaS",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "synchron",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Synchron",
+      "node_type": "Company",
+      "sector": "Brain-Computer Interface",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "braveheart-bio",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Braveheart Bio",
+      "node_type": "Company",
+      "sector": "AI Drug Discovery",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "general-intuition",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "General Intuition",
+      "node_type": "Company",
+      "sector": "AI Agents",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "decagon",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Decagon",
+      "node_type": "Company",
+      "sector": "AI Customer Service",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "bow-wave-capital",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Bow Wave Capital",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "majestic-labs",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Majestic Labs",
+      "node_type": "Company",
+      "sector": "AI Chips / Memory",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "wonderful",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Wonderful",
+      "node_type": "Company",
+      "sector": "AI Agents / Multilingual",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "iambic-therapeutics",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Iambic Therapeutics",
+      "node_type": "Company",
+      "sector": "AI Drug Discovery",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "inception",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Inception",
+      "node_type": "Company",
+      "sector": "Foundation Models / Code",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "giga",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Giga",
+      "node_type": "Company",
+      "sector": "AI Voice Agents",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "gamma",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Gamma",
+      "node_type": "Company",
+      "sector": "AI Presentations",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "scribe",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Scribe",
+      "node_type": "Company",
+      "sector": "AI Workflow Documentation",
+      "source": "curated:https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "unconventional-ai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Unconventional AI",
+      "node_type": "Company",
+      "sector": "Neuromorphic Computing",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "suno",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Suno",
+      "node_type": "Company",
+      "sector": "AI Music",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "valor-equity",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Valor Equity",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "crusoe",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Crusoe",
+      "node_type": "Company",
+      "sector": "AI Infrastructure",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "evenup",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "EvenUp",
+      "node_type": "Company",
+      "sector": "AI Legal",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "bond",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Bond",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "baseten",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Baseten",
+      "node_type": "Company",
+      "sector": "AI Inference",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "exa",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Exa",
+      "node_type": "Company",
+      "sector": "AI Search",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "new-enterprise-associates-(nea)",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "New Enterprise Associates (NEA)",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "cuspai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "CuspAI",
+      "node_type": "Company",
+      "sector": "AI Materials Discovery",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "georgian",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Georgian",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "polyai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "PolyAI",
+      "node_type": "Company",
+      "sector": "Conversational AI",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "kkr",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "KKR",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "ontic",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Ontic",
+      "node_type": "Company",
+      "sector": "AI Security Intelligence",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "vintage",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Vintage",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "cast-ai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "CAST AI",
+      "node_type": "Company",
+      "sector": "AI Cloud Optimization",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "motive",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Motive",
+      "node_type": "Company",
+      "sector": "AI Operations / Fleet",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "eurazeo",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Eurazeo",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "filigran",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Filigran",
+      "node_type": "Company",
+      "sector": "AI Cybersecurity",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "axiom-math",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Axiom Math",
+      "node_type": "Company",
+      "sector": "AI Mathematics",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "nexthop-ai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Nexthop AI",
+      "node_type": "Company",
+      "sector": "AI Networking Hardware",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "mirelo",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Mirelo",
+      "node_type": "Company",
+      "sector": "AI Audio",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "dawn-capital",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Dawn Capital",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "runware",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Runware",
+      "node_type": "Company",
+      "sector": "AI Inference",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "samaya",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Samaya",
+      "node_type": "Company",
+      "sector": "AI Financial Services",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "furtherai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "FurtherAI",
+      "node_type": "Company",
+      "sector": "AI Insurance",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "dtcp",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "DTCP",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "resistant-ai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Resistant AI",
+      "node_type": "Company",
+      "sector": "AI Fraud Prevention",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "lightrock",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Lightrock",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "augury",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Augury",
+      "node_type": "Company",
+      "sector": "Industrial AI",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "ai_focus": "",
+      "aum": "",
+      "check_size": "",
+      "hq_city": "",
+      "hq_region": "",
+      "id": "cox-enterprises",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Cox Enterprises",
+      "node_type": "VCFirm",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "stage_focus": "",
+      "type": "VC",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "carbyne",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Carbyne",
+      "node_type": "Company",
+      "sector": "AI Emergency Response",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "peec-ai",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Peec AI",
+      "node_type": "Company",
+      "sector": "AI Search / SEO",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+      "website": ""
+    },
+    {
+      "founded_year": null,
+      "id": "quantum-systems",
+      "last_updated": "2026-02-24T00:42:02Z",
+      "name": "Quantum Systems",
+      "node_type": "Company",
+      "sector": "AI Drone Tech",
+      "source": "curated:https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
       "website": ""
     }
   ]

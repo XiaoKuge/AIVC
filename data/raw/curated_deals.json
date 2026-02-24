@@ -358,5 +358,473 @@
     "date": "2026-01",
     "source_url": "https://www.pymnts.com/artificial-intelligence-2/2025/perplexity-valuation-hits-20-billion-following-new-funding-round/",
     "company_sector": "AI Search"
+  },
+  {
+    "investor": "B Capital",
+    "company": "Apptronik",
+    "amount": "$403M",
+    "round": "Series A",
+    "date": "2025",
+    "source_url": "https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+    "company_sector": "Humanoid Robotics"
+  },
+  {
+    "investor": "Greenoaks Capital",
+    "company": "The Bot Co.",
+    "amount": "$150M",
+    "round": "Equity",
+    "date": "2025",
+    "source_url": "https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+    "company_sector": "Humanoid Robotics"
+  },
+  {
+    "investor": "Nvidia",
+    "company": "Skild AI",
+    "amount": "$135M",
+    "round": "Series B",
+    "date": "2025-06",
+    "source_url": "https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+    "company_sector": "AI / Autonomy"
+  },
+  {
+    "investor": "Eclipse Ventures",
+    "company": "ForSight Robotics",
+    "amount": "$125M",
+    "round": "Series B",
+    "date": "2025-06",
+    "source_url": "https://news.crunchbase.com/robotics/startup-funding-rises-h1-2025-ai-apptronik-data/",
+    "company_sector": "Surgical Robotics"
+  },
+  {
+    "investor": "Bezos Expeditions",
+    "company": "FieldAI",
+    "amount": "$405M",
+    "round": "Equity",
+    "date": "2025-08",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "Robotics / Embodied AI"
+  },
+  {
+    "investor": "Thrive Capital",
+    "company": "Isomorphic Labs",
+    "amount": "$600M",
+    "round": "Series",
+    "date": "2025-03",
+    "source_url": "https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+    "company_sector": "AI Drug Discovery"
+  },
+  {
+    "investor": "Sequoia Capital",
+    "company": "OpenEvidence",
+    "amount": "$925M",
+    "round": "Series A",
+    "date": "2025-02",
+    "source_url": "https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+    "company_sector": "AI Medical Search"
+  },
+  {
+    "investor": "Oak HC/FT",
+    "company": "Ambience Healthcare",
+    "amount": "$243M",
+    "round": "Series C",
+    "date": "2025",
+    "source_url": "https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+    "company_sector": "AI Healthcare"
+  },
+  {
+    "investor": "General Catalyst",
+    "company": "Hippocratic AI",
+    "amount": "$126M",
+    "round": "Series C",
+    "date": "2025-11",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Healthcare"
+  },
+  {
+    "investor": "FTV Capital",
+    "company": "Duos",
+    "amount": "$130M",
+    "round": "Growth Equity",
+    "date": "2025-10",
+    "source_url": "https://news.crunchbase.com/health-wellness-biotech/ai-healthcare-funding-rises-2025/",
+    "company_sector": "AI Healthcare"
+  },
+  {
+    "investor": "Novo Holdings",
+    "company": "MapLight Therapeutics",
+    "amount": "$372.5M",
+    "round": "Series D",
+    "date": "2025-07",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Drug Discovery"
+  },
+  {
+    "investor": "Disruptive",
+    "company": "Groq",
+    "amount": "$750M",
+    "round": "Series E",
+    "date": "2025-09",
+    "source_url": "https://news.crunchbase.com/venture/record-high-us-semiconductor-startup-funding-eoy-2025/",
+    "company_sector": "AI Chips / Inference"
+  },
+  {
+    "investor": "Multiple",
+    "company": "Metropolis",
+    "amount": "$500M",
+    "round": "Series D",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI / Computer Vision"
+  },
+  {
+    "investor": "Multiple",
+    "company": "Armis",
+    "amount": "$435M",
+    "round": "Pre-IPO",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Cybersecurity"
+  },
+  {
+    "investor": "Multiple",
+    "company": "Beacon Software",
+    "amount": "$250M",
+    "round": "Series B",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI SaaS"
+  },
+  {
+    "investor": "Multiple",
+    "company": "Synchron",
+    "amount": "$200M",
+    "round": "Series D",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "Brain-Computer Interface"
+  },
+  {
+    "investor": "Multiple",
+    "company": "Braveheart Bio",
+    "amount": "$185M",
+    "round": "Series A",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Drug Discovery"
+  },
+  {
+    "investor": "Multiple",
+    "company": "General Intuition",
+    "amount": "$133.7M",
+    "round": "Seed",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Agents"
+  },
+  {
+    "investor": "Multiple",
+    "company": "Decagon",
+    "amount": "$131M",
+    "round": "Series C",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Customer Service"
+  },
+  {
+    "investor": "Bow Wave Capital",
+    "company": "Majestic Labs",
+    "amount": "$100M",
+    "round": "Series A",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Chips / Memory"
+  },
+  {
+    "investor": "Index Ventures",
+    "company": "Wonderful",
+    "amount": "$100M",
+    "round": "Series A",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Agents / Multilingual"
+  },
+  {
+    "investor": "Multiple",
+    "company": "Iambic Therapeutics",
+    "amount": "$100M",
+    "round": "Series B",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Drug Discovery"
+  },
+  {
+    "investor": "Menlo Ventures",
+    "company": "Inception",
+    "amount": "$50M",
+    "round": "Seed",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "Foundation Models / Code"
+  },
+  {
+    "investor": "Redpoint Ventures",
+    "company": "Giga",
+    "amount": "$61M",
+    "round": "Series A",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Voice Agents"
+  },
+  {
+    "investor": "Multiple",
+    "company": "Gamma",
+    "amount": "$68M",
+    "round": "Series B",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Presentations"
+  },
+  {
+    "investor": "Multiple",
+    "company": "Scribe",
+    "amount": "$75M",
+    "round": "Series C",
+    "date": "2025-11",
+    "source_url": "https://www.secondtalent.com/resources/top-ai-startups-that-raised-funding-in-november-2025/",
+    "company_sector": "AI Workflow Documentation"
+  },
+  {
+    "investor": "Andreessen Horowitz (a16z)",
+    "company": "Unconventional AI",
+    "amount": "$475M",
+    "round": "Seed",
+    "date": "2025-12",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "Neuromorphic Computing"
+  },
+  {
+    "investor": "Menlo Ventures",
+    "company": "Suno",
+    "amount": "$250M",
+    "round": "Series C",
+    "date": "2025-11",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Music"
+  },
+  {
+    "investor": "Valor Equity",
+    "company": "Crusoe",
+    "amount": "$1.38B",
+    "round": "Series E",
+    "date": "2025-10",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Infrastructure"
+  },
+  {
+    "investor": "Bessemer Venture Partners",
+    "company": "EvenUp",
+    "amount": "$150M",
+    "round": "Series E",
+    "date": "2025-10",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Legal"
+  },
+  {
+    "investor": "Lightspeed Venture Partners",
+    "company": "Distyl AI",
+    "amount": "$175M",
+    "round": "Equity",
+    "date": "2025-09",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "Enterprise AI"
+  },
+  {
+    "investor": "Bond",
+    "company": "Baseten",
+    "amount": "$150M",
+    "round": "Series D",
+    "date": "2025-09",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Inference"
+  },
+  {
+    "investor": "Benchmark",
+    "company": "Exa",
+    "amount": "$85M",
+    "round": "Series B",
+    "date": "2025-09",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Search"
+  },
+  {
+    "investor": "NEA",
+    "company": "CuspAI",
+    "amount": "$100M",
+    "round": "Series A",
+    "date": "2025-09",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Materials Discovery"
+  },
+  {
+    "investor": "Radical Ventures",
+    "company": "Cohere",
+    "amount": "$500M",
+    "round": "Equity",
+    "date": "2025-08",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "Enterprise AI / Foundation Models"
+  },
+  {
+    "investor": "Georgian",
+    "company": "PolyAI",
+    "amount": "$86M",
+    "round": "Series D",
+    "date": "2025-12",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "Conversational AI"
+  },
+  {
+    "investor": "KKR",
+    "company": "Ontic",
+    "amount": "$230M",
+    "round": "Series C",
+    "date": "2025-08",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Security Intelligence"
+  },
+  {
+    "investor": "Vintage",
+    "company": "CAST AI",
+    "amount": "$108M",
+    "round": "Series C",
+    "date": "2025-05",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Cloud Optimization"
+  },
+  {
+    "investor": "Insight Partners",
+    "company": "Motive",
+    "amount": "$150M",
+    "round": "Equity",
+    "date": "2025-07",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Operations / Fleet"
+  },
+  {
+    "investor": "Eurazeo",
+    "company": "Filigran",
+    "amount": "$58M",
+    "round": "Series C",
+    "date": "2025-10",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Cybersecurity"
+  },
+  {
+    "investor": "B Capital",
+    "company": "Axiom Math",
+    "amount": "$64M",
+    "round": "Seed",
+    "date": "2025-10",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Mathematics"
+  },
+  {
+    "investor": "Lightspeed Venture Partners",
+    "company": "Nexthop AI",
+    "amount": "$110M",
+    "round": "Seed",
+    "date": "2025-03",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Networking Hardware"
+  },
+  {
+    "investor": "Index Ventures",
+    "company": "Mirelo",
+    "amount": "$41M",
+    "round": "Seed",
+    "date": "2025-12",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Audio"
+  },
+  {
+    "investor": "Balderton Capital",
+    "company": "Gradium",
+    "amount": "$70M",
+    "round": "Seed",
+    "date": "2025-12",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Voice"
+  },
+  {
+    "investor": "Dawn Capital",
+    "company": "Runware",
+    "amount": "$50M",
+    "round": "Series A",
+    "date": "2025-12",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Inference"
+  },
+  {
+    "investor": "Coatue",
+    "company": "Samaya",
+    "amount": "$43.5M",
+    "round": "Seed",
+    "date": "2025-05",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Financial Services"
+  },
+  {
+    "investor": "Andreessen Horowitz (a16z)",
+    "company": "FurtherAI",
+    "amount": "$25M",
+    "round": "Series A",
+    "date": "2025-10",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Insurance"
+  },
+  {
+    "investor": "DTCP",
+    "company": "Resistant AI",
+    "amount": "$25M",
+    "round": "Series B",
+    "date": "2025-10",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Fraud Prevention"
+  },
+  {
+    "investor": "Lightrock",
+    "company": "Augury",
+    "amount": "$75M",
+    "round": "Equity",
+    "date": "2025-02",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "Industrial AI"
+  },
+  {
+    "investor": "Cox Enterprises",
+    "company": "Carbyne",
+    "amount": "$100M",
+    "round": "Equity",
+    "date": "2025-07",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Emergency Response"
+  },
+  {
+    "investor": "Lightspeed Venture Partners",
+    "company": "Peec AI",
+    "amount": "$21M",
+    "round": "Series A",
+    "date": "2025-11",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Search / SEO"
+  },
+  {
+    "investor": "HV Capital",
+    "company": "Quantum Systems",
+    "amount": "€160M",
+    "round": "Equity",
+    "date": "2025-05",
+    "source_url": "https://www.crescendo.ai/news/latest-vc-investment-deals-in-ai-startups",
+    "company_sector": "AI Drone Tech"
   }
 ]
