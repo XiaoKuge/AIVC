@@ -140,7 +140,7 @@ def generate_html(
         is_recent = nid in recent_company_ids and node_type == COMPANY
         if is_recent:
             color = RECENT_COLOR
-            size = max(size, 35)  # ensure visibility
+            size = max(size, 70)  # big enough to stand out
 
         # Resolve URL for this node
         url = ""
@@ -458,6 +458,11 @@ def _build_timeline_and_legend_html(
             background: #1A1A1A; color: #AAA; cursor: pointer; font-size: 10px;
             white-space: nowrap; font-family: inherit; text-transform: uppercase; letter-spacing: 0.5px;
         " onmouseover="this.style.borderColor='#FF8C00';this.style.color='#FF8C00'" onmouseout="this.style.borderColor='#333';this.style.color='#AAA'">Reset</button>
+        <button id="fit-view-btn" style="
+            padding: 3px 10px; border: 1px solid #333; border-radius: 2px;
+            background: #1A1A1A; color: #AAA; cursor: pointer; font-size: 10px;
+            white-space: nowrap; font-family: inherit; text-transform: uppercase; letter-spacing: 0.5px;
+        " onmouseover="this.style.borderColor='#00D67E';this.style.color='#00D67E'" onmouseout="this.style.borderColor='#333';this.style.color='#AAA'">Fit View</button>
     </div>
     <div class="tl-ticks" style="max-width:1200px; margin:0 auto; padding-left:104px; padding-right:232px;">
         {''.join(f'<span>{y}</span>' for y in range(min_year, max_year + 1, max(1, (max_year - min_year) // 10)))}
@@ -578,6 +583,12 @@ def _build_timeline_and_legend_html(
             labelMin.textContent = YEAR_MIN;
             labelMax.textContent = YEAR_MAX;
             info.textContent = '';
+            network.fit({{ animation: {{ duration: 400, easingFunction: 'easeInOutQuad' }} }});
+        }});
+
+        // Fit View button — just re-center without resetting filters
+        document.getElementById('fit-view-btn').addEventListener('click', function() {{
+            network.fit({{ animation: {{ duration: 400, easingFunction: 'easeInOutQuad' }} }});
         }});
 
         applyFilter();
@@ -950,32 +961,53 @@ def _build_timeline_and_legend_html(
     checkReady();
 
     function initBreathing() {{
-        // Draw pulsing glow rings behind recent nodes
+        // Store original sizes for recent nodes
+        var origSizes = {{}};
+        recentIds.forEach(function(nid) {{
+            var nd = nodes.get(nid);
+            if (nd) origSizes[nid] = nd.size || 70;
+        }});
+
+        // Draw pulsing glow rings + pulse node size
         network.on('afterDrawing', function(ctx) {{
-            phase += 0.04;
+            phase += 0.05;
             var pulse = (Math.sin(phase) + 1) / 2; // 0..1
+
+            // Pulse node sizes
+            var sizeUpdates = [];
+            recentIds.forEach(function(nid) {{
+                var base = origSizes[nid] || 70;
+                sizeUpdates.push({{ id: nid, size: base + 12 * pulse }});
+            }});
+            if (sizeUpdates.length > 0) nodes.update(sizeUpdates);
 
             recentIds.forEach(function(nid) {{
                 var pos = network.getPositions([nid])[nid];
                 if (!pos) return;
 
-                // Get the node's current rendered size
                 var nodeData = nodes.get(nid);
                 if (!nodeData || nodeData.hidden) return;
-                var baseRadius = (nodeData.size || 20) * 0.5;
+                var baseRadius = (nodeData.size || 70) * 0.55;
 
-                // Outer glow ring (large, faint)
-                var outerR = baseRadius + 12 + 10 * pulse;
+                // Wide outer glow (large, pulsing)
+                var outerR = baseRadius + 20 + 18 * pulse;
                 ctx.beginPath();
                 ctx.arc(pos.x, pos.y, outerR, 0, 2 * Math.PI);
-                ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.06 + 0.08 * pulse).toFixed(3) + ')';
+                ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.08 + 0.12 * pulse).toFixed(3) + ')';
                 ctx.fill();
 
-                // Inner glow ring (tight, brighter)
-                var innerR = baseRadius + 4 + 5 * pulse;
+                // Mid glow ring
+                var midR = baseRadius + 8 + 10 * pulse;
+                ctx.beginPath();
+                ctx.arc(pos.x, pos.y, midR, 0, 2 * Math.PI);
+                ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.15 + 0.2 * pulse).toFixed(3) + ')';
+                ctx.fill();
+
+                // Tight inner glow (bright core halo)
+                var innerR = baseRadius + 2 + 4 * pulse;
                 ctx.beginPath();
                 ctx.arc(pos.x, pos.y, innerR, 0, 2 * Math.PI);
-                ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.12 + 0.15 * pulse).toFixed(3) + ')';
+                ctx.fillStyle = 'rgba(255, 60, 60, ' + (0.2 + 0.25 * pulse).toFixed(3) + ')';
                 ctx.fill();
             }});
         }});
