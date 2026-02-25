@@ -7,6 +7,15 @@ from typing import Optional
 from pydantic import BaseModel
 
 
+class Event(BaseModel):
+    """A recorded event on a node or edge (provenance / audit trail)."""
+
+    type: str        # "created" | "updated" | "invested" | "partnered" | "personal_inv"
+    date: str        # UTC ISO timestamp of when the event was recorded
+    description: str  # Human-readable summary
+    source_url: str = ""  # Source URL if available
+
+
 class VCFirm(BaseModel):
     """A venture capital firm."""
 

@@ -68,13 +68,35 @@ class KnowledgeGraph:
         if not attrs.get("last_updated"):
             attrs["last_updated"] = _now()
         attrs["node_type"] = node_type
+        timestamp = attrs["last_updated"]
+        source_url = _extract_source_url(attrs.get("source", ""))
+        name = attrs.get("name", nid)
+
         if nid in self.g:
             # Merge: update non-empty fields only
             existing = self.g.nodes[nid]
+            changed = []
             for k, v in attrs.items():
-                if v not in (None, "", 0):
+                if v not in (None, "", 0) and k not in ("events",):
+                    if existing.get(k) != v and k not in ("last_updated", "node_type"):
+                        changed.append(k)
                     existing[k] = v
+            if changed:
+                events = existing.setdefault("events", [])
+                events.append({
+                    "type": "updated",
+                    "date": timestamp,
+                    "description": f"Updated: {', '.join(changed)}",
+                    "source_url": source_url,
+                })
         else:
+            attrs.setdefault("events", [])
+            attrs["events"].append({
+                "type": "created",
+                "date": timestamp,
+                "description": f"Discovered: {name}",
+                "source_url": source_url,
+            })
             self.g.add_node(nid, **attrs)
 
     # ── Edge operations ─────────────────────────────────────────
@@ -124,6 +146,8 @@ class KnowledgeGraph:
         if not attrs.get("last_updated"):
             attrs["last_updated"] = _now()
         attrs["edge_type"] = edge_type
+        timestamp = attrs["last_updated"]
+        source_url = _extract_source_url(attrs.get("source", ""))
 
         # Build a stable key to distinguish multiple investments
         round_val = attrs.get("round", "")
@@ -133,12 +157,27 @@ class KnowledgeGraph:
         else:
             key = edge_type
 
+        # Build human-readable description for the event
+        src_name = self.g.nodes[src].get("name", src) if src in self.g else src
+        dst_name = self.g.nodes[dst].get("name", dst) if dst in self.g else dst
+
         if self.g.has_edge(src, dst, key=key):
             # Update existing edge with same key
             existing = self.g.edges[src, dst, key]
+            changed = []
             for k, v in attrs.items():
-                if v not in (None, "", 0):
+                if v not in (None, "", 0) and k not in ("events",):
+                    if existing.get(k) != v and k not in ("last_updated", "edge_type"):
+                        changed.append(k)
                     existing[k] = v
+            if changed:
+                events = existing.setdefault("events", [])
+                events.append({
+                    "type": "updated",
+                    "date": timestamp,
+                    "description": f"Updated: {', '.join(changed)}",
+                    "source_url": source_url,
+                })
         else:
             # Check for a bare edge (no round/date) that should be upgraded
             if (round_val or date_val) and key != edge_type:
@@ -149,6 +188,27 @@ class KnowledgeGraph:
                             # Upgrade: remove bare edge, will be re-added with proper key
                             self.g.remove_edge(src, dst, key=bare_key)
                             break
+
+            # Build event description
+            desc_parts = [f"{src_name} → {dst_name}"]
+            if round_val:
+                desc_parts.append(round_val)
+            if attrs.get("amount"):
+                desc_parts.append(attrs["amount"])
+            evt_type_map = {
+                INVESTED_IN: "invested",
+                PARTNER_AT: "partnered",
+                PERSONAL_INVESTMENT: "personal_inv",
+            }
+            evt_type = evt_type_map.get(edge_type, "created")
+
+            attrs.setdefault("events", [])
+            attrs["events"].append({
+                "type": evt_type,
+                "date": timestamp,
+                "description": " | ".join(desc_parts),
+                "source_url": source_url,
+            })
             self.g.add_edge(src, dst, key=key, **attrs)
 
     # ── Persistence ─────────────────────────────────────────────
@@ -221,3 +281,15 @@ class KnowledgeGraph:
 
 def _now() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _extract_source_url(source: str) -> str:
+    """Extract a URL from a source string, if present."""
+    if not source:
+        return ""
+    if source.startswith("curated:"):
+        url = source[len("curated:"):]
+        return url if url.startswith("http") else ""
+    if source.startswith("http"):
+        return source
+    return ""

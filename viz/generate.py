@@ -141,6 +141,7 @@ def generate_html(
     node_detail_labels = {}  # nid -> multi-line detail label (for focus mode)
     node_images = {}  # nid -> {image, brokenImage} for focus mode
     node_urls = {}  # nid -> URL (for clickable links)
+    node_tooltips = {}  # nid -> tooltip HTML (for custom tooltip only)
     for nid, attrs in kg.g.nodes(data=True):
         node_type = attrs.get("node_type", "unknown")
         name = attrs.get("name", nid)
@@ -220,17 +221,18 @@ def generate_html(
             if attrs.get("website"):
                 title_parts.append(f"Web: {attrs['website']}")
 
-        title = "<br>".join(title_parts)
+        node_tooltips[nid] = "<br>".join(title_parts)
         node_detail_labels[nid] = "\n".join(detail_parts)
 
         net.add_node(
-            nid, label=name, color=color, size=size, title=title,
+            nid, label=name, color=color, size=size,
             font={"size": 14, "color": "#C8C8C8"},
         )
 
     # Add edges and collect metadata for timeline + focus mode
     edge_dates = {}       # "src||dst" -> year (for timeline)
     edge_detail_labels = {}  # "src||dst" -> label string (for focus mode)
+    edge_tooltips = {}    # "src||dst" -> tooltip HTML (for custom tooltip only)
     timeline_events: dict[str, list[dict]] = {}  # nid -> [event, ...]
     for src, dst, data in kg.g.edges(data=True):
         edge_type = data.get("edge_type", "")
@@ -249,9 +251,8 @@ def generate_html(
             label_parts.append(data["round"])
         if data.get("title") and edge_type == "partner_at":
             label_parts.append(data["title"])
-        title = "<br>".join(title_parts)
-
         edge_key = f"{src}||{dst}"
+        edge_tooltips[edge_key] = "<br>".join(title_parts)
         edge_detail_labels[edge_key] = " | ".join(label_parts) if label_parts else edge_type.replace("_", " ")
 
         # Highlight only the specific recent investment edges
@@ -260,7 +261,7 @@ def generate_html(
             color = RECENT_COLOR
             edge_width = 3
 
-        net.add_edge(src, dst, color=color, title=title, arrows="to", width=edge_width)
+        net.add_edge(src, dst, color=color, arrows="to", width=edge_width)
 
         # Track date for timeline
         date_str = data.get("date", "")
@@ -343,6 +344,16 @@ def generate_html(
         <span style="font-size:13px; color:#555; letter-spacing:1px; text-transform:uppercase;">What's Going On</span>
         <span style="flex:1;"></span>
         <span id="node-count" style="font-size:11px; color:#00D67E;"></span>
+        <button id="share-btn" style="
+            padding: 3px 10px; border: 1px solid #333; border-radius: 2px;
+            background: #1A1A1A; color: #AAA; cursor: pointer; font-size: 10px;
+            white-space: nowrap; font-family: inherit; text-transform: uppercase; letter-spacing: 0.5px;
+        " onmouseover="this.style.borderColor='#00BFFF';this.style.color='#00BFFF'" onmouseout="this.style.borderColor='#333';this.style.color='#AAA'">Share</button>
+        <button id="export-png-btn" style="
+            padding: 3px 10px; border: 1px solid #333; border-radius: 2px;
+            background: #1A1A1A; color: #AAA; cursor: pointer; font-size: 10px;
+            white-space: nowrap; font-family: inherit; text-transform: uppercase; letter-spacing: 0.5px;
+        " onmouseover="this.style.borderColor='#00D67E';this.style.color='#00D67E'" onmouseout="this.style.borderColor='#333';this.style.color='#AAA'">Export PNG</button>
     </div>
 </div>
 <style>
@@ -358,8 +369,22 @@ def generate_html(
 """
     html = html.replace("<body>", "<body>\n" + header_html)
 
+    # Collect events for dossier
+    node_events = {}
+    for nid, attrs in kg.g.nodes(data=True):
+        evts = attrs.get("events", [])
+        if evts:
+            node_events[nid] = evts
+
+    edge_events = {}  # "src||dst" -> aggregated events across multi-edge keys
+    for src, dst, data in kg.g.edges(data=True):
+        evts = data.get("events", [])
+        if evts:
+            ekey = f"{src}||{dst}"
+            edge_events.setdefault(ekey, []).extend(evts)
+
     inject = _build_timeline_and_legend_html(
-        edge_dates, min_year, max_year, default_min_year, node_detail_labels, edge_detail_labels, node_urls, node_images, recent_company_ids, timeline_events
+        edge_dates, min_year, max_year, default_min_year, node_detail_labels, edge_detail_labels, node_urls, node_images, recent_company_ids, timeline_events, node_tooltips, edge_tooltips, node_events, edge_events
     )
     html = html.replace("</body>", inject + "</body>")
     output_path.write_text(html)
@@ -378,11 +403,19 @@ def _build_timeline_and_legend_html(
     node_images: dict[str, dict[str, str]],
     recent_company_ids: set[str] | None = None,
     timeline_events: dict[str, list[dict]] | None = None,
+    node_tooltips: dict[str, str] | None = None,
+    edge_tooltips: dict[str, str] | None = None,
+    node_events: dict[str, list[dict]] | None = None,
+    edge_events: dict[str, list[dict]] | None = None,
 ) -> str:
     """Build the HTML/CSS/JS for the timeline slider, legend, and interactions."""
     edge_dates_json = json.dumps(edge_dates)
     node_labels_json = json.dumps(node_detail_labels, ensure_ascii=False)
     edge_labels_json = json.dumps(edge_detail_labels, ensure_ascii=False)
+    node_tooltips_json = json.dumps(node_tooltips or {}, ensure_ascii=False)
+    edge_tooltips_json = json.dumps(edge_tooltips or {}, ensure_ascii=False)
+    node_events_json = json.dumps(node_events or {}, ensure_ascii=False)
+    edge_events_json = json.dumps(edge_events or {}, ensure_ascii=False)
     node_urls_json = json.dumps(node_urls, ensure_ascii=False)
     node_images_json = json.dumps(node_images, ensure_ascii=False)
     recent_ids_json = json.dumps(sorted(recent_company_ids or []))
@@ -643,6 +676,15 @@ def _build_timeline_and_legend_html(
         }});
 
         applyFilter();
+
+        window.__setTimeline = function(yMin, yMax) {{
+            sliderMin.value = yMin;
+            sliderMax.value = yMax;
+            labelMin.textContent = yMin;
+            labelMax.textContent = yMax;
+            updateHighlight();
+            applyFilter();
+        }};
     }}
 }})();
 </script>
@@ -695,10 +737,11 @@ def _build_timeline_and_legend_html(
     checkReady();
 
     function initTooltip() {{
-        var nodeMap = {{}};
-        nodes.get().forEach(function(n) {{ nodeMap[n.id] = n; }});
-        var edgeMap = {{}};
-        edges.get().forEach(function(e) {{ edgeMap[e.id] = e; }});
+        var nodeTips = {node_tooltips_json};
+        var edgeTips = {edge_tooltips_json};
+        // Map edge id -> "from||to" key for tooltip lookup
+        var edgeTipMap = {{}};
+        edges.get().forEach(function(e) {{ edgeTipMap[e.id] = e.from + '||' + e.to; }});
 
         var container = document.getElementById('mynetwork') || document.querySelector('.vis-network');
 
@@ -731,18 +774,19 @@ def _build_timeline_and_legend_html(
         }}
 
         network.on('hoverNode', function(params) {{
-            var node = nodeMap[params.node];
-            if (node && node.title && lastMouseEvent) {{
-                showTip(node.title, lastMouseEvent);
+            var tip = nodeTips[params.node];
+            if (tip && lastMouseEvent) {{
+                showTip(tip, lastMouseEvent);
             }}
         }});
 
         network.on('blurNode', function() {{ hideTip(); }});
 
         network.on('hoverEdge', function(params) {{
-            var edge = edgeMap[params.edge];
-            if (edge && edge.title && lastMouseEvent) {{
-                showTip(edge.title, lastMouseEvent);
+            var key = edgeTipMap[params.edge];
+            var tip = key && edgeTips[key];
+            if (tip && lastMouseEvent) {{
+                showTip(tip, lastMouseEvent);
             }}
         }});
 
@@ -786,6 +830,7 @@ def _build_timeline_and_legend_html(
     #focus-timeline .ft-header {{
         display: flex;
         align-items: baseline;
+        justify-content: center;
         gap: 10px;
         margin-bottom: 8px;
     }}
@@ -810,6 +855,7 @@ def _build_timeline_and_legend_html(
         overflow-y: hidden;
         white-space: nowrap;
         padding-bottom: 6px;
+        text-align: center;
     }}
     #focus-timeline .ft-scroll::-webkit-scrollbar {{
         height: 4px;
@@ -821,8 +867,8 @@ def _build_timeline_and_legend_html(
     #focus-timeline .ft-track {{
         display: inline-flex;
         align-items: flex-start;
+        justify-content: center;
         gap: 0;
-        min-width: 100%;
     }}
     #focus-timeline .ft-event {{
         display: inline-flex;
@@ -1129,18 +1175,31 @@ def _build_timeline_and_legend_html(
         network.on('selectNode', function(params) {{
             if (params.nodes.length === 1) {{
                 focusOn(params.nodes[0]);
+                if (typeof window.__showDossier === 'function') {{
+                    window.__showDossier(params.nodes[0], 'node');
+                }}
             }}
         }});
 
         network.on('deselectNode', function() {{
             resetFocus();
+            if (typeof window.__closeDossier === 'function') window.__closeDossier();
         }});
 
         network.on('click', function(params) {{
             if (params.nodes.length === 0 && params.edges.length === 0 && focusedNode) {{
                 resetFocus();
+                if (typeof window.__closeDossier === 'function') window.__closeDossier();
+            }}
+            // Edge click → show dossier for edge
+            if (params.nodes.length === 0 && params.edges.length > 0) {{
+                if (typeof window.__showDossier === 'function') {{
+                    window.__showDossier(params.edges[0], 'edge');
+                }}
             }}
         }});
+
+        window.__focusOn = focusOn;
     }}
 }})();
 </script>
@@ -1167,18 +1226,16 @@ def _build_timeline_and_legend_html(
     .vis-loading-bar .text {{ color: #666 !important; font-family: 'SF Mono','Consolas',monospace !important; }}
 </style>
 
-<!-- Breathing/pulsing glow animation for recent nodes -->
+<!-- Breathing/pulsing glow animation for recent nodes + hover glow -->
 <script>
 (function() {{
     var recentIds = new Set({recent_ids_json});
-    if (recentIds.size === 0) return;
-
     var phase = 0;
     var lastRedraw = 0;
     var REDRAW_INTERVAL = 50; // ms between redraws (~20fps)
 
     function checkReady() {{
-        if (typeof network === 'undefined' || typeof nodes === 'undefined') {{
+        if (typeof network === 'undefined' || typeof nodes === 'undefined' || typeof edges === 'undefined') {{
             setTimeout(checkReady, 200);
             return;
         }}
@@ -1187,52 +1244,552 @@ def _build_timeline_and_legend_html(
     checkReady();
 
     function initBreathing() {{
-        // Store original sizes for recent nodes
-        var origSizes = {{}};
-        recentIds.forEach(function(nid) {{
-            var nd = nodes.get(nid);
-            if (nd) origSizes[nid] = nd.size || 70;
+        // Build adjacency for hover glow
+        var adjMap = {{}};
+        edges.get().forEach(function(e) {{
+            if (!adjMap[e.from]) adjMap[e.from] = [];
+            if (!adjMap[e.to]) adjMap[e.to] = [];
+            adjMap[e.from].push(e.to);
+            adjMap[e.to].push(e.from);
         }});
 
-        // Draw pulsing glow rings only (no node size updates in draw callback)
+        var hoveredNode = null;
+        var hoverNeighbors = new Set();
+
+        network.on('hoverNode', function(params) {{
+            hoveredNode = params.node;
+            hoverNeighbors = new Set(adjMap[params.node] || []);
+        }});
+        network.on('blurNode', function() {{
+            hoveredNode = null;
+            hoverNeighbors = new Set();
+        }});
+
+        // Helper: extract RGB from node color for glow tint
+        function nodeRGB(nid) {{
+            var nd = nodes.get(nid);
+            if (!nd) return '255,255,255';
+            var c = nd.color;
+            if (typeof c === 'object') c = c.border || c.background || c.highlight || '#FFF';
+            if (typeof c !== 'string') return '255,255,255';
+            c = c.replace(/^#/, '');
+            if (c.length === 3) c = c[0]+c[0]+c[1]+c[1]+c[2]+c[2];
+            if (c.length !== 6) return '255,255,255';
+            return parseInt(c.substring(0,2),16) + ',' + parseInt(c.substring(2,4),16) + ',' + parseInt(c.substring(4,6),16);
+        }}
+
         network.on('afterDrawing', function(ctx) {{
             var pulse = (Math.sin(phase) + 1) / 2; // 0..1
 
+            // Recent nodes red glow
             recentIds.forEach(function(nid) {{
                 var pos = network.getPositions([nid])[nid];
                 if (!pos) return;
-
                 var nodeData = nodes.get(nid);
                 if (!nodeData || nodeData.hidden) return;
                 var baseRadius = (nodeData.size || 20) * 0.5;
 
-                // Outer glow
                 var outerR = baseRadius + 8 + 6 * pulse;
                 ctx.beginPath();
                 ctx.arc(pos.x, pos.y, outerR, 0, 2 * Math.PI);
                 ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.06 + 0.09 * pulse).toFixed(3) + ')';
                 ctx.fill();
 
-                // Inner glow
                 var innerR = baseRadius + 2 + 3 * pulse;
                 ctx.beginPath();
                 ctx.arc(pos.x, pos.y, innerR, 0, 2 * Math.PI);
                 ctx.fillStyle = 'rgba(255, 60, 60, ' + (0.12 + 0.15 * pulse).toFixed(3) + ')';
                 ctx.fill();
             }});
+
+            // Hover glow — edges + nodes
+            if (hoveredNode) {{
+                var allGlow = [hoveredNode].concat(Array.from(hoverNeighbors));
+                var positions = network.getPositions(allGlow);
+                var hoverPos = positions[hoveredNode];
+
+                // Edge glow (drawn first, behind node glow)
+                if (hoverPos) {{
+                    hoverNeighbors.forEach(function(nid) {{
+                        var nPos = positions[nid];
+                        if (!nPos) return;
+                        var nd = nodes.get(nid);
+                        if (nd && nd.opacity !== undefined && nd.opacity < 0.1) return;
+                        ctx.save();
+                        ctx.beginPath();
+                        ctx.moveTo(hoverPos.x, hoverPos.y);
+                        ctx.lineTo(nPos.x, nPos.y);
+                        ctx.strokeStyle = 'rgba(0, 191, 255, ' + (0.06 + 0.10 * pulse).toFixed(3) + ')';
+                        ctx.lineWidth = 4 + 3 * pulse;
+                        ctx.shadowColor = 'rgba(0, 191, 255, 0.4)';
+                        ctx.shadowBlur = 8 + 6 * pulse;
+                        ctx.stroke();
+                        ctx.restore();
+                    }});
+                }}
+
+                // Node glow
+                allGlow.forEach(function(nid) {{
+                    var pos = positions[nid];
+                    if (!pos) return;
+                    var nodeData = nodes.get(nid);
+                    if (!nodeData || nodeData.hidden) return;
+                    if (nodeData.opacity !== undefined && nodeData.opacity < 0.1) return;
+                    var baseRadius = (nodeData.size || 20) * 0.5;
+                    var isCenter = (nid === hoveredNode);
+                    var intensity = isCenter ? 1.0 : 0.5;
+                    var rgb = nodeRGB(nid);
+
+                    var outerR = baseRadius + 6 + 5 * pulse * intensity;
+                    ctx.beginPath();
+                    ctx.arc(pos.x, pos.y, outerR, 0, 2 * Math.PI);
+                    ctx.fillStyle = 'rgba(' + rgb + ', ' + (0.06 * intensity + 0.10 * pulse * intensity).toFixed(3) + ')';
+                    ctx.fill();
+
+                    var innerR = baseRadius + 1 + 3 * pulse * intensity;
+                    ctx.beginPath();
+                    ctx.arc(pos.x, pos.y, innerR, 0, 2 * Math.PI);
+                    ctx.fillStyle = 'rgba(' + rgb + ', ' + (0.10 * intensity + 0.14 * pulse * intensity).toFixed(3) + ')';
+                    ctx.fill();
+                }});
+            }}
         }});
 
-        // Advance phase and trigger redraw for glow animation only (no nodes.update)
         function animLoop(ts) {{
             if (ts - lastRedraw >= REDRAW_INTERVAL) {{
                 lastRedraw = ts;
                 phase += 0.05;
-                network.redraw();
+                if (recentIds.size > 0 || hoveredNode) {{
+                    network.redraw();
+                }}
             }}
             requestAnimationFrame(animLoop);
         }}
         requestAnimationFrame(animLoop);
     }}
+}})();
+</script>
+
+<!-- Event Dossier Modal -->
+<style>
+    #event-dossier {{
+        display: none;
+        position: fixed;
+        top: 56px;
+        right: 16px;
+        bottom: 80px;
+        width: 340px;
+        background: rgba(10,10,10,0.97);
+        border: 1px solid #333;
+        border-left: 3px solid #FF8C00;
+        border-radius: 4px;
+        z-index: 10002;
+        font-family: {MONO_FONT};
+        color: #CCC;
+        overflow: hidden;
+        box-shadow: 0 0 40px rgba(255,140,0,0.08);
+        display: none;
+    }}
+    #dossier-header {{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 14px 18px 10px;
+        border-bottom: 1px solid #222;
+    }}
+    #dossier-header .dh-label {{
+        font-size: 9px;
+        color: #FF8C00;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+    }}
+    #dossier-header .dh-name {{
+        font-size: 14px;
+        color: #EEE;
+        font-weight: 600;
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }}
+    #dossier-header .dh-count {{
+        font-size: 10px;
+        color: #555;
+        white-space: nowrap;
+    }}
+    #dossier-close {{
+        background: none;
+        border: none;
+        color: #555;
+        font-size: 18px;
+        cursor: pointer;
+        padding: 0 4px;
+        line-height: 1;
+    }}
+    #dossier-close:hover {{ color: #FF8C00; }}
+    #dossier-body {{
+        padding: 18px;
+        min-height: 120px;
+        position: relative;
+        overflow: hidden;
+    }}
+    .dossier-card {{
+        display: none;
+    }}
+    .dossier-card.active {{
+        display: block;
+    }}
+    .dc-type {{
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 2px;
+        font-size: 9px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 8px;
+    }}
+    .dc-type.created {{ background: rgba(0,214,126,0.15); color: #00D67E; }}
+    .dc-type.updated {{ background: rgba(0,191,255,0.15); color: #00BFFF; }}
+    .dc-type.invested {{ background: rgba(255,140,0,0.15); color: #FF8C00; }}
+    .dc-type.partnered {{ background: rgba(255,140,0,0.15); color: #FF8C00; }}
+    .dc-type.personal_inv {{ background: rgba(139,69,19,0.2); color: #CD853F; }}
+    .dc-date {{
+        font-size: 10px;
+        color: #00D67E;
+        font-variant-numeric: tabular-nums;
+        margin-left: 10px;
+    }}
+    .dc-desc {{
+        font-size: 13px;
+        color: #DDD;
+        line-height: 1.5;
+        margin: 10px 0;
+        word-break: break-word;
+    }}
+    .dc-source {{
+        font-size: 11px;
+    }}
+    .dc-source a {{
+        color: #00BFFF;
+        text-decoration: none;
+    }}
+    .dc-source a:hover {{
+        color: #00D67E;
+        text-decoration: underline;
+    }}
+    #dossier-nav {{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+        padding: 10px 18px 14px;
+        border-top: 1px solid #222;
+    }}
+    .dnav-btn {{
+        background: #1A1A1A;
+        border: 1px solid #333;
+        border-radius: 2px;
+        color: #AAA;
+        cursor: pointer;
+        padding: 4px 14px;
+        font-family: inherit;
+        font-size: 11px;
+    }}
+    .dnav-btn:hover {{ border-color: #FF8C00; color: #FF8C00; }}
+    .dnav-btn:disabled {{ opacity: 0.3; cursor: default; border-color: #333; color: #555; }}
+    #dossier-pos {{
+        font-size: 11px;
+        color: #555;
+        font-variant-numeric: tabular-nums;
+        min-width: 50px;
+        text-align: center;
+    }}
+</style>
+<div id="event-dossier">
+    <div id="dossier-header">
+        <span class="dh-label">Intel</span>
+        <span class="dh-name" id="dossier-name"></span>
+        <span class="dh-count" id="dossier-count"></span>
+        <button id="dossier-close">&times;</button>
+    </div>
+    <div id="dossier-body"></div>
+    <div id="dossier-nav">
+        <button class="dnav-btn" id="dossier-prev">&larr; prev</button>
+        <span id="dossier-pos"></span>
+        <button class="dnav-btn" id="dossier-next">next &rarr;</button>
+    </div>
+</div>
+<script>
+(function() {{
+    var nodeEventsData = {node_events_json};
+    var edgeEventsData = {edge_events_json};
+
+    var modal = document.getElementById('event-dossier');
+    var nameEl = document.getElementById('dossier-name');
+    var countEl = document.getElementById('dossier-count');
+    var bodyEl = document.getElementById('dossier-body');
+    var posEl = document.getElementById('dossier-pos');
+    var prevBtn = document.getElementById('dossier-prev');
+    var nextBtn = document.getElementById('dossier-next');
+    var closeBtn = document.getElementById('dossier-close');
+
+    var currentEvents = [];
+    var currentIdx = 0;
+
+    // Build edge key map once vis.js is ready
+    var edgeKeyMap = {{}};
+    function buildEdgeKeyMap() {{
+        if (typeof edges === 'undefined') {{
+            setTimeout(buildEdgeKeyMap, 300);
+            return;
+        }}
+        edges.get().forEach(function(e) {{
+            edgeKeyMap[e.id] = e.from + '||' + e.to;
+        }});
+    }}
+    buildEdgeKeyMap();
+
+    function renderCard(idx) {{
+        if (idx < 0 || idx >= currentEvents.length) return;
+        currentIdx = idx;
+        var ev = currentEvents[idx];
+        var typeClass = (ev.type || 'created').replace(/[^a-z_]/g, '');
+        var html = '<div class="dossier-card active">';
+        html += '<span class="dc-type ' + typeClass + '">' + (ev.type || '').toUpperCase() + '</span>';
+        html += '<span class="dc-date">' + (ev.date || '') + '</span>';
+        html += '<div class="dc-desc">' + (ev.description || '') + '</div>';
+        if (ev.source_url) {{
+            var domain = '';
+            try {{ domain = new URL(ev.source_url).hostname; }} catch(e) {{ domain = ev.source_url; }}
+            html += '<div class="dc-source"><a href="' + ev.source_url + '" target="_blank" rel="noopener">&#x1F517; ' + domain + '</a></div>';
+        }}
+        html += '</div>';
+        bodyEl.innerHTML = html;
+        posEl.textContent = (idx + 1) + ' / ' + currentEvents.length;
+        prevBtn.disabled = (idx === 0);
+        nextBtn.disabled = (idx === currentEvents.length - 1);
+    }}
+
+    function openDossier(title, events) {{
+        if (!events || events.length === 0) return;
+        currentEvents = events;
+        currentIdx = 0;
+        nameEl.textContent = title;
+        countEl.textContent = events.length + ' event' + (events.length !== 1 ? 's' : '');
+        renderCard(0);
+        modal.style.display = 'block';
+    }}
+
+    function closeDossier() {{
+        modal.style.display = 'none';
+        currentEvents = [];
+    }}
+
+    prevBtn.addEventListener('click', function() {{
+        if (currentIdx > 0) renderCard(currentIdx - 1);
+    }});
+    nextBtn.addEventListener('click', function() {{
+        if (currentIdx < currentEvents.length - 1) renderCard(currentIdx + 1);
+    }});
+    closeBtn.addEventListener('click', closeDossier);
+
+    document.addEventListener('keydown', function(e) {{
+        if (modal.style.display !== 'block') return;
+        if (e.key === 'Escape') closeDossier();
+        if (e.key === 'ArrowLeft' && currentIdx > 0) renderCard(currentIdx - 1);
+        if (e.key === 'ArrowRight' && currentIdx < currentEvents.length - 1) renderCard(currentIdx + 1);
+    }});
+
+    // Expose for click handlers in other IIFEs
+    window.__showDossier = function(id, type) {{
+        if (type === 'node') {{
+            var events = nodeEventsData[id];
+            var nd = (typeof nodes !== 'undefined') ? nodes.get(id) : null;
+            var title = (nd && nd.label) ? nd.label : id;
+            openDossier(title, events);
+        }} else if (type === 'edge') {{
+            var key = edgeKeyMap[id];
+            var events = key ? edgeEventsData[key] : null;
+            if (!events) return;
+            // Build a title from the key
+            var parts = key ? key.split('||') : [id];
+            var title = parts.join(' → ');
+            openDossier(title, events);
+        }}
+    }};
+    window.__closeDossier = closeDossier;
+}})();
+</script>
+
+<!-- Share URL + Export PNG -->
+<script>
+(function() {{
+    var YEAR_MIN = {min_year}, YEAR_MAX = {max_year}, DEFAULT_MIN = {default_min_year};
+
+    function parseHash() {{
+        var hash = window.location.hash.replace(/^#/, '');
+        if (!hash) return {{}};
+        var params = {{}};
+        hash.split('&').forEach(function(pair) {{
+            var parts = pair.split('=');
+            if (parts.length === 2) {{
+                params[parts[0]] = decodeURIComponent(parts[1]);
+            }}
+        }});
+        return params;
+    }}
+
+    function buildHash(focusNodeId, yMin, yMax) {{
+        var parts = [];
+        if (focusNodeId) parts.push('focus=' + encodeURIComponent(focusNodeId));
+        if (yMin !== undefined && parseInt(yMin) !== DEFAULT_MIN) parts.push('ymin=' + yMin);
+        if (yMax !== undefined && parseInt(yMax) !== YEAR_MAX) parts.push('ymax=' + yMax);
+        return parts.length ? '#' + parts.join('&') : '';
+    }}
+
+    function updateHash() {{
+        if (typeof network === 'undefined') return;
+        var selected = network.getSelectedNodes();
+        var focusId = selected.length === 1 ? selected[0] : null;
+        var sliderMin = document.getElementById('year-min');
+        var sliderMax = document.getElementById('year-max');
+        var yMin = sliderMin ? sliderMin.value : DEFAULT_MIN;
+        var yMax = sliderMax ? sliderMax.value : YEAR_MAX;
+        var hash = buildHash(focusId, yMin, yMax);
+        if (hash) {{
+            history.replaceState(null, '', hash);
+        }} else {{
+            history.replaceState(null, '', window.location.pathname + window.location.search);
+        }}
+    }}
+
+    // Restore state from URL hash on load
+    function restoreFromHash() {{
+        var params = parseHash();
+        if (!params.focus && !params.ymin && !params.ymax) return;
+
+        function waitForReady(cb) {{
+            if (typeof network !== 'undefined' && typeof window.__focusOn === 'function' && typeof window.__setTimeline === 'function') {{
+                cb();
+            }} else {{
+                setTimeout(function() {{ waitForReady(cb); }}, 200);
+            }}
+        }}
+
+        waitForReady(function() {{
+            // Apply timeline filters first
+            var yMin = params.ymin ? parseInt(params.ymin) : DEFAULT_MIN;
+            var yMax = params.ymax ? parseInt(params.ymax) : YEAR_MAX;
+            yMin = Math.max(YEAR_MIN, Math.min(YEAR_MAX, yMin));
+            yMax = Math.max(YEAR_MIN, Math.min(YEAR_MAX, yMax));
+            if (yMin > yMax) yMin = yMax;
+            if (parseInt(document.getElementById('year-min').value) !== yMin || parseInt(document.getElementById('year-max').value) !== yMax) {{
+                window.__setTimeline(yMin, yMax);
+            }}
+
+            // Focus on node if specified
+            if (params.focus) {{
+                try {{
+                    var allNodes = nodes.get();
+                    var exists = allNodes.some(function(n) {{ return n.id === params.focus; }});
+                    if (exists) {{
+                        network.selectNodes([params.focus]);
+                        window.__focusOn(params.focus);
+                    }}
+                }} catch(e) {{
+                    // Invalid node ID — skip gracefully
+                }}
+            }}
+        }});
+    }}
+    restoreFromHash();
+
+    // Keep URL hash in sync as user interacts
+    function checkReady() {{
+        if (typeof network === 'undefined') {{
+            setTimeout(checkReady, 200);
+            return;
+        }}
+        network.on('selectNode', function() {{ setTimeout(updateHash, 50); }});
+        network.on('deselectNode', function() {{ setTimeout(updateHash, 50); }});
+        var sliderMin = document.getElementById('year-min');
+        var sliderMax = document.getElementById('year-max');
+        if (sliderMin) sliderMin.addEventListener('change', function() {{ setTimeout(updateHash, 50); }});
+        if (sliderMax) sliderMax.addEventListener('change', function() {{ setTimeout(updateHash, 50); }});
+    }}
+    checkReady();
+
+    // Share button
+    document.getElementById('share-btn').addEventListener('click', function() {{
+        var btn = this;
+        // Build URL from current state
+        var selected = (typeof network !== 'undefined') ? network.getSelectedNodes() : [];
+        var focusId = selected.length === 1 ? selected[0] : null;
+        var sliderMin = document.getElementById('year-min');
+        var sliderMax = document.getElementById('year-max');
+        var yMin = sliderMin ? sliderMin.value : DEFAULT_MIN;
+        var yMax = sliderMax ? sliderMax.value : YEAR_MAX;
+        var hash = buildHash(focusId, yMin, yMax);
+        var url = window.location.origin + window.location.pathname + hash;
+
+        function showCopied() {{
+            var orig = btn.textContent;
+            btn.textContent = 'Copied!';
+            btn.style.borderColor = '#00D67E';
+            btn.style.color = '#00D67E';
+            setTimeout(function() {{
+                btn.textContent = orig;
+                btn.style.borderColor = '#333';
+                btn.style.color = '#AAA';
+            }}, 1500);
+        }}
+
+        if (navigator.clipboard && navigator.clipboard.writeText) {{
+            navigator.clipboard.writeText(url).then(showCopied).catch(function() {{
+                // Fallback
+                fallbackCopy(url, showCopied);
+            }});
+        }} else {{
+            fallbackCopy(url, showCopied);
+        }}
+    }});
+
+    function fallbackCopy(text, onSuccess) {{
+        var ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.left = '-9999px';
+        document.body.appendChild(ta);
+        ta.select();
+        try {{
+            document.execCommand('copy');
+            onSuccess();
+        }} catch(e) {{
+            alert('Copy failed. URL: ' + text);
+        }}
+        document.body.removeChild(ta);
+    }}
+
+    // Export PNG button
+    document.getElementById('export-png-btn').addEventListener('click', function() {{
+        try {{
+            var container = document.getElementById('mynetwork');
+            if (!container) return;
+            var canvas = container.querySelector('canvas');
+            if (!canvas) return;
+            var dataUrl = canvas.toDataURL('image/png');
+            var a = document.createElement('a');
+            a.href = dataUrl;
+            a.download = 'ai-vc-graph.png';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }} catch(e) {{
+            alert('Could not export PNG. The canvas may contain cross-origin images.');
+        }}
+    }});
 }})();
 </script>
 """
