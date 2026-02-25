@@ -1204,27 +1204,20 @@ def _build_timeline_and_legend_html(
 
                 var nodeData = nodes.get(nid);
                 if (!nodeData || nodeData.hidden) return;
-                var baseRadius = (nodeData.size || 70) * 0.55;
+                var baseRadius = (nodeData.size || 20) * 0.5;
 
-                // Wide outer glow (large, pulsing)
-                var outerR = baseRadius + 20 + 18 * pulse;
+                // Outer glow
+                var outerR = baseRadius + 8 + 6 * pulse;
                 ctx.beginPath();
                 ctx.arc(pos.x, pos.y, outerR, 0, 2 * Math.PI);
-                ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.08 + 0.12 * pulse).toFixed(3) + ')';
+                ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.06 + 0.09 * pulse).toFixed(3) + ')';
                 ctx.fill();
 
-                // Mid glow ring
-                var midR = baseRadius + 8 + 10 * pulse;
-                ctx.beginPath();
-                ctx.arc(pos.x, pos.y, midR, 0, 2 * Math.PI);
-                ctx.fillStyle = 'rgba(255, 32, 32, ' + (0.15 + 0.2 * pulse).toFixed(3) + ')';
-                ctx.fill();
-
-                // Tight inner glow (bright core halo)
-                var innerR = baseRadius + 2 + 4 * pulse;
+                // Inner glow
+                var innerR = baseRadius + 2 + 3 * pulse;
                 ctx.beginPath();
                 ctx.arc(pos.x, pos.y, innerR, 0, 2 * Math.PI);
-                ctx.fillStyle = 'rgba(255, 60, 60, ' + (0.2 + 0.25 * pulse).toFixed(3) + ')';
+                ctx.fillStyle = 'rgba(255, 60, 60, ' + (0.12 + 0.15 * pulse).toFixed(3) + ')';
                 ctx.fill();
             }});
         }});
