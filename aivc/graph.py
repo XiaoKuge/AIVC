@@ -1,4 +1,4 @@
-"""NetworkX DiGraph wrapper for the AI VC Knowledge Graph."""
+"""NetworkX MultiDiGraph wrapper for the AI VC Knowledge Graph."""
 
 from __future__ import annotations
 
@@ -31,14 +31,17 @@ PERSONAL_INVESTMENT = "personal_investment"
 
 
 class KnowledgeGraph:
-    """Wrapper around NetworkX DiGraph for AI VC data.
+    """Wrapper around NetworkX MultiDiGraph for AI VC data.
+
+    Uses MultiDiGraph to support multiple investment rounds between
+    the same firm→company pair (e.g. Series A, then Series B).
 
     Provides idempotent merge operations so re-running scrapers
     won't create duplicates.
     """
 
     def __init__(self) -> None:
-        self.g = nx.DiGraph()
+        self.g = nx.MultiDiGraph()
 
     # ── Node operations ─────────────────────────────────────────
 
@@ -113,20 +116,40 @@ class KnowledgeGraph:
         self._merge_edge(person_id, company_id, PERSONAL_INVESTMENT, attrs)
 
     def _merge_edge(self, src: str, dst: str, edge_type: str, attrs: dict[str, Any]) -> None:
-        """Idempotent merge: create or update an edge."""
+        """Idempotent merge: create or update an edge.
+
+        Uses (edge_type, round, date) as the edge key so that multiple
+        investment rounds between the same pair coexist.
+        """
         if not attrs.get("last_updated"):
             attrs["last_updated"] = _now()
         attrs["edge_type"] = edge_type
-        if self.g.has_edge(src, dst):
-            existing = self.g.edges[src, dst]
-            # Only update if same edge type
-            if existing.get("edge_type") == edge_type:
-                for k, v in attrs.items():
-                    if v not in (None, "", 0):
-                        existing[k] = v
-            # Different edge type: use multi-edge key approach via attribute
+
+        # Build a stable key to distinguish multiple investments
+        round_val = attrs.get("round", "")
+        date_val = attrs.get("date", "")
+        if round_val or date_val:
+            key = f"{edge_type}:{round_val}:{date_val}"
         else:
-            self.g.add_edge(src, dst, **attrs)
+            key = edge_type
+
+        if self.g.has_edge(src, dst, key=key):
+            # Update existing edge with same key
+            existing = self.g.edges[src, dst, key]
+            for k, v in attrs.items():
+                if v not in (None, "", 0):
+                    existing[k] = v
+        else:
+            # Check for a bare edge (no round/date) that should be upgraded
+            if (round_val or date_val) and key != edge_type:
+                for bare_key in [edge_type, 0]:
+                    if self.g.has_edge(src, dst, key=bare_key):
+                        ex = self.g.edges[src, dst, bare_key]
+                        if ex.get("edge_type") == edge_type and not ex.get("round") and not ex.get("date"):
+                            # Upgrade: remove bare edge, will be re-added with proper key
+                            self.g.remove_edge(src, dst, key=bare_key)
+                            break
+            self.g.add_edge(src, dst, key=key, **attrs)
 
     # ── Persistence ─────────────────────────────────────────────
 
@@ -140,11 +163,18 @@ class KnowledgeGraph:
 
     @classmethod
     def load(cls, path: str | Path) -> "KnowledgeGraph":
-        """Load graph from JSON."""
+        """Load graph from JSON.
+
+        Handles backward compatibility: old DiGraph JSON (multigraph=false)
+        is loaded as MultiDiGraph with existing edges getting key=0.
+        """
         path = Path(path)
         with open(path) as f:
             data = json.load(f)
         kg = cls()
+        # Ensure old DiGraph JSON loads as MultiDiGraph
+        if not data.get("multigraph"):
+            data["multigraph"] = True
         kg.g = nx.node_link_graph(data)
         return kg
 

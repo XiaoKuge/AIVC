@@ -114,3 +114,63 @@ class TestKnowledgeGraph:
         assert "new-startup" in kg.g
         assert kg.g.nodes["new-vc"]["node_type"] == FIRM
         assert kg.g.nodes["new-startup"]["node_type"] == COMPANY
+
+    def test_multi_round_investment(self):
+        """Multiple investment rounds between same firm and company should coexist."""
+        kg = KnowledgeGraph()
+        kg.add_investment("Test VC", "Startup Inc",
+                          Deal(amount="$10M", round="Series A", date="2024-01"))
+        kg.add_investment("Test VC", "Startup Inc",
+                          Deal(amount="$50M", round="Series B", date="2025-06"))
+
+        edges = kg.edges_by_type(INVESTED_IN)
+        assert len(edges) == 2
+        amounts = {e[2]["amount"] for e in edges}
+        assert amounts == {"$10M", "$50M"}
+        rounds = {e[2]["round"] for e in edges}
+        assert rounds == {"Series A", "Series B"}
+
+    def test_multi_round_idempotent(self):
+        """Re-adding the same round should update, not duplicate."""
+        kg = KnowledgeGraph()
+        kg.add_investment("Test VC", "Startup Inc",
+                          Deal(amount="$10M", round="Series A", date="2024-01"))
+        kg.add_investment("Test VC", "Startup Inc",
+                          Deal(amount="$12M", round="Series A", date="2024-01"))
+
+        edges = kg.edges_by_type(INVESTED_IN)
+        assert len(edges) == 1
+        assert edges[0][2]["amount"] == "$12M"  # Updated
+
+    def test_bare_edge_upgrade(self):
+        """A bare edge (no round/date) should be upgraded when a specific round arrives."""
+        kg = KnowledgeGraph()
+        kg.add_investment("Test VC", "Startup Inc", Deal())  # bare edge
+        assert len(kg.edges_by_type(INVESTED_IN)) == 1
+
+        kg.add_investment("Test VC", "Startup Inc",
+                          Deal(amount="$10M", round="Series A", date="2024-01"))
+        # Bare edge should be replaced, not a second edge
+        assert len(kg.edges_by_type(INVESTED_IN)) == 1
+        assert kg.edges_by_type(INVESTED_IN)[0][2]["amount"] == "$10M"
+
+    def test_save_and_load_multiround(self):
+        """Multi-round edges should survive save/load cycle."""
+        kg = KnowledgeGraph()
+        kg.add_investment("Test VC", "Startup Inc",
+                          Deal(amount="$10M", round="Series A", date="2024-01"))
+        kg.add_investment("Test VC", "Startup Inc",
+                          Deal(amount="$50M", round="Series B", date="2025-06"))
+
+        with tempfile.NamedTemporaryFile(suffix=".json", delete=False) as f:
+            path = f.name
+
+        kg.save(path)
+        kg2 = KnowledgeGraph.load(path)
+
+        edges = kg2.edges_by_type(INVESTED_IN)
+        assert len(edges) == 2
+        amounts = {e[2]["amount"] for e in edges}
+        assert amounts == {"$10M", "$50M"}
+
+        Path(path).unlink()

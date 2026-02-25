@@ -3,11 +3,11 @@
 from __future__ import annotations
 
 import re
-from datetime import datetime, timezone
-from pathlib import Path
+import time
 
 import feedparser
 
+from aivc.extract import fetch_article
 from scrapers.base import BaseScraper, ScrapedDeal, ScrapeResult
 
 # Keywords that indicate a funding/investment article
@@ -26,6 +26,9 @@ FUNDING_KEYWORDS = [
 ]
 
 FUNDING_PATTERN = re.compile("|".join(FUNDING_KEYWORDS), re.IGNORECASE)
+
+# Delay between full article fetches (seconds)
+FETCH_DELAY = 1.0
 
 
 class RSSMonitor(BaseScraper):
@@ -66,14 +69,22 @@ class RSSMonitor(BaseScraper):
             text = f"{title} {summary}"
 
             if FUNDING_PATTERN.search(text):
-                # This is a funding-related article
-                # We create a placeholder deal - LLM extractor will fill details
+                # Fetch full article text for better LLM extraction
+                full_text = text  # fallback
+                try:
+                    fetched = fetch_article(link)
+                    if fetched and len(fetched) > len(text):
+                        full_text = fetched
+                    time.sleep(FETCH_DELAY)
+                except Exception:
+                    pass  # Use RSS title+summary as fallback
+
                 deal = ScrapedDeal(
                     investor="",  # To be filled by LLM extractor
                     company="",
                     source_url=link,
-                    raw_text=text[:2000],
-                    confidence=0.5,  # Low confidence until LLM validates
+                    raw_text=full_text[:12000],
+                    confidence=0.5,
                 )
                 articles.append(deal)
 

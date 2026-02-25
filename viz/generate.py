@@ -34,6 +34,20 @@ EDGE_COLORS = {
 MONO_FONT = "'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', monospace"
 
 
+def _date_sort_key(date_str: str) -> str:
+    """Normalize date strings for chronological sorting.
+
+    "2025" -> "2025-00-00", "2025-12" -> "2025-12-00", "2025-12-15" -> "2025-12-15".
+    Empty/missing -> "9999-99-99".
+    """
+    if not date_str:
+        return "9999-99-99"
+    parts = date_str.split("-")
+    while len(parts) < 3:
+        parts.append("00")
+    return "-".join(parts[:3])
+
+
 def generate_html(
     graph_path: str | Path | None = None,
     output_path: str | Path | None = None,
@@ -140,7 +154,7 @@ def generate_html(
         is_recent = nid in recent_company_ids and node_type == COMPANY
         if is_recent:
             color = RECENT_COLOR
-            size = max(size, 70)  # big enough to stand out
+            size = max(size, min(size * 2, 40))  # slightly larger; glow handles visibility
 
         # Resolve URL for this node
         url = ""
@@ -217,6 +231,7 @@ def generate_html(
     # Add edges and collect metadata for timeline + focus mode
     edge_dates = {}       # "src||dst" -> year (for timeline)
     edge_detail_labels = {}  # "src||dst" -> label string (for focus mode)
+    timeline_events: dict[str, list[dict]] = {}  # nid -> [event, ...]
     for src, dst, data in kg.g.edges(data=True):
         edge_type = data.get("edge_type", "")
         color = EDGE_COLORS.get(edge_type, "#CCCCCC")
@@ -255,6 +270,40 @@ def generate_html(
                 edge_dates[edge_key] = year
             except ValueError:
                 pass
+
+        # Accumulate per-node timeline events (investment edges only)
+        if edge_type in (INVESTED_IN, PERSONAL_INVESTMENT):
+            raw_date = data.get("date", "")
+            sort_key = _date_sort_key(raw_date)
+            amount = data.get("amount", "")
+            rnd = data.get("round", "")
+            src_attrs = kg.g.nodes[src]
+            dst_attrs = kg.g.nodes[dst]
+            # Event for the investor (src) — neighbor is the company (dst)
+            timeline_events.setdefault(src, []).append({
+                "date": raw_date,
+                "sortKey": sort_key,
+                "amount": amount,
+                "round": rnd,
+                "neighborId": dst,
+                "neighborName": dst_attrs.get("name", dst),
+                "neighborType": dst_attrs.get("node_type", ""),
+            })
+            # Event for the company (dst) — neighbor is the investor (src)
+            timeline_events.setdefault(dst, []).append({
+                "date": raw_date,
+                "sortKey": sort_key,
+                "amount": amount,
+                "round": rnd,
+                "neighborId": src,
+                "neighborName": src_attrs.get("name", src),
+                "neighborType": src_attrs.get("node_type", ""),
+            })
+
+
+    # Sort each node's timeline events chronologically
+    for nid in timeline_events:
+        timeline_events[nid].sort(key=lambda ev: ev["sortKey"])
 
     # Compute year range
     if edge_dates:
@@ -310,7 +359,7 @@ def generate_html(
     html = html.replace("<body>", "<body>\n" + header_html)
 
     inject = _build_timeline_and_legend_html(
-        edge_dates, min_year, max_year, default_min_year, node_detail_labels, edge_detail_labels, node_urls, node_images, recent_company_ids
+        edge_dates, min_year, max_year, default_min_year, node_detail_labels, edge_detail_labels, node_urls, node_images, recent_company_ids, timeline_events
     )
     html = html.replace("</body>", inject + "</body>")
     output_path.write_text(html)
@@ -328,6 +377,7 @@ def _build_timeline_and_legend_html(
     node_urls: dict[str, str],
     node_images: dict[str, dict[str, str]],
     recent_company_ids: set[str] | None = None,
+    timeline_events: dict[str, list[dict]] | None = None,
 ) -> str:
     """Build the HTML/CSS/JS for the timeline slider, legend, and interactions."""
     edge_dates_json = json.dumps(edge_dates)
@@ -336,6 +386,7 @@ def _build_timeline_and_legend_html(
     node_urls_json = json.dumps(node_urls, ensure_ascii=False)
     node_images_json = json.dumps(node_images, ensure_ascii=False)
     recent_ids_json = json.dumps(sorted(recent_company_ids or []))
+    timeline_events_json = json.dumps(timeline_events or {}, ensure_ascii=False)
 
     return f"""
 <!-- Legend -->
@@ -711,6 +762,124 @@ def _build_timeline_and_legend_html(
 }})();
 </script>
 
+<!-- Focus Timeline Panel -->
+<style>
+    #focus-timeline {{
+        position: fixed;
+        bottom: 72px;
+        left: 0; right: 0;
+        background: rgba(10,10,10,0.97);
+        border-top: 1px solid #333;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s ease, padding 0.35s ease;
+        padding: 0 24px;
+        font-family: {MONO_FONT};
+        font-size: 11px;
+        color: #AAA;
+        z-index: 9998;
+    }}
+    #focus-timeline.active {{
+        max-height: 160px;
+        padding: 10px 24px 12px;
+    }}
+    #focus-timeline .ft-header {{
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-bottom: 8px;
+    }}
+    #focus-timeline .ft-header .ft-title {{
+        font-weight: 600;
+        color: #666;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 10px;
+    }}
+    #focus-timeline .ft-header .ft-node-name {{
+        color: #EEE;
+        font-size: 13px;
+        font-weight: 600;
+    }}
+    #focus-timeline .ft-header .ft-count {{
+        color: #555;
+        font-size: 10px;
+    }}
+    #focus-timeline .ft-scroll {{
+        overflow-x: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        padding-bottom: 6px;
+    }}
+    #focus-timeline .ft-scroll::-webkit-scrollbar {{
+        height: 4px;
+    }}
+    #focus-timeline .ft-scroll::-webkit-scrollbar-thumb {{
+        background: #333;
+        border-radius: 2px;
+    }}
+    #focus-timeline .ft-track {{
+        display: inline-flex;
+        align-items: flex-start;
+        gap: 0;
+        min-width: 100%;
+    }}
+    #focus-timeline .ft-event {{
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 100px;
+        cursor: pointer;
+        padding: 2px 6px;
+        border-radius: 3px;
+        transition: background 0.15s;
+    }}
+    #focus-timeline .ft-event:hover {{
+        background: rgba(255,255,255,0.05);
+    }}
+    #focus-timeline .ft-date {{
+        font-size: 9px;
+        color: #666;
+        margin-bottom: 4px;
+        font-variant-numeric: tabular-nums;
+    }}
+    #focus-timeline .ft-dot {{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-bottom: 4px;
+        box-shadow: 0 0 6px rgba(255,255,255,0.1);
+        flex-shrink: 0;
+    }}
+    #focus-timeline .ft-line {{
+        position: relative;
+    }}
+    #focus-timeline .ft-name {{
+        font-size: 10px;
+        color: #CCC;
+        max-width: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+    }}
+    #focus-timeline .ft-deal {{
+        font-size: 9px;
+        color: #555;
+        max-width: 90px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        text-align: center;
+    }}
+    #focus-timeline .ft-empty {{
+        color: #444;
+        font-style: italic;
+        padding: 12px 0;
+    }}
+</style>
+<div id="focus-timeline"></div>
+
 <!-- Click-to-focus: zoom into subgraph, show metadata in nodes and on edges -->
 <script>
 (function() {{
@@ -718,6 +887,9 @@ def _build_timeline_and_legend_html(
     var nodeDetailLabels = {node_labels_json};
     var edgeDetailLabels = {edge_labels_json};
     var nodeImages = {node_images_json};
+    var timelineEvents = {timeline_events_json};
+    var COLOR_MAP = {{ 'firm': '#FF8C00', 'company': '#00D67E', 'person': '#00BFFF' }};
+    var focusTimelineEl = document.getElementById('focus-timeline');
 
     function checkReady() {{
         if (typeof network === 'undefined' || typeof nodes === 'undefined' || typeof edges === 'undefined') {{
@@ -755,6 +927,57 @@ def _build_timeline_and_legend_html(
         }});
 
         var focusedNode = null;
+
+        function showTimeline(nodeId) {{
+            var events = timelineEvents[nodeId];
+            if (!events || events.length === 0) {{
+                focusTimelineEl.innerHTML = '<div class="ft-empty">No dated events</div>';
+                focusTimelineEl.classList.add('active');
+                return;
+            }}
+            var nodeName = nodeDetailLabels[nodeId] ? nodeDetailLabels[nodeId].split('\\n')[0] : nodeId;
+            var html = '<div class="ft-header">';
+            html += '<span class="ft-title">Timeline</span>';
+            html += '<span class="ft-node-name">' + nodeName + '</span>';
+            html += '<span class="ft-count">(' + events.length + ' event' + (events.length !== 1 ? 's' : '') + ')</span>';
+            html += '</div>';
+            html += '<div class="ft-scroll"><div class="ft-track">';
+            events.forEach(function(ev) {{
+                var dotColor = COLOR_MAP[ev.neighborType] || '#888';
+                var dateLabel = ev.date || '?';
+                var dealParts = [];
+                if (ev.amount) dealParts.push(ev.amount);
+                if (ev.round) dealParts.push(ev.round);
+                var dealStr = dealParts.join(' ');
+                html += '<div class="ft-event" data-nid="' + ev.neighborId + '">';
+                html += '<div class="ft-date">' + dateLabel + '</div>';
+                html += '<div class="ft-dot" style="background:' + dotColor + ';"></div>';
+                html += '<div class="ft-name">' + ev.neighborName + '</div>';
+                if (dealStr) html += '<div class="ft-deal">' + dealStr + '</div>';
+                html += '</div>';
+            }});
+            html += '</div></div>';
+            focusTimelineEl.innerHTML = html;
+            focusTimelineEl.classList.add('active');
+
+            // Wire click events on dots
+            focusTimelineEl.querySelectorAll('.ft-event').forEach(function(el) {{
+                el.addEventListener('click', function(e) {{
+                    e.stopPropagation();
+                    var nid = el.getAttribute('data-nid');
+                    if (nid) focusOn(nid);
+                }});
+            }});
+        }}
+
+        function hideTimeline() {{
+            focusTimelineEl.classList.remove('active');
+            setTimeout(function() {{
+                if (!focusTimelineEl.classList.contains('active')) {{
+                    focusTimelineEl.innerHTML = '';
+                }}
+            }}, 400);
+        }}
 
         // Build adjacency
         var adjEdges = {{}};
@@ -862,9 +1085,12 @@ def _build_timeline_and_legend_html(
                 nodes: subgraphNodeIds,
                 animation: {{ duration: 500, easingFunction: 'easeInOutQuad' }}
             }});
+
+            showTimeline(nodeId);
         }}
 
         function resetFocus() {{
+            hideTimeline();
             focusedNode = null;
             var nodeUpdates = allNodes.map(function(n) {{
                 return {{
@@ -968,18 +1194,9 @@ def _build_timeline_and_legend_html(
             if (nd) origSizes[nid] = nd.size || 70;
         }});
 
-        // Draw pulsing glow rings + pulse node size
+        // Draw pulsing glow rings only (no node size updates in draw callback)
         network.on('afterDrawing', function(ctx) {{
-            phase += 0.05;
             var pulse = (Math.sin(phase) + 1) / 2; // 0..1
-
-            // Pulse node sizes
-            var sizeUpdates = [];
-            recentIds.forEach(function(nid) {{
-                var base = origSizes[nid] || 70;
-                sizeUpdates.push({{ id: nid, size: base + 12 * pulse }});
-            }});
-            if (sizeUpdates.length > 0) nodes.update(sizeUpdates);
 
             recentIds.forEach(function(nid) {{
                 var pos = network.getPositions([nid])[nid];
@@ -1012,10 +1229,11 @@ def _build_timeline_and_legend_html(
             }});
         }});
 
-        // Continuously trigger redraws for animation
+        // Advance phase and trigger redraw for glow animation only (no nodes.update)
         function animLoop(ts) {{
             if (ts - lastRedraw >= REDRAW_INTERVAL) {{
                 lastRedraw = ts;
+                phase += 0.05;
                 network.redraw();
             }}
             requestAnimationFrame(animLoop);
