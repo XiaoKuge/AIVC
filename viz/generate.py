@@ -61,6 +61,16 @@ def generate_html(
 
     kg = KnowledgeGraph.load(graph_path)
 
+    # Load person profile photos
+    person_images_path = DATA_DIR / "person_images.json"
+    person_photos: dict[str, str] = {}
+    if person_images_path.exists():
+        import json as _json
+        with open(person_images_path) as _f:
+            _raw = _json.load(_f)
+            _raw.pop("_note", None)
+            person_photos = {k: v for k, v in _raw.items() if v}
+
     net = Network(
         height=height,
         width=width,
@@ -90,15 +100,16 @@ def generate_html(
         },
         "physics": {
             "forceAtlas2Based": {
-                "gravitationalConstant": -150,
-                "centralGravity": 0.008,
-                "springLength": 250,
-                "springConstant": 0.015,
-                "damping": 0.4
+                "gravitationalConstant": -400,
+                "centralGravity": 0.002,
+                "springLength": 400,
+                "springConstant": 0.006,
+                "damping": 0.35,
+                "avoidOverlap": 0.8
             },
             "solver": "forceAtlas2Based",
             "stabilization": {
-                "iterations": 300
+                "iterations": 1000
             },
             "maxVelocity": 50,
             "minVelocity": 0.75
@@ -178,7 +189,7 @@ def generate_html(
         fallback_url = f"https://ui-avatars.com/api/?name={encoded_name}&background={bg_hex}&color=fff&size=128&bold=true"
 
         if node_type == PERSON:
-            image_url = fallback_url
+            image_url = person_photos.get(nid, fallback_url)
         elif domain:
             image_url = f"https://www.google.com/s2/favicons?domain={domain}&sz=128"
         else:
@@ -358,7 +369,7 @@ def generate_html(
 </div>
 <style>
     body { background: #0A0A0A !important; margin: 0; }
-    #mynetwork { margin-top: 48px !important; background: #0A0A0A !important; }
+    #mynetwork { margin-top: 48px !important; height: calc(100vh - 120px) !important; width: 100vw !important; background: #0A0A0A !important; }
     .card { border: none !important; box-shadow: none !important; margin: 0 !important; padding: 0 !important; background: transparent !important; }
     .card-body { background: transparent !important; }
     ::selection { background: #FF8C00; color: #000; }
@@ -598,6 +609,40 @@ def _build_timeline_and_legend_html(
     }}, 200);
 
     function initTimeline() {{
+        // Globally disable physics after any stabilization to prevent drift.
+        // Use setTimeout to avoid re-entrancy issues with vis.js event handlers.
+        var _freezePending = false;
+        function freezePhysics() {{
+            if (_freezePending) return;
+            _freezePending = true;
+            setTimeout(function() {{
+                network.setOptions({{ physics: false }});
+                _freezePending = false;
+            }}, 50);
+        }}
+        network.on('stabilized', freezePhysics);
+        network.on('stabilizationIterationsDone', freezePhysics);
+        window.__freezePhysics = freezePhysics;
+
+        // After stabilization: stretch layout into ellipse matching viewport aspect ratio, then fit
+        network.once('stabilizationIterationsDone', function() {{
+            setTimeout(function() {{
+                var container = document.getElementById('mynetwork');
+                var cw = container ? container.clientWidth : window.innerWidth;
+                var ch = container ? container.clientHeight : window.innerHeight;
+                var aspect = cw / (ch || 1);  // e.g. ~1.8 for widescreen
+                if (aspect > 1.1) {{
+                    var allPos = network.getPositions();
+                    var updates = [];
+                    for (var nid in allPos) {{
+                        var pos = allPos[nid];
+                        network.moveNode(nid, pos.x * aspect, pos.y);
+                    }}
+                }}
+                network.fit({{ animation: {{ duration: 400, easingFunction: 'easeInOutQuad' }} }});
+            }}, 100);
+        }});
+
         var allEdges = edges.get();
         var allNodes = nodes.get();
 
@@ -645,6 +690,7 @@ def _build_timeline_and_legend_html(
                 }}
             }});
             nodes.update(nodeUpdates);
+            if (window.__freezePhysics) window.__freezePhysics();
 
             info.textContent = visibleEdges + ' shown, ' + hiddenEdges + ' hidden';
         }}
@@ -664,6 +710,7 @@ def _build_timeline_and_legend_html(
                 return {{ id: n.id, hidden: false, opacity: 1, color: originalNodes[n.id].color }};
             }});
             nodes.update(nodeUpdates);
+            if (window.__freezePhysics) window.__freezePhysics();
             labelMin.textContent = YEAR_MIN;
             labelMax.textContent = YEAR_MAX;
             info.textContent = '';
@@ -880,14 +927,32 @@ def _build_timeline_and_legend_html(
         border-radius: 3px;
         transition: background 0.15s;
     }}
-    #focus-timeline .ft-event:hover {{
+    #focus-timeline .ft-event:hover,
+    #focus-timeline .ft-event.ft-linked {{
         background: rgba(255,255,255,0.05);
+    }}
+    @keyframes ft-breathe {{
+        0%, 100% {{ box-shadow: 0 0 4px rgba(255,255,255,0.15); transform: scale(1); }}
+        50% {{ box-shadow: 0 0 14px rgba(0,191,255,0.5); transform: scale(1.12); }}
+    }}
+    #focus-timeline .ft-event.ft-linked .ft-avatar,
+    #focus-timeline .ft-event.ft-linked .ft-dot {{
+        animation: ft-breathe 1.2s ease-in-out infinite;
     }}
     #focus-timeline .ft-date {{
         font-size: 9px;
         color: #666;
         margin-bottom: 4px;
         font-variant-numeric: tabular-nums;
+    }}
+    #focus-timeline .ft-avatar {{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid #888;
+        object-fit: cover;
+        background: #111;
+        margin-bottom: 4px;
     }}
     #focus-timeline .ft-dot {{
         width: 12px;
@@ -990,14 +1055,19 @@ def _build_timeline_and_legend_html(
             html += '<div class="ft-scroll"><div class="ft-track">';
             events.forEach(function(ev) {{
                 var dotColor = COLOR_MAP[ev.neighborType] || '#888';
-                var dateLabel = ev.date || '?';
+                var dateLabel = ev.date || '';
                 var dealParts = [];
                 if (ev.amount) dealParts.push(ev.amount);
                 if (ev.round) dealParts.push(ev.round);
                 var dealStr = dealParts.join(' ');
                 html += '<div class="ft-event" data-nid="' + ev.neighborId + '">';
                 html += '<div class="ft-date">' + dateLabel + '</div>';
-                html += '<div class="ft-dot" style="background:' + dotColor + ';"></div>';
+                var nImg = nodeImages[ev.neighborId];
+                if (nImg) {{
+                    html += '<img class="ft-avatar" src="' + nImg.image + '" onerror="this.src=&quot;' + nImg.brokenImage + '&quot;" style="border-color:' + dotColor + ';">';
+                }} else {{
+                    html += '<div class="ft-dot" style="background:' + dotColor + ';"></div>';
+                }}
                 html += '<div class="ft-name">' + ev.neighborName + '</div>';
                 if (dealStr) html += '<div class="ft-deal">' + dealStr + '</div>';
                 html += '</div>';
@@ -1012,6 +1082,17 @@ def _build_timeline_and_legend_html(
                     e.stopPropagation();
                     var nid = el.getAttribute('data-nid');
                     if (nid) focusOn(nid);
+                }});
+            }});
+
+            // 联动: Timeline → Graph hover linkage
+            focusTimelineEl.querySelectorAll('.ft-event').forEach(function(el) {{
+                el.addEventListener('mouseenter', function() {{
+                    var nid = el.getAttribute('data-nid');
+                    if (nid && window.__setLinkedNode) window.__setLinkedNode(nid);
+                }});
+                el.addEventListener('mouseleave', function() {{
+                    if (window.__setLinkedNode) window.__setLinkedNode(null);
                 }});
             }});
         }}
@@ -1125,6 +1206,7 @@ def _build_timeline_and_legend_html(
                 }}
             }});
             edges.update(edgeUpdates);
+            if (window.__freezePhysics) window.__freezePhysics();
 
             // Zoom to fit the subgraph
             network.fit({{
@@ -1165,6 +1247,8 @@ def _build_timeline_and_legend_html(
                 }};
             }});
             edges.update(edgeUpdates);
+            if (window.__freezePhysics) window.__freezePhysics();
+            network.redraw();
 
             // Zoom back to full view
             network.fit({{
@@ -1255,14 +1339,37 @@ def _build_timeline_and_legend_html(
 
         var hoveredNode = null;
         var hoverNeighbors = new Set();
+        var linkedNode = null;  // set from timeline hover (联动)
+
+        // Expose for timeline → graph linkage
+        window.__setLinkedNode = function(nid) {{
+            linkedNode = nid;
+        }};
 
         network.on('hoverNode', function(params) {{
             hoveredNode = params.node;
             hoverNeighbors = new Set(adjMap[params.node] || []);
+            // 联动: Graph → Timeline — highlight matching timeline events
+            var ftEl = document.getElementById('focus-timeline');
+            if (ftEl) {{
+                ftEl.querySelectorAll('.ft-event.ft-linked').forEach(function(el) {{
+                    el.classList.remove('ft-linked');
+                }});
+                ftEl.querySelectorAll('.ft-event[data-nid="' + params.node + '"]').forEach(function(el) {{
+                    el.classList.add('ft-linked');
+                }});
+            }}
         }});
         network.on('blurNode', function() {{
             hoveredNode = null;
             hoverNeighbors = new Set();
+            // 联动: remove timeline highlights
+            var ftEl = document.getElementById('focus-timeline');
+            if (ftEl) {{
+                ftEl.querySelectorAll('.ft-event.ft-linked').forEach(function(el) {{
+                    el.classList.remove('ft-linked');
+                }});
+            }}
         }});
 
         // Helper: extract RGB from node color for glow tint
@@ -1301,6 +1408,30 @@ def _build_timeline_and_legend_html(
                 ctx.fillStyle = 'rgba(255, 60, 60, ' + (0.12 + 0.15 * pulse).toFixed(3) + ')';
                 ctx.fill();
             }});
+
+            // 联动: glow on linkedNode (from timeline hover)
+            if (linkedNode && linkedNode !== hoveredNode) {{
+                var lPos = network.getPositions([linkedNode])[linkedNode];
+                if (lPos) {{
+                    var lnd = nodes.get(linkedNode);
+                    if (lnd && !lnd.hidden && (lnd.opacity === undefined || lnd.opacity >= 0.1)) {{
+                        var lBase = (lnd.size || 20) * 0.5;
+                        var lRgb = nodeRGB(linkedNode);
+
+                        var lOuterR = lBase + 6 + 5 * pulse;
+                        ctx.beginPath();
+                        ctx.arc(lPos.x, lPos.y, lOuterR, 0, 2 * Math.PI);
+                        ctx.fillStyle = 'rgba(' + lRgb + ', ' + (0.06 + 0.10 * pulse).toFixed(3) + ')';
+                        ctx.fill();
+
+                        var lInnerR = lBase + 1 + 3 * pulse;
+                        ctx.beginPath();
+                        ctx.arc(lPos.x, lPos.y, lInnerR, 0, 2 * Math.PI);
+                        ctx.fillStyle = 'rgba(' + lRgb + ', ' + (0.10 + 0.14 * pulse).toFixed(3) + ')';
+                        ctx.fill();
+                    }}
+                }}
+            }}
 
             // Hover glow — edges + nodes
             if (hoveredNode) {{
@@ -1359,7 +1490,7 @@ def _build_timeline_and_legend_html(
             if (ts - lastRedraw >= REDRAW_INTERVAL) {{
                 lastRedraw = ts;
                 phase += 0.05;
-                if (recentIds.size > 0 || hoveredNode) {{
+                if (recentIds.size > 0 || hoveredNode || linkedNode) {{
                     network.redraw();
                 }}
             }}

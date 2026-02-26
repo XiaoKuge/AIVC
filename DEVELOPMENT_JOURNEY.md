@@ -101,8 +101,51 @@ The biggest feature of the day. Three-layer implementation:
   - Color-coded type badges (green=created, cyan=updated, amber=invested).
   - Carousel navigation: `← prev | 2/3 | next →`.
   - Keyboard: Left/Right arrows to flip, Escape to close. Click outside to dismiss.
-- Node click → focus mode + dossier opens.
+- Node click → focus mode + dossier opens on right side.
 - Edge click → dossier opens for that edge's events.
+- Repositioned from centered modal to right-side panel to avoid blocking the graph.
+
+### CI/CD fix
+
+The daily GitHub Actions cron job had never run successfully. Root cause: `pyproject.toml` had `build-backend = "setuptools.backends._legacy:_Backend"` which doesn't exist in newer setuptools (Python 3.12 on GitHub Actions). Fixed to `setuptools.build_meta`. Manually triggered workflow — all steps passed.
+
+### Technical documentation update
+
+Updated both Chinese technical docs (`docs/软件技术交付说明书.md` and `docs/用户手册.md`) to reflect all Day 3 features: Event model, event provenance, Share URL, Export PNG, hover glow, dossier panel, CI fix.
+
+---
+
+## Day 4 — Feb 26, 2026: Data integrity, profile photos & interactive polish
+
+### Rebuild pipeline (`scripts/rebuild.py`)
+
+Created a single-command rebuild script that runs all pipeline steps in the correct order: seed → enrich_companies → import_deals → enrich_dates → generate_viz. Auto-snapshots the existing graph before each rebuild. Supports `--dry-run` and `--no-viz` flags. This prevents the recurring bug where running one step alone would wipe enrichment data from a previous step.
+
+### Investment date recovery
+
+Fixed 14 ID mismatches in `investment_dates.json` (e.g., `moonshot-ai` vs `moonshot-ai-(kimi)`, `01.ai` vs `01.ai-(yi)`) that were silently preventing date enrichment. Extended date enrichment to cover `partner_at` and `personal_investment` edges (not just `invested_in`). Added 77 person-related dates. All 423 edges now have dates — zero "?" marks on the timeline.
+
+### Person profile photos
+
+Curated Wikimedia Commons CC-licensed photo URLs for 20 of 22 person nodes (stored in `data/person_images.json`). Updated `viz/generate.py` to use real photos for Person nodes instead of always falling back to initial-based avatars from ui-avatars.com.
+
+### Timeline avatars
+
+Replaced grey dots on the focus timeline with actual company logos and person profile pictures (`<img class="ft-avatar">`). Fixed a subtle JS syntax error where nested single quotes in the `onerror` attribute broke the click-to-focus IIFE — solved with `&quot;` HTML entities.
+
+### Physics stabilization (systematic fix)
+
+Mouse movement was causing graph nodes to drift/resize. Root cause: physics was never properly disabled after stabilization, and `nodes.update()` / `edges.update()` can internally re-enable it. Fix: global deferred `freezePhysics()` via `setTimeout(50ms)` to avoid vis.js re-entrancy issues, called after every `stabilized` event and after every `nodes.update()` / `edges.update()` call. Added `network.redraw()` after `resetFocus` data updates since physics-disabled vis.js doesn't auto-refresh the canvas.
+
+### 联动 (Linked hover)
+
+Bidirectional hover linkage between the graph and the focus timeline:
+- **Graph → Timeline**: Hovering a node on the graph adds `.ft-linked` class to matching timeline events, triggering a CSS breathing animation on their avatars.
+- **Timeline → Graph**: Hovering a timeline event calls `window.__setLinkedNode(nid)`, which draws a pulsing glow on the corresponding graph node via the `afterDrawing` canvas callback.
+
+### Elliptical layout
+
+Changed the ForceAtlas2 physics settings (stronger repulsion, weaker springs, lower central gravity) and added post-stabilization x-axis stretching based on the viewport aspect ratio. The graph now fills the full widescreen viewport as an ellipse instead of collapsing into a small circle.
 
 ---
 
