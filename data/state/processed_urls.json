@@ -439,6 +439,10 @@
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/fintech/plaid-completes-tender-offer-8b-valuation/": {
+    "date": "2026-02-27T09:48:01Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/fintech/unicorn-stripe-secondary-sale-valuation/": {
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
@@ -453,6 +457,10 @@
   },
   "https://news.crunchbase.com/venture/data-2025-vs-2021-funding-hottest-companies-ai/": {
     "date": "2026-02-25T23:02:32Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/venture/gv-fintech-ai-startup-investor-sakach-stripe-ramp/": {
+    "date": "2026-02-27T09:48:01Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/venture/public-private-market-innovation-gray-odin/": {
@@ -471,6 +479,10 @@
     "date": "2026-02-26T08:59:45Z",
     "deals_found": 0
   },
+  "https://pandaily.com/embodied-ai-firm-behind-unitree-robotics-brain-raises-hundreds-of-millions-of-rmb": {
+    "date": "2026-02-27T09:48:01Z",
+    "deals_found": 0
+  },
   "https://pandaily.com/ex-sense-time-industrial-robotics-team-raises-tens-of-millions-for-wheeled-robots": {
     "date": "2026-02-26T08:59:45Z",
     "deals_found": 0
@@ -481,6 +493,10 @@
   },
   "https://pandaily.com/kimi-surpasses-last-year-s-full-year-revenue-in-20-days-becomes-china-s-fastest-decacorn": {
     "date": "2026-02-25T23:02:38Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/nio-s-chip-subsidiary-raises-first-round-at-nearly-1-4-billion-valuation": {
+    "date": "2026-02-27T09:48:01Z",
     "deals_found": 0
   },
   "https://pandaily.com/richard-liu-qiangdong-announces-usd-700-million-investment-to-launch-yacht-brand-sea-expandary": {
@@ -515,6 +531,14 @@
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/02/26/sophia-space-raises-10m-seed-to-demo-novel-space-computers/": {
+    "date": "2026-02-27T09:48:01Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/02/26/trace-raises-3-million-to-solve-the-agent-adoption-problem/": {
+    "date": "2026-02-27T09:48:01Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/ark-climate-tech-ai-funding-rasie-pre-seed/": {
     "date": "2026-02-26T08:59:45Z",
     "deals_found": 0
@@ -523,8 +547,24 @@
     "date": "2026-02-25T23:02:38Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/einride-113m-pipe-oversubscribed-spac-legato/": {
+    "date": "2026-02-27T09:48:01Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/encord-scale-ai-rival-60m-physical-ai-data/": {
+    "date": "2026-02-27T09:48:01Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/ex-deliveroo-exec-launches-alpa-with-3-5m-to-close-hospitalitys-financial-visibility-gap/": {
     "date": "2026-02-26T08:59:45Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/oska-health-raises-e11m-ai-coaches-for-europes-chronic-care-gap/": {
+    "date": "2026-02-27T09:48:01Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/plaid-hits-8b-valuation-in-secondary-round-eyes-ipo-path-as-fraud-tools-explode-400/": {
+    "date": "2026-02-27T09:48:01Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/quill-bags-6-5m-to-build-a-chief-of-ai-staff-that-keeps-your-data-sovereign/": {
@@ -6221,6 +6261,10 @@
   },
   "https://www.scmp.com/tech/article/3344246/trump-renews-attack-taiwans-chip-sector-after-us-supreme-court-tariff-ruling?utm_source=rss_feed": {
     "date": "2026-02-25T23:02:38Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/article/3344755/facebook-owner-meta-presses-ahead-manus-merger-despite-beijing-probe?utm_source=rss_feed": {
+    "date": "2026-02-27T09:48:01Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/big-tech/article/3344572/xiaomi-deepens-push-chips-and-ai-peers-race-humanoid-robotics?utm_source=rss_feed": {
