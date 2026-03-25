@@ -523,6 +523,10 @@
     "date": "2026-03-14T08:48:06Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/kleiner-perkins-raises-ai-focused-funds/": {
+    "date": "2026-03-25T08:54:31Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/openai-raise-largest-ai-venture-deal-ever/": {
     "date": "2026-02-28T08:46:20Z",
     "deals_found": 0
@@ -585,6 +589,10 @@
   },
   "https://pandaily.com/ai-robotics-raises-over-rmb-1-b-in-series-b-touted-as-china-s-most-tesla-like-robotics-startup": {
     "date": "2026-02-25T23:02:38Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/alibaba-cloud-fully-opens-jvs-claw-no-invite-needed-to-raise-your-own-cloud-lobster": {
+    "date": "2026-03-25T08:54:31Z",
     "deals_found": 0
   },
   "https://pandaily.com/alibaba-cloud-raises-ai-computing-and-storage-prices-by-up-to-34": {
@@ -697,6 +705,10 @@
   },
   "https://pandaily.com/model-best-secures-hundreds-of-millions-in-funding-led-by-china-telecom-launching-deep-business-collaboration": {
     "date": "2026-02-28T08:46:20Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/momenta-files-confidentially-for-hong-kong-ipo-targets-listing-within-2026": {
+    "date": "2026-03-25T08:54:31Z",
     "deals_found": 0
   },
   "https://pandaily.com/mrtis-tech-bio-secures-approval-for-hong-kong-ipo-filing": {
@@ -979,6 +991,18 @@
     "date": "2026-03-24T08:55:12Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/03/24/databricks-buys-two-startups-lakewatch-antimatter-siftd-ai-security/": {
+    "date": "2026-03-25T08:54:31Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/24/doss-raises-55m-for-ai-inventory-management-that-plugs-into-erp/": {
+    "date": "2026-03-25T08:54:31Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/24/mirage-raises-75m-to-continue-building-models-for-its-ai-video-editing-app-captions/": {
+    "date": "2026-03-25T08:54:31Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/the-phd-students-who-became-the-judges-of-the-ai-industry/": {
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
@@ -1151,6 +1175,10 @@
     "date": "2026-03-03T08:54:32Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/galtea-barcelona-ai-testing-platform-raises-3-2m-seed-round-42cap/": {
+    "date": "2026-03-25T08:54:31Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/groundhawk-secures-e2m-to-3d-map-europes-underground-infrastructure/": {
     "date": "2026-03-03T08:54:32Z",
     "deals_found": 0
@@ -1173,6 +1201,10 @@
   },
   "https://techfundingnews.com/legora-raises-550m-at-5-55b-tripling-its-valuation-in-5-months/": {
     "date": "2026-03-11T08:50:34Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/londons-epoch-biodesign-raises-9m-from-extantia-and-kompas-vc-for-its-largest-nylon-6-6-biorecycling-plant/": {
+    "date": "2026-03-25T08:54:31Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/lyzr-ai-14-5m-accenture-250m-valuation/": {
