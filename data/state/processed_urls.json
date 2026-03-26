@@ -503,6 +503,10 @@
     "date": "2026-03-21T08:51:37Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/construction-tech-automation-trayd-ai-seriesa/": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/data-2025-vs-2021-funding-hottest-companies-ai/": {
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
@@ -671,6 +675,10 @@
     "date": "2026-03-03T08:54:32Z",
     "deals_found": 0
   },
+  "https://pandaily.com/inverse-matrix-technology-raises-over-10-million-to-advance-world-models": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
   "https://pandaily.com/jd-property-targets-hong-kong-ipo-reframing-its-valuation-story-through-global-expansion-and-capital-efficiency": {
     "date": "2026-02-25T23:02:38Z",
     "deals_found": 0
@@ -681,6 +689,10 @@
   },
   "https://pandaily.com/knowin-completes-angel-round-financing-valued-over-300-million": {
     "date": "2026-03-07T08:45:09Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/kuaishou-expects-3-6-billion-capex-in-2026-to-boost-ai-infrastructure": {
+    "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
   },
   "https://pandaily.com/light-sail-tech-raises-nearly-usd-41-2-million-in-four-rounds-within-one-yea": {
@@ -785,6 +797,10 @@
   },
   "https://pandaily.com/stair-med-raises-72-5-million-alibaba-and-tencent-back-china-s-brain-machine-interface-pioneer": {
     "date": "2026-03-13T08:54:28Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/sunrising-ai-raises-over-14-million-within-six-months-of-founding": {
+    "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
   },
   "https://pandaily.com/synap-x-raises-nearly-50-million-in-seed-round-within-two-months-of-founding": {
@@ -1003,6 +1019,22 @@
     "date": "2026-03-25T08:54:31Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/03/25/deccan-ai-raises-25m-as-ai-training-push-relies-on-india-based-workforce/": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/25/granola-raises-125m-hits-1-5b-valuation-as-it-expands-from-meeting-notetaker-to-enterprise-ai-app/": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/25/harvey-confirms-11b-valuation-sequoia-triples-down/": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/25/lucid-bots-raises-20m-to-keep-up-with-demand-for-its-window-washing-drones/": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/the-phd-students-who-became-the-judges-of-the-ai-industry/": {
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
@@ -1033,6 +1065,10 @@
   },
   "https://techfundingnews.com/amazon-backed-x-energy-files-for-ipo-hot-on-the-heels-of-1-4b-raise-to-scale-small-modular-nuclear-reactors/": {
     "date": "2026-03-24T08:55:12Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/amazon-theia-8m-financial-markets-ai/": {
+    "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/amidst-labour-shortage-in-europe-ringtime-raises-e1-8m-to-help-recruiters-reach-them-faster/": {
@@ -1143,6 +1179,10 @@
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/europes-e15b-bet-on-scaleups-eif-targets-late-stage-funding-gap/": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/europes-x-rival-eyou-raises-e300k-for-real-time-fact-checking-social/": {
     "date": "2026-03-17T08:54:27Z",
     "deals_found": 0
@@ -1171,12 +1211,24 @@
     "date": "2026-03-05T08:55:07Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/former-openai-and-deepmind-researchers-eye-7b-valuation-for-ai-startup-periodic-labs/": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/french-synbio-bacta-snaps-e7m-can-ai-yeast-crack-the-e1b-astaxanthin-market/": {
     "date": "2026-03-03T08:54:32Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/galtea-barcelona-ai-testing-platform-raises-3-2m-seed-round-42cap/": {
     "date": "2026-03-25T08:54:31Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/german-us-vc-futurepresent-steps-out-of-stealth-with-300m-fund-to-back-ai-startups/": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/granola-raises-125m-series-c-company-context-ai/": {
+    "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/groundhawk-secures-e2m-to-3d-map-europes-underground-infrastructure/": {
@@ -1197,6 +1249,10 @@
   },
   "https://techfundingnews.com/inside-redbud-vcs-25m-fund-strategy-as-it-looks-for-founders-outside-of-silicon-valley/": {
     "date": "2026-03-21T08:51:37Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/kleiner-perkins-3-5b-early-stage-growth-ai-investment/": {
+    "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/legora-raises-550m-at-5-55b-tripling-its-valuation-in-5-months/": {
@@ -1221,6 +1277,10 @@
   },
   "https://techfundingnews.com/mirai-robotics-snaps-4-2m-to-bring-autonomous-intelligence-to-the-worlds-oceans/": {
     "date": "2026-03-09T08:56:20Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/mountly-raises-600k-alps-food-delivery/": {
+    "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/munichs-uvc-adds-growth-stage-with-e77m-follows-proxima-fusions-e2b-raise/": {
@@ -1257,6 +1317,10 @@
   },
   "https://techfundingnews.com/openai-raises-110b-730b-valuation-ai-infrastructure/": {
     "date": "2026-02-28T08:46:20Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/openai-raises-120-billion-record-funding-round-2026/": {
+    "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/oska-health-raises-e11m-ai-coaches-for-europes-chronic-care-gap/": {
@@ -6907,6 +6971,10 @@
     "date": "2026-02-25T23:02:33Z",
     "deals_found": 0
   },
+  "https://thetwentyminutevc.libsyn.com/20vc-why-you-need-1bn-to-do-series-a-today-openai-vs-anthropic-who-wins-enterprise-spacex-at-2trn-and-data-centers-in-space-the-20bn-groq-deal-broken-down-jeff-bezos-100bn-new-fund": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
   "https://thetwentyminutevc.libsyn.com/20vc-why-you-never-want-to-fight-a-fair-fit-for-distribution-why-no-great-company-is-built-with-1-product-and-when-to-release-your-second-what-founders-can-do-to-extract-the-most-from-their-cap-table-with-shoaib-makani-founder-ceo-keeptruckin": {
     "date": "2026-02-25T23:02:33Z",
     "deals_found": 0
@@ -7179,6 +7247,10 @@
     "date": "2026-03-16T09:06:00Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/business/companies/article/3347877/china-mobile-bets-hong-kong-gateway-global-computing-flows?utm_source=rss_feed": {
+    "date": "2026-03-26T09:00:40Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/economy/china-economy/article/3345288/china-should-education-spending-help-population-adapt-ai-era-economist?utm_source=rss_feed": {
     "date": "2026-03-04T08:52:38Z",
     "deals_found": 0
@@ -7233,6 +7305,10 @@
   },
   "https://www.scmp.com/tech/article/3347611/inside-unitrees-landmark-ipo-what-know-about-chinas-humanoid-giant?utm_source=rss_feed": {
     "date": "2026-03-24T08:55:12Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/article/3347951/chinas-kuaishou-slumps-analysts-flag-growth-pressure-despite-strong-results?utm_source=rss_feed": {
+    "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/big-tech/article/3344572/xiaomi-deepens-push-chips-and-ai-peers-race-humanoid-robotics?utm_source=rss_feed": {
