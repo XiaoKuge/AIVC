@@ -235,6 +235,10 @@
     "date": "2026-02-25T23:02:36Z",
     "deals_found": 0
   },
+  "https://a16z.simplecast.com/episodes/marc-andreessen-on-evaluating-founders-and-ais-consumer-surplus-Gu808y3s": {
+    "date": "2026-03-31T09:08:07Z",
+    "deals_found": 0
+  },
   "https://a16z.simplecast.com/episodes/new-path-antibiotic-resistance-tiFfI6JF": {
     "date": "2026-02-25T23:02:36Z",
     "deals_found": 0
@@ -803,6 +807,10 @@
     "date": "2026-03-17T08:54:27Z",
     "deals_found": 0
   },
+  "https://pandaily.com/sigenergy-clears-hong-kong-listing-hearing-as-revenue-hits-1-25-billion": {
+    "date": "2026-03-31T09:08:08Z",
+    "deals_found": 0
+  },
   "https://pandaily.com/sigenergy-files-for-hong-kong-ipo-for-third-time-after-previous-lapses": {
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
@@ -865,6 +873,10 @@
   },
   "https://pandaily.com/zelos-secures-over-usd-300-million-in-new-funding-valuation-surpasses-usd-1-billion": {
     "date": "2026-02-25T23:02:38Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/zero-gravity-aircraft-raises-21-m-pre-b-round-1": {
+    "date": "2026-03-31T09:08:08Z",
     "deals_found": 0
   },
   "https://pandaily.com/zero-one-automotive-raises-170-m-to-build-the-tesla-of-heavy-trucks": {
@@ -1075,6 +1087,26 @@
     "date": "2026-03-28T08:56:35Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/03/30/ai-chip-startup-rebellions-raises-400-million-at-2-3b-valuation-in-pre-ipo-round/": {
+    "date": "2026-03-31T09:08:07Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/30/mistral-ai-raises-830m-in-debt-to-set-up-a-data-center-near-paris/": {
+    "date": "2026-03-31T09:08:07Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/30/qodo-bets-on-code-verification-as-ai-coding-scales-raises-70m/": {
+    "date": "2026-03-31T09:08:07Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/30/scaleops-130m-series-c-kubernetes-efficiency-ai-demand-funding/": {
+    "date": "2026-03-31T09:08:07Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/30/starcloud-raises-170-million-series-ato-build-data-centers-in-space/": {
+    "date": "2026-03-31T09:08:07Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/the-phd-students-who-became-the-judges-of-the-ai-industry/": {
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
@@ -1257,6 +1289,10 @@
   },
   "https://techfundingnews.com/female-founders-europe-funding-february-2026/": {
     "date": "2026-03-03T08:54:32Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/female-led-enkei-secures-e0-4m-from-radcap-and-ex-tarkett-ceo-to-scale-circular-design-material-receramix/": {
+    "date": "2026-03-31T09:08:08Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/fibionic-3m-seed-bionic-fiber-placement/": {
@@ -1443,12 +1479,20 @@
     "date": "2026-02-25T23:02:38Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/rebellions-raises-400m-pre-ipo-round-ai-inference-infrastructure/": {
+    "date": "2026-03-31T09:08:08Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/reflection-ai-25-billion-valuation-nvidia-deepseek/": {
     "date": "2026-03-28T08:56:35Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/rhoda-ai-450m-series-a-stealth-exit-robotics/": {
     "date": "2026-03-12T08:55:24Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/riplo-raises-2-3m-to-build-ai-os-for-consulting-firms/": {
+    "date": "2026-03-31T09:08:08Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/rivia-raises-15m-to-build-ai-engine-for-clinical-trial-data/": {
@@ -1469,6 +1513,10 @@
   },
   "https://techfundingnews.com/sambanova-sn50-ai-chip-350m-series-e-intel/": {
     "date": "2026-02-25T23:02:38Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/scaleops-130m-series-c-insight-partners-ai-infra/": {
+    "date": "2026-03-31T09:08:08Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/scalvy-raises-13-9m-from-silicon-badia-to-power-next-gen-ai-data-centres-and-energy-systems/": {
@@ -2501,6 +2549,14 @@
   },
   "https://technode.com/2026/03/30/sony-raises-prices-of-china-market-ps5-lineup-by-up-to-100/": {
     "date": "2026-03-30T09:18:13Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/03/31/byd-reportedly-raises-export-target-to-1-5-million-units/": {
+    "date": "2026-03-31T09:08:07Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/03/31/xiaomi-ceo-lei-jun-announces-launch-of-ai-talent-recruitment-programme/": {
+    "date": "2026-03-31T09:08:07Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/-20vc-travelperks-avi-meir-on-why-2021-will-be-a-record-year-for-business-travel-the-3-priorities-for-all-founders-during-covid-what-vcs-can-do-to-really-support-their-founders-in-a-recession": {
@@ -7417,6 +7473,14 @@
   },
   "https://www.scmp.com/tech/article/3348311/what-makes-yuanjie-chinese-optical-chip-star-and-hong-kong-ipo-candidate-stand-out?utm_source=rss_feed": {
     "date": "2026-03-30T09:18:13Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/article/3348377/firing-manycore-first-hangzhous-six-little-dragons-near-hong-kong-ipo?utm_source=rss_feed": {
+    "date": "2026-03-31T09:08:07Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/article/3348450/streaming-giant-iqiyi-joins-homecoming-wave-proposed-us300m-hong-kong-listing?utm_source=rss_feed": {
+    "date": "2026-03-31T09:08:07Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/big-tech/article/3344572/xiaomi-deepens-push-chips-and-ai-peers-race-humanoid-robotics?utm_source=rss_feed": {
