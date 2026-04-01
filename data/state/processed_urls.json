@@ -523,6 +523,10 @@
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/data-largest-seed-rounds-ai-startups/": {
+    "date": "2026-04-01T09:09:42Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/data-series-b-startup-funding-ai-defense-health/": {
     "date": "2026-03-10T08:53:28Z",
     "deals_found": 0
@@ -581,6 +585,10 @@
   },
   "https://news.crunchbase.com/venture/unicorn-legal-tech-ai-startup-legora-triples-valuation/": {
     "date": "2026-03-11T08:50:34Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/venture/wearable-fitness-tech-ai-whoop-seriesg-funding/": {
+    "date": "2026-04-01T09:09:42Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/venture/world-model-ai-lab-ami-raises-europes-largest-seed-round/": {
@@ -1107,6 +1115,14 @@
     "date": "2026-03-31T09:08:07Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/03/31/nomadic-raises-8-4-million-to-wrangle-the-data-pouring-off-avs/": {
+    "date": "2026-04-01T09:09:42Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/03/31/openai-not-yet-public-raises-3b-from-retail-investors-in-monster-122b-fund-raise/": {
+    "date": "2026-04-01T09:09:42Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/the-phd-students-who-became-the-judges-of-the-ai-industry/": {
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
@@ -1165,6 +1181,10 @@
   },
   "https://techfundingnews.com/as-industrial-labour-shortages-grow-roboforce-grabs-52m-for-ai-robots/": {
     "date": "2026-03-17T08:54:27Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/audicin-raises-1-6m-oura-co-founder-business-finland-nervous-system-recovery-wearables/": {
+    "date": "2026-04-01T09:09:42Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/axiamatic-54m-greylock-bessemer-ai-transformation/": {
@@ -1255,6 +1275,10 @@
     "date": "2026-02-27T09:48:01Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/enervenue-300m-series-b-extension-aqueous-metal-hydrogen-grid-storage/": {
+    "date": "2026-04-01T09:09:42Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/entrepreneurs-first-200m-pre-idea-founders/": {
     "date": "2026-03-14T08:48:06Z",
     "deals_found": 0
@@ -1343,6 +1367,10 @@
     "date": "2026-03-27T08:56:36Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/keyrock-belgian-digital-asset-unicorn-11b-valuation-sc-ventures-ripple/": {
+    "date": "2026-04-01T09:09:42Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/kleiner-perkins-3-5b-early-stage-growth-ai-investment/": {
     "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
@@ -1373,6 +1401,10 @@
   },
   "https://techfundingnews.com/meta-9-trillion-valuation-executive-stock-options-2031/": {
     "date": "2026-03-28T08:56:35Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/midas-berlin-onchain-investment-platform-raises-50m-series-a/": {
+    "date": "2026-04-01T09:09:42Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/mirai-robotics-snaps-4-2m-to-bring-autonomous-intelligence-to-the-worlds-oceans/": {
@@ -1579,8 +1611,16 @@
     "date": "2026-03-13T08:54:28Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/uber-acquires-blacklane-berlin-premium-chauffeur-service/": {
+    "date": "2026-04-01T09:09:42Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/uber-eyes-robotaxis-invests-up-to-1-25b-in-ev-maker-rivian/": {
     "date": "2026-03-21T08:51:37Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/uk-ai-chip-startup-fractile-in-talks-200m-1b-valuation-accel-nvidia-alternative/": {
+    "date": "2026-04-01T09:09:42Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/vc-series-a-expectations-europe-2026/": {
@@ -1589,6 +1629,10 @@
   },
   "https://techfundingnews.com/vinted-co-founder-backs-webels-e4-3m-to-supercharge-home-services-super-app/": {
     "date": "2026-03-17T08:54:27Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/why-rtp-global-backed-kestra-25m-enterprise-orchestration-pitch-deck/": {
+    "date": "2026-04-01T09:09:42Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/wilbe-labs-europe-scientist-founders/": {
@@ -2557,6 +2601,10 @@
   },
   "https://technode.com/2026/03/31/xiaomi-ceo-lei-jun-announces-launch-of-ai-talent-recruitment-programme/": {
     "date": "2026-03-31T09:08:07Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/04/01/huawei-highlights-ai-harmonyos-and-auto-momentum-in-2015-annual-report/": {
+    "date": "2026-04-01T09:09:42Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/-20vc-travelperks-avi-meir-on-why-2021-will-be-a-record-year-for-business-travel-the-3-priorities-for-all-founders-during-covid-what-vcs-can-do-to-really-support-their-founders-in-a-recession": {
@@ -7507,6 +7555,10 @@
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/tech/policy/article/3348527/apples-accidental-ai-feature-roll-out-china-risks-regulatory-backlash-expert-says?utm_source=rss_feed": {
+    "date": "2026-04-01T09:09:42Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/tech/tech-trends/article/3343427/hua-hong-says-memory-shortage-positive-pricing-it-reports-record-quarterly-sales?utm_source=rss_feed": {
     "date": "2026-02-25T23:02:38Z",
     "deals_found": 0
@@ -7537,6 +7589,10 @@
   },
   "https://www.scmp.com/tech/tech-trends/article/3348159/south-korean-chip-giants-step-china-investments-combat-global-ai-memory-shortage?utm_source=rss_feed": {
     "date": "2026-03-29T08:52:04Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/tech-trends/article/3348555/zhipu-ai-revenue-jumps-132-first-post-ipo-report-missing-estimates?utm_source=rss_feed": {
+    "date": "2026-04-01T09:09:42Z",
     "deals_found": 0
   },
   "https://www.theverge.com/ai-artificial-intelligence/885958/openai-amazon-nvidia-softback-110-billion-investment": {
