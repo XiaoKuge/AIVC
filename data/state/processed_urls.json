@@ -115,6 +115,10 @@
     "date": "2026-02-25T23:02:36Z",
     "deals_found": 0
   },
+  "https://a16z.simplecast.com/episodes/balaji-srinivasan-prove-correct-not-just-go-direct-2mZ_Tjdd": {
+    "date": "2026-04-23T09:19:26Z",
+    "deals_found": 0
+  },
   "https://a16z.simplecast.com/episodes/basics-of-growth-engagement-retention-rerun-j1ouLVEj": {
     "date": "2026-02-25T23:02:36Z",
     "deals_found": 0
@@ -551,6 +555,10 @@
     "date": "2026-03-21T08:51:37Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/building-successful-startup-vertical-ai-schroder-mgv/": {
+    "date": "2026-04-23T09:19:26Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/china-leads-startup-funding-ai-seed-growth-asia-q1-2026/": {
     "date": "2026-04-14T09:19:30Z",
     "deals_found": 0
@@ -709,6 +717,10 @@
   },
   "https://pandaily.com/after-spring-festival-gala-appearance-ningbo-based-humanoid-robot-company-pn-dbotics-secures-tens-of-millions-of-dollars-in-funding": {
     "date": "2026-02-28T08:46:20Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/agibot-and-macao-trade-and-investment-promotion-institute-forge-strategic-partnership-to-expand-embodied-ai-globally": {
+    "date": "2026-04-23T09:19:26Z",
     "deals_found": 0
   },
   "https://pandaily.com/ai-materials-company-kaiwu-ji-secures-hundreds-of-millions-in-angel-plus-funding": {
@@ -989,6 +1001,10 @@
   },
   "https://pandaily.com/psi-bot-raises-280-m-to-accelerate-embodied-ai-data-collection-and-logistics-deployment": {
     "date": "2026-03-10T08:53:28Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/pudu-robotics-secures-nearly-rmb-1-b-in-funding-and-expands-global-footprint-with-new-u-s-headquarters": {
+    "date": "2026-04-23T09:19:26Z",
     "deals_found": 0
   },
   "https://pandaily.com/q-craft-raises-100-m-to-accelerate-push-toward-general-physical-ai": {
@@ -1439,6 +1455,14 @@
     "date": "2026-04-22T09:16:58Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/04/22/ai-is-spitting-out-more-potential-drugs-than-ever-this-start-up-wants-to-figure-out-which-ones-matter/": {
+    "date": "2026-04-23T09:19:26Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/04/22/how-spacex-preempted-a-2b-fundraise-with-a-60b-buyout-offer/": {
+    "date": "2026-04-23T09:19:26Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/the-phd-students-who-became-the-judges-of-the-ai-industry/": {
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
@@ -1551,6 +1575,10 @@
     "date": "2026-04-09T09:16:22Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/blue-energy-380m-funding-vxi-capital-factory-built-nuclear-plants/": {
+    "date": "2026-04-23T09:19:26Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/bluesky-quietly-raised-100m-and-its-aiming-to-be-more-than-a-twitter-x-alternative/": {
     "date": "2026-03-21T08:51:37Z",
     "deals_found": 0
@@ -1649,6 +1677,10 @@
   },
   "https://techfundingnews.com/ease-health-41m-series-a-behavioral-health-ai-os/": {
     "date": "2026-03-03T08:54:32Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/eccasion-3-2m-funding-swapfiets-founders-used-ev-platform/": {
+    "date": "2026-04-23T09:19:26Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/eif-50m-join-capital-defence-tech-fund-iii/": {
@@ -1839,6 +1871,10 @@
     "date": "2026-03-10T08:53:28Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/mcwin-capital-partners-leads-e10m-round-in-incapto-to-replace-coffee-capsules-with-smart-subscriptions/": {
+    "date": "2026-04-23T09:19:26Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/meet-the-sisters-behind-rubi-turning-co%e2%82%82-into-materials-with-7-5m-backing/": {
     "date": "2026-03-18T08:54:02Z",
     "deals_found": 0
@@ -1887,12 +1923,20 @@
     "date": "2026-04-08T09:10:00Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/naturbeads-eu-grant-puglia-commercial-plant-biodegradable-microspheres/": {
+    "date": "2026-04-23T09:19:26Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/neato-25m-2p-commerce-funding/": {
     "date": "2026-04-15T09:17:11Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/nebius-raises-4-3b-to-expand-ai-infrastructure-just-a-week-after-announcing-nvidia-meta-deals/": {
     "date": "2026-03-24T08:55:12Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/neocognition-40m-seed-self-learning-ai-agents-enterprise/": {
+    "date": "2026-04-23T09:19:26Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/netflix-acquires-ben-affleck-interpositive-ai-filmmaking/": {
@@ -2217,6 +2261,10 @@
   },
   "https://techfundingnews.com/uk-sovereign-ai-launch/": {
     "date": "2026-04-18T08:53:54Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/univity-27m-series-a-vleo-5g-satellite-constellation-telecom-starlink-rival/": {
+    "date": "2026-04-23T09:19:26Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/upscale-ai-200m-series-a-ai-data-centre-networking/": {
@@ -4589,6 +4637,10 @@
   },
   "https://thetwentyminutevc.libsyn.com/20vc-crypto-roundtable-how-will-us-elections-impact-crypto-why-will-trump-lean-into-crypto-in-2024-should-ftx-investors-have-known-about-sbf-will-opensea-ever-be-worth-13bn-again-will-nfts-come-back-with-kyle-samani-and-nick-tomaino": {
     "date": "2026-02-25T23:02:32Z",
+    "deals_found": 0
+  },
+  "https://thetwentyminutevc.libsyn.com/20vc-cursor-acquired-for-60bn-by-xai-anthropic-hits-1trn-in-secondary-markets-did-anthropic-just-kill-figma-adobe-and-canva-rippling-hits-1bn-in-arr-salesforce-goes-headless-smart-or-stupid-cerebras-ipo-20": {
+    "date": "2026-04-23T09:19:26Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/20vc-cursor-raises-23bn-who-wins-the-coding-war-peter-thiel-and-softbank-sell-nvidia-analysed-why-venture-capital-will-hit-1trn-and-the-opening-of-retail-why-stripe-and-the-best-companies-will-never-go-public": {
@@ -8143,6 +8195,10 @@
     "date": "2026-03-07T08:45:09Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/news/world/united-states-canada/article/3351063/billionaire-justin-sun-sues-trump-family-crypto-venture?utm_source=rss_feed": {
+    "date": "2026-04-23T09:19:26Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/opinion/china-opinion/article/3346402/two-sessions-signals-china-us-tech-contest-entering-new-era?utm_source=rss_feed": {
     "date": "2026-03-16T09:06:00Z",
     "deals_found": 0
@@ -8221,6 +8277,10 @@
   },
   "https://www.scmp.com/tech/article/3349471/hangzhou-six-little-dragons-member-manycore-seeks-us130m-hong-kong-ipo?utm_source=rss_feed": {
     "date": "2026-04-09T09:16:22Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/article/3351004/why-chinas-cash-rich-ai-firm-deepseek-still-shopping-funding-sources?utm_source=rss_feed": {
+    "date": "2026-04-23T09:19:26Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/big-tech/article/3344572/xiaomi-deepens-push-chips-and-ai-peers-race-humanoid-robotics?utm_source=rss_feed": {
