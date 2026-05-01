@@ -519,6 +519,10 @@
     "date": "2026-04-03T09:00:22Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/ai-powered-legal-tech-startup-legora-seriesd-extension-nvidia/": {
+    "date": "2026-05-01T09:21:01Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/all-time-high-funding-to-austin-startups-2025-ai-robotics-manufacturing/": {
     "date": "2026-03-28T08:56:35Z",
     "deals_found": 0
@@ -701,6 +705,10 @@
   },
   "https://news.crunchbase.com/venture/supabase-startup-investment-dreambase-ai-felicis/": {
     "date": "2026-04-30T09:29:01Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/venture/ultrafast-unicorns-early-seed-fundraising-startups-ai/": {
+    "date": "2026-05-01T09:21:02Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/venture/unicorn-count-4-year-high-robotics-ai-march-2026/": {
@@ -1579,6 +1587,14 @@
     "date": "2026-04-30T09:29:01Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/04/30/anthropic-potential-900b-valuation-round-could-happen-within-two-weeks/": {
+    "date": "2026-05-01T09:21:01Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/04/30/legal-ai-startup-legora-hits-5-6-valuation-and-its-battle-with-harvey-just-got-hotter/": {
+    "date": "2026-05-01T09:21:01Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/equity-podcast-runway-ceo-cristobal-valenzuela-ai-video-world-models/": {
     "date": "2026-04-30T09:29:01Z",
     "deals_found": 0
@@ -1619,6 +1635,10 @@
     "date": "2026-03-12T08:55:24Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/aidoc-150m-goldman-sachs-softbank-nventures-ipo-clinical-ai/": {
+    "date": "2026-05-01T09:21:02Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/all3-25m-seed-rtp-global-construction-robotics-ai/": {
     "date": "2026-04-29T09:28:05Z",
     "deals_found": 0
@@ -1645,6 +1665,10 @@
   },
   "https://techfundingnews.com/anthropic-1-trillion-valuation-secondary-market-overtakes-openai/": {
     "date": "2026-04-24T09:23:07Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/anthropic-50b-round-900b-valuation-ipo-report/": {
+    "date": "2026-05-01T09:21:02Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/anthropic-ai-security-quantum/": {
@@ -1701,6 +1725,10 @@
   },
   "https://techfundingnews.com/bezos-project-prometheus-10b-ai-lab-38b-valuation/": {
     "date": "2026-04-21T09:22:59Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/bioorbit-bags-9-8m-from-localglobe-breega-seedcamp-and-others-in-largest-seed-raise-for-in-space-drug-manufacturing/": {
+    "date": "2026-05-01T09:21:02Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/blackbird-leads-10m-round-in-marloo-to-free-financial-advisers-from-paperwork-using-ai/": {
@@ -1923,6 +1951,10 @@
     "date": "2026-04-18T08:53:54Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/featherless-ai-20m-series-a-amd-airbus-open-source-ai-infrastructure/": {
+    "date": "2026-05-01T09:21:02Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/female-founders-europe-funding-february-2026/": {
     "date": "2026-03-03T08:54:32Z",
     "deals_found": 0
@@ -1997,6 +2029,10 @@
   },
   "https://techfundingnews.com/holyvolt-acquires-wildcat-discovery-technologies-for-73m-to-bridge-lab-innovation-and-scalable-production/": {
     "date": "2026-03-07T08:45:09Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/how-due-diligence-tools-are-changing-tech-startup-funding-decisions/": {
+    "date": "2026-05-01T09:21:02Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/how-ernestas-20m-raise-aims-to-shape-the-future-of-custom-rugs/": {
@@ -2411,6 +2447,10 @@
     "date": "2026-04-21T09:22:59Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/softbank-openai-40b-loan-eight-banks-ipo-bet/": {
+    "date": "2026-05-01T09:21:02Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/solidroad-25m-series-a-ai-customer-support-qa/": {
     "date": "2026-04-17T09:19:49Z",
     "deals_found": 0
@@ -2473,6 +2513,10 @@
   },
   "https://techfundingnews.com/thoma-bravos-5b-logistics-bet-what-do-we-know-about-wwex-and-auctane-merger/": {
     "date": "2026-03-04T08:52:38Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/three-structural-forces-holding-back-next-generation-vc-ai/": {
+    "date": "2026-05-01T09:21:02Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/thrive-holdings-raises-2-billion-ai-services/": {
@@ -8479,6 +8523,10 @@
     "date": "2026-04-25T09:02:33Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/economy/china-economy/article/3352019/how-china-using-ai-and-state-funding-transform-micro-drama-industry?utm_source=rss_feed": {
+    "date": "2026-05-01T09:21:02Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/news/world/united-states-canada/article/3351063/billionaire-justin-sun-sues-trump-family-crypto-venture?utm_source=rss_feed": {
     "date": "2026-04-23T09:19:26Z",
     "deals_found": 0
@@ -8697,6 +8745,10 @@
   },
   "https://www.theverge.com/ai-artificial-intelligence/908513/the-vibes-are-off-at-openai": {
     "date": "2026-04-09T09:16:22Z",
+    "deals_found": 0
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/915970/meta-manus-ai-ads-website-slop": {
+    "date": "2026-05-01T09:21:01Z",
     "deals_found": 0
   },
   "https://www.theverge.com/ai-artificial-intelligence/920476/openai-chatgpt-downloads-slow-down-ipo": {
