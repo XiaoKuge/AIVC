@@ -511,6 +511,10 @@
     "date": "2026-03-03T08:54:32Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/seed/us-startup-venture-funding-boom-concentration-bay-area/": {
+    "date": "2026-05-02T09:17:24Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/active-investors-big-deals-february-2026-yc-a16z-nvidia/": {
     "date": "2026-03-06T08:47:43Z",
     "deals_found": 0
@@ -557,6 +561,10 @@
   },
   "https://news.crunchbase.com/venture/biggest-funding-rounds-cloud-energy-ai-world-labs/": {
     "date": "2026-02-25T23:02:32Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/venture/biggest-funding-rounds-defense-aerospace-ai-fintech/": {
+    "date": "2026-05-02T09:17:24Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/venture/biggest-funding-rounds-ev-transportation-biotech-slate/": {
@@ -1595,6 +1603,10 @@
     "date": "2026-05-01T09:21:01Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/05/01/replits-amjad-masad-on-the-cursor-deal-fighting-apple-and-why-hed-rather-not-sell/": {
+    "date": "2026-05-02T09:17:24Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/equity-podcast-runway-ceo-cristobal-valenzuela-ai-video-world-models/": {
     "date": "2026-04-30T09:29:01Z",
     "deals_found": 0
@@ -1607,12 +1619,20 @@
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/137-ventures-700m-funds-spacex-stake-ipo-15bn-aum/": {
+    "date": "2026-05-02T09:17:24Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/14-5m-for-carefam-ai-agents-to-fix-healthcare-hiring-bottleneck/": {
     "date": "2026-03-13T08:54:28Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/accel-and-sequoia-back-oasis-securitys-120m-series-b-for-secure-ai-agents/": {
     "date": "2026-03-21T08:51:37Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/accenture-and-adobe-back-netomis-110m-series-c-to-scale-enterprise-agentic-cx/": {
+    "date": "2026-05-02T09:17:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/adyen-alums-silverflow-raises-40m-to-kill-legacy-payments/": {
@@ -1749,6 +1769,10 @@
   },
   "https://techfundingnews.com/blue-energy-380m-funding-vxi-capital-factory-built-nuclear-plants/": {
     "date": "2026-04-23T09:19:26Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/blue-owl-spacex-10x-return-software-loan-book-hedge/": {
+    "date": "2026-05-02T09:17:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/bluesky-quietly-raised-100m-and-its-aiming-to-be-more-than-a-twitter-x-alternative/": {
@@ -2119,6 +2143,10 @@
     "date": "2026-03-10T08:53:28Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/meta-25b-bond-sale-stock-falls-ai-spending-plan/": {
+    "date": "2026-05-02T09:17:24Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/meta-9-trillion-valuation-executive-stock-options-2031/": {
     "date": "2026-03-28T08:56:35Z",
     "deals_found": 0
@@ -2169,6 +2197,10 @@
   },
   "https://techfundingnews.com/neato-25m-2p-commerce-funding/": {
     "date": "2026-04-15T09:17:11Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/nebius-eigen-ai-643m-acquisition-mit-inference-bay-area/": {
+    "date": "2026-05-02T09:17:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/nebius-raises-4-3b-to-expand-ai-infrastructure-just-a-week-after-announcing-nvidia-meta-deals/": {
@@ -2585,6 +2617,10 @@
   },
   "https://techfundingnews.com/xscape-photonics-raises-37m-to-laser-power-ai-data-centres-with-8-color-falconx/": {
     "date": "2026-03-12T08:55:24Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/yc-alum-skio-105m-exit-recharge-shopify-subscription-rival/": {
+    "date": "2026-05-02T09:17:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/youth-lands-4-5m-to-detect-50-biomarkers-via-selfies-and-voice/": {
@@ -8681,6 +8717,10 @@
   },
   "https://www.scmp.com/tech/policy/article/3349422/chinas-zhipu-ai-open-sources-flagship-model-raises-prices-narrow-gap-us-rivals?utm_source=rss_feed": {
     "date": "2026-04-09T09:16:22Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/policy/article/3352173/hong-kong-tech-hub-progress-significant-dalton-ventures-steve-sun-says?utm_source=rss_feed": {
+    "date": "2026-05-02T09:17:24Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/tech-trends/article/3343427/hua-hong-says-memory-shortage-positive-pricing-it-reports-record-quarterly-sales?utm_source=rss_feed": {
