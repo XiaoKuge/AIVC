@@ -795,6 +795,10 @@
     "date": "2026-04-24T09:23:07Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/monthly-vc-funding-recap-ai-may-2026/": {
+    "date": "2026-06-04T10:05:51Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/most-active-fintech-investors-yc-q1-2026/": {
     "date": "2026-04-16T09:16:00Z",
     "deals_found": 0
@@ -1033,6 +1037,10 @@
   },
   "https://pandaily.com/deepseek-raises-7b-valuation-51b-v41-june": {
     "date": "2026-05-09T09:15:22Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/deepseek-s-coming-of-age-landmark-funding-round-and-the-case-jun2026": {
+    "date": "2026-06-04T10:05:51Z",
     "deals_found": 0
   },
   "https://pandaily.com/deer-robot-luming-robotics-1b-rmb-mitsubishi": {
@@ -2195,6 +2203,14 @@
     "date": "2026-06-03T09:58:24Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/06/03/alphabets-record-breaking-85b-raise-for-googles-ai-business-is-a-helluva-good-signal/": {
+    "date": "2026-06-04T10:05:51Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/06/03/coralogix-raises-200m-in-race-to-build-the-monitoring-layer-for-ai-agents/": {
+    "date": "2026-06-04T10:05:51Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/elon-musk-cant-hear-you-over-the-sound-of-his-1-75-trillion-ipo/": {
     "date": "2026-05-23T09:24:39Z",
     "deals_found": 0
@@ -2385,6 +2401,10 @@
   },
   "https://techfundingnews.com/axiamatic-54m-greylock-bessemer-ai-transformation/": {
     "date": "2026-03-13T08:54:28Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/backed-by-xai-co-founder-and-world-cup-winner-kodesage-snaps-6-6m-to-tackle-the-enterprise-software-problem-ai-cant-reach/": {
+    "date": "2026-06-04T10:05:51Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/bayern-kapital-backs-nature-robots-e4m-seed-round-to-power-next-gen-autonomous-agriculture/": {
@@ -2723,6 +2743,10 @@
     "date": "2026-04-14T09:19:30Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/ex-deepmind-researchers-including-indian-origin-cambridge-alum-raise-20m-for-airspeed-to-turn-revenue-teams-insights-into-action/": {
+    "date": "2026-06-04T10:05:51Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/ex-deepmind-researchers-london-startup-raises-50m-to-build-non-toxic-cooling-systems-for-next-gen-gpus-using-ai/": {
     "date": "2026-05-28T10:01:23Z",
     "deals_found": 0
@@ -2731,12 +2755,20 @@
     "date": "2026-02-26T08:59:45Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/ex-isar-aerospace-and-volocopter-leaders-raise-e5-7m-to-fix-the-enterprise-ai-execution-problem/": {
+    "date": "2026-06-04T10:05:51Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/ex-monzo-teams-gradient-labs-doubles-series-a-to-26m-as-ai-agents-take-over-financial-operations/": {
     "date": "2026-06-02T10:12:32Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/ex-palantir-founders-calibre-raises-3m/": {
     "date": "2026-05-19T09:55:00Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/ex-robinhood-and-superhuman-alums-raise-35m-in-a16z-led-round-to-let-ai-run-small-businesses-end-to-end/": {
+    "date": "2026-06-04T10:05:51Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/ex-roblox-engineers-opsmill-raises-14m-from-bgv-partech-to-build-data-layer-for-network-automation/": {
@@ -3215,6 +3247,10 @@
     "date": "2026-03-26T09:00:40Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/oqc-raises-260m-europes-biggest-quantum-round-ever-as-britain-commits-2b-to-win-the-global-quantum-race/": {
+    "date": "2026-06-04T10:05:51Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/oska-health-raises-e11m-ai-coaches-for-europes-chronic-care-gap/": {
     "date": "2026-02-27T09:48:01Z",
     "deals_found": 0
@@ -3453,6 +3489,10 @@
   },
   "https://techfundingnews.com/sedivention-2-9m-seed-bmp-ventures-obesity-medtech-ozempic-alternative/": {
     "date": "2026-05-07T09:38:31Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/semble-secures-30m-series-c-to-expand-europes-most-connected-private-healthcare-platform/": {
+    "date": "2026-06-04T10:05:51Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/seprify-13-4m-series-a-cellulose-tio2-alternative/": {
@@ -3703,6 +3743,10 @@
     "date": "2026-03-05T08:55:07Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/wordsmith-raises-70m-series-b-to-bring-legal-work-back-in-house-as-harvey-hits-11b-and-the-legal-ai-arms-race-accelerates/": {
+    "date": "2026-06-04T10:05:51Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/x-energy-1b-nasdaq-ipo-advanced-nuclear-reactors/": {
     "date": "2026-04-25T09:02:33Z",
     "deals_found": 0
@@ -3721,6 +3765,10 @@
   },
   "https://techfundingnews.com/yc-alum-skio-105m-exit-recharge-shopify-subscription-rival/": {
     "date": "2026-05-02T09:17:24Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/yc-backed-french-startup-upstream-raises-3m-to-rebuild-email-in-the-era-of-ai-agents/": {
+    "date": "2026-06-04T10:05:51Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/yc-unicorn-corgi-doubles-valuation-to-2-6b-in-three-weeks-with-106m-raise-to-modernise-commercial-insurance/": {
@@ -4767,6 +4815,10 @@
     "date": "2026-06-02T10:12:32Z",
     "deals_found": 0
   },
+  "https://technode.com/2026/06/04/deepseek-in-talks-to-raise-7-billion-from-tencent-catl-and-other-investors/": {
+    "date": "2026-06-04T10:05:51Z",
+    "deals_found": 0
+  },
   "https://thetwentyminutevc.libsyn.com/-20vc-travelperks-avi-meir-on-why-2021-will-be-a-record-year-for-business-travel-the-3-priorities-for-all-founders-during-covid-what-vcs-can-do-to-really-support-their-founders-in-a-recession": {
     "date": "2026-02-25T23:02:33Z",
     "deals_found": 0
@@ -5689,6 +5741,10 @@
   },
   "https://thetwentyminutevc.libsyn.com/20vc-anthropic-cpo-mike-krieger-where-will-value-be-created-in-a-world-of-ai-have-foundation-models-commoditized-when-do-model-providers-become-application-providers-what-anthropic-learned-from-deepseek": {
     "date": "2026-02-25T23:02:32Z",
+    "deals_found": 0
+  },
+  "https://thetwentyminutevc.libsyn.com/20vc-anthropic-files-to-go-public-token-budgeting-panic-hits-corporate-america-cognition-raises-1bn-at-26bn-valuation-apollo-warns-pe-software-returns-will-be-disastrous-the-9-9-6-work-ethic-performative-theatre-or-startup-reality": {
+    "date": "2026-06-04T10:05:51Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/20vc-anthropic-raises-13bn-why-canva-will-not-direct-list-openai-buys-statsig-for-11bn-all-stock-lovable-raising-at-4bn-vercel-at-9bn-justified-or-not-quarterly-results-from-snow-mongo-zoom-and-more": {
