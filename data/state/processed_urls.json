@@ -603,6 +603,10 @@
     "date": "2026-03-06T08:47:43Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/active-startup-investors-may-2026-a16z-y-combinator-general-catalyst/": {
+    "date": "2026-06-05T09:55:36Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/ai-interviewer-miravoice-raises-seed-funding-unusual/": {
     "date": "2026-04-03T09:00:22Z",
     "deals_found": 0
@@ -833,6 +837,10 @@
   },
   "https://news.crunchbase.com/venture/robotics-semiconductor-led-unicorns-february-2026/": {
     "date": "2026-03-13T08:54:28Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/venture/scotch-raises-ai-funding-liquor-retail-tech/": {
+    "date": "2026-06-05T09:55:36Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/venture/seed-funding-skewing-larger-ai-competitive-data/": {
@@ -2211,6 +2219,10 @@
     "date": "2026-06-04T10:05:51Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/06/04/ahead-of-its-ipo-anthropics-daniela-amodei-shrugs-off-doubts-about-ais-returns/": {
+    "date": "2026-06-05T09:55:36Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/elon-musk-cant-hear-you-over-the-sound-of-his-1-75-trillion-ipo/": {
     "date": "2026-05-23T09:24:39Z",
     "deals_found": 0
@@ -3395,6 +3407,10 @@
     "date": "2026-05-09T09:15:22Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/ramp-raises-750m-at-44b-as-harvard-classmates-turn-a-corporate-card-into-americas-fastest-growing-finance-platform/": {
+    "date": "2026-06-05T09:55:36Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/range-quantum-systems-15m-seed-quantum-chip-testing/": {
     "date": "2026-04-21T09:22:59Z",
     "deals_found": 0
@@ -3445,6 +3461,10 @@
   },
   "https://techfundingnews.com/rox-ai-1-2b-valuation-general-catalyst-sales-agents/": {
     "date": "2026-03-14T08:48:06Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/sam-altman-backed-helion-raises-465m-at-15-5b-as-fusion-moves-from-lab-milestone-to-construction-site/": {
+    "date": "2026-06-05T09:55:36Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/samaipata-110m-fund-iii-ai-startups-europe/": {
@@ -3567,6 +3587,10 @@
     "date": "2026-03-04T08:52:38Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/spacexs-first-employee-raises-500m-at-4-26b-to-build-the-infrastructure-that-moves-spacecraft-after-launch/": {
+    "date": "2026-06-05T09:55:36Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/spacexs-record-ipo-valuation/": {
     "date": "2026-05-22T09:48:09Z",
     "deals_found": 0
@@ -3595,12 +3619,20 @@
     "date": "2026-03-14T08:48:06Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/suno-raises-400m-at-5-4b-valuation-as-ai-music-hits-300m-arr/": {
+    "date": "2026-06-05T09:55:36Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/swarmer-1200-ipo-surge-ai-drone-nasdaq/": {
     "date": "2026-03-19T08:55:36Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/sweden-ballistics-bags-e30m-from-ex-army-chief-and-eqt-exec-to-boost-tnt-production-in-europe/": {
     "date": "2026-05-08T09:14:27Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/swiss-startup-gr3n-raises-e15-5m-to-build-the-worlds-first-microwave-pet-recycling-plant-and-tackle-the-85-of-plastic-that-never-gets-recycled/": {
+    "date": "2026-06-05T09:55:36Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/synera-35m-series-b-ai-engineering-agents/": {
@@ -3633,6 +3665,10 @@
   },
   "https://techfundingnews.com/the-climate-vc-that-lost-an-investment-in-carbon-removal-just-raised-150m-to-back-ai-infrastructure-instead/": {
     "date": "2026-05-29T09:53:53Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/the-deepmind-and-boston-dynamics-team-building-the-brain-for-every-robot-raises-400m/": {
+    "date": "2026-06-05T09:55:36Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/the-firm-that-backed-uber-and-alibaba-just-minted-a-new-unicorn-and-its-coming-for-wealth-management/": {
@@ -10097,6 +10133,10 @@
   },
   "https://www.scmp.com/tech/policy/article/3354547/despite-blocking-metas-manus-deal-china-says-door-open-foreign-tech-investment?utm_source=rss_feed": {
     "date": "2026-05-23T09:24:39Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/policy/article/3355973/us-seeks-block-chinese-carriers-beijing-opens-telecoms-pilots-foreign-outfits?utm_source=rss_feed": {
+    "date": "2026-06-05T09:55:36Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/tech-trends/article/3343427/hua-hong-says-memory-shortage-positive-pricing-it-reports-record-quarterly-sales?utm_source=rss_feed": {
