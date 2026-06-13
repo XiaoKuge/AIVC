@@ -571,6 +571,10 @@
     "date": "2026-05-22T09:48:09Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/public/spacex-record-breaking-ipo-spcx/": {
+    "date": "2026-06-13T09:48:57Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/real-estate-property-tech/ai-generated-hvac-quotes-rebar-seriesa/": {
     "date": "2026-03-11T08:50:34Z",
     "deals_found": 0
@@ -641,6 +645,10 @@
   },
   "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-autonomy-biotech-anthropic/": {
     "date": "2026-04-25T09:02:33Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-biotech-healthcare-ninjaone-leads/": {
+    "date": "2026-06-13T09:48:57Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/venture/biggest-funding-rounds-ai-defense-openai-shield/": {
@@ -2331,6 +2339,14 @@
     "date": "2026-06-12T10:06:35Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/06/12/mistral-is-rumored-to-be-raising-e3b-at-e20-valuation/": {
+    "date": "2026-06-13T09:48:57Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/06/12/spacex-ipo-live-updates-on-everything-you-need-to-know/": {
+    "date": "2026-06-13T09:48:57Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/elon-musk-cant-hear-you-over-the-sound-of-his-1-75-trillion-ipo/": {
     "date": "2026-05-23T09:24:39Z",
     "deals_found": 0
@@ -2339,8 +2355,16 @@
     "date": "2026-04-30T09:29:01Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/podcast/its-hot-ipo-summer-and-the-mangos-are-ripe/": {
+    "date": "2026-06-13T09:48:57Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/the-phd-students-who-became-the-judges-of-the-ai-industry/": {
     "date": "2026-03-19T08:55:36Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/video/spacex-anthropic-and-openais-hot-ipo-summer/": {
+    "date": "2026-06-13T09:48:57Z",
     "deals_found": 0
   },
   "https://techcrunch.com/video/spacex-files-to-go-public-and-the-math-requires-a-little-faith/": {
@@ -10123,6 +10147,10 @@
     "date": "2026-06-12T10:06:35Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/news/world/united-states-canada/article/3356972/elon-musk-becomes-worlds-first-trillionaire-after-spacex-ipo?utm_source=rss_feed": {
+    "date": "2026-06-13T09:48:57Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/opinion/china-opinion/article/3346402/two-sessions-signals-china-us-tech-contest-entering-new-era?utm_source=rss_feed": {
     "date": "2026-03-16T09:06:00Z",
     "deals_found": 0
@@ -10537,6 +10565,14 @@
   },
   "https://www.theverge.com/ai-artificial-intelligence/946335/openai-ipo-s-1-confidential": {
     "date": "2026-06-09T09:51:16Z",
+    "deals_found": 0
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/948409/elon-musk-trillionaire-spacex-ipo": {
+    "date": "2026-06-13T09:48:57Z",
+    "deals_found": 0
+  },
+  "https://www.theverge.com/business/948996/spacex-ipo-elon-musk": {
+    "date": "2026-06-13T09:48:57Z",
     "deals_found": 0
   },
   "https://www.theverge.com/news/912484/allbirds-ai-hyperscale": {
