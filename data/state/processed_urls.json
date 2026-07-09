@@ -815,8 +815,16 @@
     "date": "2026-03-10T08:53:28Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/data-top-active-us-investors-general-catalyst-a16z-q2-2026/": {
+    "date": "2026-07-09T09:55:17Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/dpi-crunch-startup-funding-schroder-mgv/": {
     "date": "2026-05-30T09:31:08Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/venture/edtech-university-ai-platform-funding-edvisorly/": {
+    "date": "2026-07-09T09:55:17Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/venture/europe-seed-investor-seedcamp-closes-two-funds/": {
@@ -1205,6 +1213,10 @@
   },
   "https://pandaily.com/deep-robotics-files-for-star-market-ipo-seeks-3-5-b-valuation": {
     "date": "2026-05-20T09:55:32Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/deepctrls-physical-ai-funding-energy-jul2026": {
+    "date": "2026-07-09T09:55:17Z",
     "deals_found": 0
   },
   "https://pandaily.com/deepseek-50-billion-funding-round-jun2026": {
@@ -2699,6 +2711,14 @@
     "date": "2026-07-08T09:30:21Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/07/08/lovable-reportedly-in-talks-to-double-its-valuation-to-13-2b/": {
+    "date": "2026-07-09T09:55:16Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/07/08/prime-intellect-raises-130m-series-a-to-help-enterprises-build-their-own-ai-agents/": {
+    "date": "2026-07-09T09:55:17Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/2026/07/08/sambanova-draws-1b-at-11b-valuation-in-series-f-first-close/": {
     "date": "2026-07-08T09:30:21Z",
     "deals_found": 0
@@ -3747,6 +3767,10 @@
     "date": "2026-05-28T10:01:23Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/kraken-technology-group-175m-series-b-unicorn/": {
+    "date": "2026-07-09T09:55:17Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/lawx-7-5m-seed-ai-operating-system-german-law-firms/": {
     "date": "2026-05-18T09:58:04Z",
     "deals_found": 0
@@ -4201,6 +4225,10 @@
   },
   "https://techfundingnews.com/quantum-systems-raises-1-2b-at-8b-valuation-as-blackstone-doubles-down-on-european-defence-tech/": {
     "date": "2026-07-02T09:48:19Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/quantumdiamonds-raises-91m-eu-chips-act-manufacturing/": {
+    "date": "2026-07-09T09:55:17Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/quill-bags-6-5m-to-build-a-chief-of-ai-staff-that-keeps-your-data-sovereign/": {
@@ -8899,6 +8927,10 @@
     "date": "2026-02-25T23:02:33Z",
     "deals_found": 0
   },
+  "https://thetwentyminutevc.libsyn.com/20vc-sam-altman-offers-trump-5-of-openai-fool-or-genius-alex-karp-sounds-the-alarm-enterprises-fear-frontier-models-questionable-roi-of-ai-the-rise-of-chinese-open-source-deepseek-building-own-chips": {
+    "date": "2026-07-09T09:55:17Z",
+    "deals_found": 0
+  },
   "https://thetwentyminutevc.libsyn.com/20vc-sam-altman-on-the-trajectory-of-model-capability-improvements-will-scaling-laws-continue-semi-conductor-supply-chains-what-startups-will-be-steamrolled-by-openai-and-where-is-opportunity": {
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
@@ -11171,6 +11203,14 @@
     "date": "2026-07-07T09:47:50Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/tech/article/3359941/shares-soar-recently-listed-zhipu-ai-and-iluvatar-corex-launch-secondary-placements?utm_source=rss_feed": {
+    "date": "2026-07-09T09:55:17Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/article/3359955/chinas-top-dram-maker-sets-date-us43b-shanghai-ipo-amid-memory-boom?utm_source=rss_feed": {
+    "date": "2026-07-09T09:55:17Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/tech/big-tech/article/3344572/xiaomi-deepens-push-chips-and-ai-peers-race-humanoid-robotics?utm_source=rss_feed": {
     "date": "2026-02-25T23:02:38Z",
     "deals_found": 0
@@ -11429,6 +11469,10 @@
   },
   "https://www.scmp.com/tech/tech-trends/article/3359705/chinas-chip-equipment-rally-faces-earnings-test-memory-boom-fuels-bets-local-tools?utm_source=rss_feed": {
     "date": "2026-07-07T09:47:50Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/tech-trends/article/3359963/chinese-ai-labs-pursue-custom-chips-lower-costs-heavy-upfront-investment-risk?utm_source=rss_feed": {
+    "date": "2026-07-09T09:55:17Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/tech-war/article/3354097/amd-ceos-meeting-chinas-vice-premier-raises-optimism-about-us-ai-chip-imports?utm_source=rss_feed": {
