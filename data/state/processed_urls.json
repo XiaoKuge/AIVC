@@ -655,6 +655,10 @@
     "date": "2026-03-03T08:54:32Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/sales-marketing/centralize-enterprise-sales-gtm-startup-funding-slack-meta-alums/": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/sales-marketing/gtm-ai-startup-funding-netomi-hightouch/": {
     "date": "2026-05-09T09:15:22Z",
     "deals_found": 0
@@ -1263,12 +1267,20 @@
     "date": "2026-03-12T08:55:24Z",
     "deals_found": 0
   },
+  "https://pandaily.com/china-advanced-packaging-new-wave-jul2026": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
   "https://pandaily.com/china-brain-computer-interface-boom-jul2026": {
     "date": "2026-07-08T09:30:22Z",
     "deals_found": 0
   },
   "https://pandaily.com/china-commercial-space-race-jun2026": {
     "date": "2026-06-23T09:54:41Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/china-robots-global-supply-chain-tianzhihang-jul2026": {
+    "date": "2026-07-30T09:43:54Z",
     "deals_found": 0
   },
   "https://pandaily.com/csc-financial-semiconductor-equipment-investment-jul2026": {
@@ -2987,6 +2999,18 @@
     "date": "2026-07-29T09:36:20Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/07/29/as-ai-content-floods-the-internet-pangram-raises-9m-to-detect-it/": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/07/29/encore-ai-raises-30m-to-build-ai-agents-that-learn-from-customer-calls/": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/07/29/microsoft-logs-3-2b-from-anthropic-investment-but-openai-was-a-mixed-bag/": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/apples-lawsuit-couldnt-come-at-a-worse-time-for-openai/": {
     "date": "2026-07-18T09:14:41Z",
     "deals_found": 0
@@ -3079,8 +3103,16 @@
     "date": "2026-06-25T09:51:38Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/agon-30m-seed-defence-ai-training-data/": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/agriodor-15m-series-a-crop-protection/": {
     "date": "2026-04-15T09:17:11Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/ahead-health-10m-funding-preventive-care-germany-netherlands/": {
+    "date": "2026-07-30T09:43:54Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/ai-from-bavaria-neuramancer-secures-e1-7m-for-detect-deepfakes-and-synthetic-media-fraud/": {
@@ -3487,6 +3519,10 @@
     "date": "2026-05-19T09:55:00Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/crunchbase-data-europe-next-100b-startup-centacorns/": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/crusoe-to-triple-valuation-to-30b-as-ai-infrastructure-race-heats-up-report/": {
     "date": "2026-07-03T09:43:27Z",
     "deals_found": 0
@@ -3733,6 +3769,10 @@
   },
   "https://techfundingnews.com/even-realities-1b-valuation-camera-free-glasses/": {
     "date": "2026-07-07T09:47:50Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/eversion-technologies-2-3m-seed-medtech-insoles/": {
+    "date": "2026-07-30T09:43:54Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/every-ai-startup-in-europe-is-selling-sovereignty-valarian-just-raised-50m-to-prove-infrastructure-governance-is-different/": {
@@ -4309,6 +4349,10 @@
   },
   "https://techfundingnews.com/meta-coreweave-21b-ai-cloud-deal/": {
     "date": "2026-04-10T09:15:53Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/micron-mediatek-back-chipagents-as-ai-startup-extends-series-a-to-134m-on-6x-arr-growth/": {
+    "date": "2026-07-30T09:43:54Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/midas-berlin-onchain-investment-platform-raises-50m-series-a/": {
@@ -5195,6 +5239,10 @@
     "date": "2026-06-30T09:49:32Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/unit-ai-raises-12m-from-prologis-ventures-and-sennder-backer-dynamo-to-modularise-warehouse-automation/": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/univity-27m-series-a-vleo-5g-satellite-constellation-telecom-starlink-rival/": {
     "date": "2026-04-23T09:19:26Z",
     "deals_found": 0
@@ -5229,6 +5277,10 @@
   },
   "https://techfundingnews.com/what-if-you-never-forgot-anything-harvard-spinout-engramme-eyes-1b-valuation-to-build-ai-memory/": {
     "date": "2026-04-14T09:19:30Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/who-funds-uk-venture-capital-we-list-the-20-biggest-lps-in-2026/": {
+    "date": "2026-07-30T09:43:54Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/why-american-vcs-are-writing-europes-biggest-ai-cheques/": {
@@ -8795,6 +8847,10 @@
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
   },
+  "https://thetwentyminutevc.libsyn.com/20vc-jensens-open-weights-letter-travis-kalanick-raises-17b-for-atoms-google-cloud-grows-82-but-the-market-tanks-francisco-partners-raises-21bn-etched-raises-300m-to-take-on-nvidia": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
   "https://thetwentyminutevc.libsyn.com/20vc-jetcoms-marc-lore-on-how-to-assess-human-potential-and-the-resume-test-why-chief-people-officer-should-be-one-of-your-first-hires-and-why-we-need-a-new-type-of-venture-capital": {
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
@@ -11507,6 +11563,10 @@
     "date": "2026-07-26T09:25:38Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/business/banking-finance/article/3362337/finance-firms-set-pour-more-investment-ai-amid-data-divide-fears?utm_source=rss_feed": {
+    "date": "2026-07-30T09:43:54Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/business/china-business/article/3346696/hong-kong-stocks-edge-lower-us-iran-stand-oil-supply-fears?utm_source=rss_feed": {
     "date": "2026-03-16T09:06:00Z",
     "deals_found": 0
@@ -11573,6 +11633,10 @@
   },
   "https://www.scmp.com/business/china-business/article/3358830/funding-option-royalties-giant-opens-hong-kong-base-mainland-china-biotech-deals-surge?utm_source=rss_feed": {
     "date": "2026-06-30T09:49:32Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/business/china-business/article/3362256/cxmt-shock-how-chinas-viable-alternatives-punch-nvidia-micron-sk-hynix-shares?utm_source=rss_feed": {
+    "date": "2026-07-30T09:43:54Z",
     "deals_found": 0
   },
   "https://www.scmp.com/business/china-evs/article/3353991/global-growth-evs-faces-hurdles-insurance-charging-gaps-says-bnp-paribas?utm_source=rss_feed": {
@@ -11873,6 +11937,10 @@
   },
   "https://www.scmp.com/tech/article/3361444/chinese-robot-maker-agibot-pursues-hong-kong-ipo-hiring-three-sponsors-sources?utm_source=rss_feed": {
     "date": "2026-07-22T09:35:33Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/article/3362294/explosive-demand-cooling-continues-europe-swelters-chinas-midea-says?utm_source=rss_feed": {
+    "date": "2026-07-30T09:43:54Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/big-tech/article/3344572/xiaomi-deepens-push-chips-and-ai-peers-race-humanoid-robotics?utm_source=rss_feed": {
