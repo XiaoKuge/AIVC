@@ -583,6 +583,10 @@
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/health-wellness-biotech/fitness-startup-funding-rebounding-ai-data-h1-2026/": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/health-wellness-biotech/saile-doctors-side-jobs-central-platform-credentials/": {
     "date": "2026-05-14T09:40:18Z",
     "deals_found": 0
@@ -693,6 +697,10 @@
   },
   "https://news.crunchbase.com/startups/omnea-funding-employees-future-founders-freeman/": {
     "date": "2026-07-01T09:49:58Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/transportation/clearjet-raises-25m-logistics-ai-seriesb/": {
+    "date": "2026-08-13T09:13:23Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/transportation/freehand-pando-enterprise-supply-chain-spend-management-startup/": {
@@ -2003,6 +2011,10 @@
     "date": "2026-03-21T08:51:37Z",
     "deals_found": 0
   },
+  "https://pandaily.com/taizhou-zhongfu-deep-sea-buoyancy-material-breaks-western-monopoly-aug2026": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
   "https://pandaily.com/tars-raises-455-m-pre-a-round-setting-record-in-china-s-embodied-ai-sector": {
     "date": "2026-04-17T09:19:49Z",
     "deals_found": 0
@@ -3127,6 +3139,22 @@
     "date": "2026-08-10T09:14:57Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/08/12/ai-coding-startup-cognition-reportedly-already-in-talks-to-raise-at-40b-valuation/": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/08/12/blacksmiths-valuation-jumps-10x-to-550m-as-ai-coding-fuels-software-validation/": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/08/12/lovable-confirms-new-13-3b-valuation-raises-another-400m/": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/08/12/openai-backed-thrive-holdings-raises-2b-to-bring-ai-to-the-enterprise/": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/apples-lawsuit-couldnt-come-at-a-worse-time-for-openai/": {
     "date": "2026-07-18T09:14:41Z",
     "deals_found": 0
@@ -3179,6 +3207,10 @@
     "date": "2026-03-13T08:54:28Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/20-uk-ai-startups-to-watch-in-2026-top-vcs/": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/5u-ai-3-2m-pre-seed-freight-forwarding-ai-workers/": {
     "date": "2026-07-28T09:36:29Z",
     "deals_found": 0
@@ -3189,6 +3221,10 @@
   },
   "https://techfundingnews.com/accel-and-sequoia-back-oasis-securitys-120m-series-b-for-secure-ai-agents/": {
     "date": "2026-03-21T08:51:37Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/accel-raises-3-5b-across-four-funds-as-ai-reshapes-early-stage-vc/": {
+    "date": "2026-08-13T09:13:23Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/accenture-and-adobe-back-netomis-110m-series-c-to-scale-enterprise-agentic-cx/": {
@@ -3619,12 +3655,20 @@
     "date": "2026-03-24T08:55:12Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/coderabbit-lands-143m-at-1-5b-valuation-as-ai-generated-code-surges/": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/codewords-9m-seed-visionaries-ai-agents-workflow-automation/": {
     "date": "2026-05-08T09:14:27Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/cognition-ai-25b-valuation-funding-talks-devin-software-engineer/": {
     "date": "2026-04-24T09:23:07Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/cognition-ai-eyes-40b-valuation-less-than-three-months-after-26b-mark/": {
+    "date": "2026-08-13T09:13:23Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/conduct-60m-series-a-iconiq-index-ventures-sap-2027-deadline/": {
@@ -4127,6 +4171,10 @@
     "date": "2026-05-15T09:50:47Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/from-idea-to-ipo-navigating-tech-startup-challenges-while-prioritising-security/": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/from-mit-research-to-1-5b-unicorn-ethan-hus-meshy-raises-400m-for-ai-powered-3d-creation/": {
     "date": "2026-07-24T09:29:49Z",
     "deals_found": 0
@@ -4229,6 +4277,10 @@
   },
   "https://techfundingnews.com/hawkeye-360-ipo-416m-2-4b-valuation-space-tech-defense/": {
     "date": "2026-05-09T09:15:23Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/heaviside-raises-60m-at-a-600m-valuation-up-21x-in-three-months/": {
+    "date": "2026-08-13T09:13:23Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/helsing-1-8b-series-e-18b-valuation/": {
@@ -4465,6 +4517,10 @@
   },
   "https://techfundingnews.com/londons-epoch-biodesign-raises-9m-from-extantia-and-kompas-vc-for-its-largest-nylon-6-6-biorecycling-plant/": {
     "date": "2026-03-25T08:54:31Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/lovable-raises-400m-at-13-3b-valuation-menlo-eqt/": {
+    "date": "2026-08-13T09:13:23Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/lululemon-syntetica-30m-series-a-nylon-recycling/": {
@@ -6815,6 +6871,10 @@
     "date": "2026-08-10T09:14:57Z",
     "deals_found": 0
   },
+  "https://technode.com/2026/08/13/tencent-backs-lovable-in-400-million-series-c-at-13-3-billion-valuation/": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
   "https://thetwentyminutevc.libsyn.com/-20vc-travelperks-avi-meir-on-why-2021-will-be-a-record-year-for-business-travel-the-3-priorities-for-all-founders-during-covid-what-vcs-can-do-to-really-support-their-founders-in-a-recession": {
     "date": "2026-02-25T23:02:33Z",
     "deals_found": 0
@@ -8093,6 +8153,10 @@
   },
   "https://thetwentyminutevc.libsyn.com/20vc-canva-co-founder-cliff-obrecht-on-the-journey-from-100-vc-rejections-to-a-40bn-company-why-good-enough-is-not-good-enough-the-secret-to-hiring-non-obvious-talent-and-relationships-to-money-and-why-they-are-giving-away-billions": {
     "date": "2026-02-25T23:02:32Z",
+    "deals_found": 0
+  },
+  "https://thetwentyminutevc.libsyn.com/20vc-canva-slashes-growth-how-much-is-it-really-worth-demis-hassabis-and-jeff-dean-talent-exodus-at-google-revoluts-50bn-ceo-pay-package-elon-musks-55bn-terrafab": {
+    "date": "2026-08-13T09:13:23Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/20vc-capital-gs-laela-sturdy-on-what-stripe-uipath-and-duolingo-taught-me-about-company-building-and-investing-how-to-analyse-valuation-market-timing-sizing-and-exiting-life-inside-alphabets-7bn-growth-fund": {
@@ -11987,6 +12051,10 @@
     "date": "2026-07-30T09:43:54Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/business/china-business/article/3363799/chinas-brain-chip-drive-accelerates-slew-state-backed-initiatives?utm_source=rss_feed": {
+    "date": "2026-08-13T09:13:23Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/business/china-evs/article/3353991/global-growth-evs-faces-hurdles-insurance-charging-gaps-says-bnp-paribas?utm_source=rss_feed": {
     "date": "2026-05-19T09:55:00Z",
     "deals_found": 0
@@ -12305,6 +12373,10 @@
   },
   "https://www.scmp.com/tech/article/3363762/chinese-ai-start-modelbest-kicks-pre-ipo-tutoring-process-mainland-listing?utm_source=rss_feed": {
     "date": "2026-08-12T09:09:53Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/article/3363797/fund-backed-china-memory-giant-ymtc-invests-push-alternative-chipmaking-route?utm_source=rss_feed": {
+    "date": "2026-08-13T09:13:23Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/big-tech/article/3344572/xiaomi-deepens-push-chips-and-ai-peers-race-humanoid-robotics?utm_source=rss_feed": {
