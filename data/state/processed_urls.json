@@ -1159,6 +1159,10 @@
     "date": "2026-03-18T08:54:02Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/unicorn-investors-ai-robotics-2026-sequoia-khosla/": {
+    "date": "2026-08-20T10:38:24Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/unicorn-legal-tech-ai-startup-legora-triples-valuation/": {
     "date": "2026-03-11T08:50:34Z",
     "deals_found": 0
@@ -1277,6 +1281,10 @@
   },
   "https://pandaily.com/autonomous-driving-firm-momenta-files-for-hong-kong-ipo-targets-1-billion": {
     "date": "2026-03-06T08:47:43Z",
+    "deals_found": 0
+  },
+  "https://pandaily.com/baidu-q2-2026-ai-revenue-half-new-baidu-kunlun-chip-eruder-applications-aug2026": {
+    "date": "2026-08-20T10:38:24Z",
     "deals_found": 0
   },
   "https://pandaily.com/beijing-based-ai-storage-firm-xsky-funded-to-series-f-files-for-hong-kong-ipo": {
@@ -3227,6 +3235,14 @@
     "date": "2026-08-19T10:02:44Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/08/19/cognition-ceo-denies-report-that-spacex-tried-to-acquire-the-startup/": {
+    "date": "2026-08-20T10:38:24Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/08/19/relativity-networks-raises-22-million-to-bring-a-faster-kind-of-fiber-to-data-centers/": {
+    "date": "2026-08-20T10:38:24Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/apples-lawsuit-couldnt-come-at-a-worse-time-for-openai/": {
     "date": "2026-07-18T09:14:41Z",
     "deals_found": 0
@@ -3417,6 +3433,10 @@
   },
   "https://techfundingnews.com/alqem-raises-8m-rare-earth-free-magnets/": {
     "date": "2026-07-07T09:47:50Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/also-raises-150m-series-d-autonomous-electric-vehicles/": {
+    "date": "2026-08-20T10:38:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/amazon-backed-x-energy-files-for-ipo-hot-on-the-heels-of-1-4b-raise-to-scale-small-modular-nuclear-reactors/": {
@@ -3681,6 +3701,10 @@
   },
   "https://techfundingnews.com/calibre-3-3m-pre-seed-pitch-deck-amino-collective-ai-health/": {
     "date": "2026-04-22T09:16:58Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/callosum-raises-100m-europe-largest-seed-round/": {
+    "date": "2026-08-20T10:38:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/cambridge-aerospace-raises-300m-at-3-4b-valuation-to-scale-low-cost-air-defence/": {
@@ -4005,6 +4029,10 @@
   },
   "https://techfundingnews.com/etched-10-3b-series-c-sequoia-record/": {
     "date": "2026-07-26T09:25:38Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/etched-raises-700m-21b-valuation-jane-street/": {
+    "date": "2026-08-20T10:38:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/eternal-ag-raises-8m-to-automate-greenhouse-harvesting/": {
@@ -4811,6 +4839,10 @@
     "date": "2026-04-15T09:17:11Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/nebius-4-5b-convertible-notes-share-price-drop/": {
+    "date": "2026-08-20T10:38:24Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/nebius-eigen-ai-643m-acquisition-mit-inference-bay-area/": {
     "date": "2026-05-02T09:17:24Z",
     "deals_found": 0
@@ -5499,6 +5531,10 @@
     "date": "2026-07-23T09:37:24Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/temporal-talks-500m-funding-12b-valuation/": {
+    "date": "2026-08-20T10:38:24Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/tencent-to-back-deepseek-in-4b-round-at-50b-valuation-marking-first-external-funding-report/": {
     "date": "2026-05-09T09:15:23Z",
     "deals_found": 0
@@ -5529,6 +5565,10 @@
   },
   "https://techfundingnews.com/the-ai-startup-replacing-software-engineers-just-raised-1b-at-26b-valuation-and-it-is-already-writing-89-of-cognitions-own-code/": {
     "date": "2026-05-28T10:01:23Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/the-business-case-for-extending-the-life-of-technology-why-circular-it-is-moving-up-the-investment-agenda/": {
+    "date": "2026-08-20T10:38:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/the-climate-vc-that-lost-an-investment-in-carbon-removal-just-raised-150m-to-back-ai-infrastructure-instead/": {
@@ -5749,6 +5789,10 @@
   },
   "https://techfundingnews.com/why-did-mistrals-co-founders-back-a-e6m-funding-round-in-ai-simulation-startup-days-after-acquiring-its-competitor/": {
     "date": "2026-06-02T10:12:32Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/why-investors-handed-the-twistlock-founders-51m-before-they-shipped-a-product/": {
+    "date": "2026-08-20T10:38:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/why-rtp-global-backed-kestra-25m-enterprise-orchestration-pitch-deck/": {
@@ -7061,6 +7105,14 @@
   },
   "https://technode.com/2026/08/19/yuanxin-satellite-reportedly-raises-nearly-rmb7-billion-at-rmb50-billion-valuation/": {
     "date": "2026-08-19T10:02:44Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/08/20/cherys-aimoga-robotics-begins-ipo-preparations-as-it-targets-overseas-markets/": {
+    "date": "2026-08-20T10:38:24Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/08/20/yangtze-memory-clears-ipo-counseling-acceptance-moving-closer-to-a-shanghai-listing/": {
+    "date": "2026-08-20T10:38:24Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/-20vc-travelperks-avi-meir-on-why-2021-will-be-a-record-year-for-business-travel-the-3-priorities-for-all-founders-during-covid-what-vcs-can-do-to-really-support-their-founders-in-a-recession": {
@@ -10363,6 +10415,10 @@
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
   },
+  "https://thetwentyminutevc.libsyn.com/20vc-spacex-buys-cursor-for-60bn-stripes-8bn-openrouter-bet-anthropics-first-profit-the-math-behind-reaching-600bn-in-revenue-lovable-and-higgsfield-raise-mega-rounds": {
+    "date": "2026-08-20T10:38:24Z",
+    "deals_found": 0
+  },
   "https://thetwentyminutevc.libsyn.com/20vc-spacex-completes-acquisition-of-xai-the-2026-saas-massacre-public-market-collapse-microsofts-360-billion-market-cap-loss-nvidias-100bn-investment-dispute-with-openai-waymo-raises-16-billion-at-a-110-billion-valuation": {
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
@@ -12579,6 +12635,10 @@
     "date": "2026-08-13T09:13:23Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/tech/article/3364654/armed-funding-boost-spacesail-accelerates-chinas-push-rival-elon-musks-starlink?utm_source=rss_feed": {
+    "date": "2026-08-20T10:38:24Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/tech/big-tech/article/3344572/xiaomi-deepens-push-chips-and-ai-peers-race-humanoid-robotics?utm_source=rss_feed": {
     "date": "2026-02-25T23:02:38Z",
     "deals_found": 0
@@ -12741,6 +12801,10 @@
   },
   "https://www.scmp.com/tech/big-tech/article/3364380/meet-chinese-ai-star-who-splashed-reported-us70m-california-mansion?utm_source=rss_feed": {
     "date": "2026-08-19T10:02:44Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/big-tech/article/3364582/spectacle-scale-why-chinas-robotics-firms-face-critical-juncture?utm_source=rss_feed": {
+    "date": "2026-08-20T10:38:24Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/big-tech/series/3356494/spacex-ipo-views-ground?utm_source=rss_feed": {
@@ -13065,6 +13129,10 @@
   },
   "https://www.theverge.com/ai-artificial-intelligence/977124/amazon-data-center-worst-polluting-power-plant": {
     "date": "2026-08-09T08:55:07Z",
+    "deals_found": 0
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/982323/openai-hit-brakes-voluntary-pacing-ai": {
+    "date": "2026-08-20T10:38:24Z",
     "deals_found": 0
   },
   "https://www.theverge.com/business/948996/spacex-ipo-elon-musk": {
