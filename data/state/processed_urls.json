@@ -871,6 +871,10 @@
     "date": "2026-09-05T08:55:17Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/biggest-funding-rounds-cybersecurity-ai-health-island-cyera/": {
+    "date": "2026-09-26T08:58:16Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/biggest-funding-rounds-cybersecurity-defense-startup-ai-odyssey-leads/": {
     "date": "2026-06-19T10:14:24Z",
     "deals_found": 0
@@ -3565,6 +3569,14 @@
   },
   "https://techcrunch.com/2026/09/24/twenty-minutes-with-the-ceo-of-elevenlabs-now-reportedly-valued-at-22-billion/": {
     "date": "2026-09-25T09:02:17Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/09/25/ahead-of-u-s-ipo-british-ai-neocloud-nscale-secures-3-36b-in-convertible-finacing/": {
+    "date": "2026-09-26T08:58:16Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/09/25/anthropics-founders-seek-voting-control-ahead-of-ipo/": {
+    "date": "2026-09-26T08:58:16Z",
     "deals_found": 0
   },
   "https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/": {
