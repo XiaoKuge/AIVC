@@ -1251,6 +1251,10 @@
     "date": "2026-05-19T09:55:00Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/real-estate-proptech-ai-startups-qa-wallace-fifth-wall/": {
+    "date": "2026-10-14T09:00:13Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/record-breaking-funding-ai-global-q1-2026/": {
     "date": "2026-04-02T09:08:47Z",
     "deals_found": 0
@@ -3727,6 +3731,10 @@
     "date": "2026-10-13T09:02:30Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/10/13/pluto-security-raises-42m-as-ai-gives-enterprise-security-teams-a-new-headache/": {
+    "date": "2026-10-14T09:00:13Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/": {
     "date": "2026-09-12T09:01:22Z",
     "deals_found": 0
@@ -3837,6 +3845,10 @@
   },
   "https://techfundingnews.com/adyen-alums-silverflow-raises-40m-to-kill-legacy-payments/": {
     "date": "2026-03-05T08:55:07Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/affinity-labs-raises-2m-creator-software-fuel-ventures-bending-spoons/": {
+    "date": "2026-10-14T09:00:13Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/after-anthropics-ipo-filing-openai-reportedly-eyes-1t-valuation-in-wall-street-debut/": {
@@ -4041,6 +4053,10 @@
   },
   "https://techfundingnews.com/anthropics-1-2t-secondary-valuation-jumps-550-in-a-year-overtaking-openai/": {
     "date": "2026-07-10T09:47:26Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/antler-invests-2m-uk-startups-physical-ai-industrial-automation/": {
+    "date": "2026-10-14T09:00:13Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/antler-uk-13-startups-pre-seed-investment/": {
@@ -4293,6 +4309,10 @@
   },
   "https://techfundingnews.com/causa-prima-10m-pre-seed-creandum-b2b-payments-ai-agents-network/": {
     "date": "2026-06-16T10:31:17Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/causa-prima-raises-20m-seed-from-base10-to-let-ai-agents-settle-b2b-invoices/": {
+    "date": "2026-10-14T09:00:13Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/cellares-277m-series-d-ark-invest-cell-therapy/": {
@@ -4825,6 +4845,10 @@
   },
   "https://techfundingnews.com/exclusive-female-founded-responsible-ai-startup-lands-1m-to-grade-apprenticeship-exams/": {
     "date": "2026-10-13T09:02:30Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/exclusive-helsinki-ambio-raises-5m-recycled-plastics-b2venture/": {
+    "date": "2026-10-14T09:00:13Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/exclusive-quantum-bridge-secures-8m-to-protect-finance-government-and-defence-from-quantum-cybersecurity-risks/": {
@@ -5797,6 +5821,10 @@
   },
   "https://techfundingnews.com/ollygarden-raises-4m-datadog-grafana-dash0-telemetry-waste/": {
     "date": "2026-10-09T09:02:38Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/olympic-medalist-andrew-steele-raises-6m-preventive-health-stride-araya-ventures/": {
+    "date": "2026-10-14T09:00:13Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/omni-120m-series-c-15b-valuation-semantic-layer-ai-data-governance/": {
@@ -8347,8 +8375,24 @@
     "date": "2026-10-12T09:18:43Z",
     "deals_found": 0
   },
+  "https://technode.com/2026/10/13/ai-is-getting-a-factory-job/": {
+    "date": "2026-10-14T09:00:13Z",
+    "deals_found": 0
+  },
   "https://technode.com/2026/10/13/home-robot-startup-ola-dimensions-raises-hundreds-of-millions-of-rmb-in-fourth-funding-round/": {
     "date": "2026-10-13T09:02:30Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/10/14/ai-inference-chip-startup-sunmmio-completes-pre-a2-and-series-a-funding/": {
+    "date": "2026-10-14T09:00:13Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/10/14/hong-kong-regulator-suspends-chapanda-shares-over-suspected-ipo-manipulation/": {
+    "date": "2026-10-14T09:00:13Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/10/14/robot-maker-agibot-nears-new-funding-round-at-rmb-50-billion-valuation/": {
+    "date": "2026-10-14T09:00:13Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/-20vc-travelperks-avi-meir-on-why-2021-will-be-a-record-year-for-business-travel-the-3-priorities-for-all-founders-during-covid-what-vcs-can-do-to-really-support-their-founders-in-a-recession": {
@@ -14525,6 +14569,14 @@
   },
   "https://www.scmp.com/tech/tech-trends/article/3370177/chinas-ai-chipmaker-biren-tumbles-12-it-seeks-us510-million-share-placement?utm_source=rss_feed": {
     "date": "2026-10-08T09:03:47Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/tech-trends/article/3370739/why-samsung-sk-hynix-and-cxmt-shares-are-under-pressure-despite-strong-ai-demand?utm_source=rss_feed": {
+    "date": "2026-10-14T09:00:13Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/tech-trends/article/3370858/china-chip-exports-jump-136-us45b-ai-frenzy-jacks-prices?utm_source=rss_feed": {
+    "date": "2026-10-14T09:00:13Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/tech-war/article/3354097/amd-ceos-meeting-chinas-vice-premier-raises-optimism-about-us-ai-chip-imports?utm_source=rss_feed": {
