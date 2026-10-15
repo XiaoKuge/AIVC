@@ -1103,6 +1103,10 @@
     "date": "2026-06-18T10:14:23Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/founder-raises-5m-next-act-ai-marketing-startup-marklo-herrin/": {
+    "date": "2026-10-15T09:04:00Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/funding-picked-up-ai-led-europe-q1-2026/": {
     "date": "2026-04-15T09:17:11Z",
     "deals_found": 0
@@ -1293,6 +1297,10 @@
   },
   "https://news.crunchbase.com/venture/semiconductor-giants-nvda-intc-backing-ai-robotics-starups-2026/": {
     "date": "2026-08-18T09:43:02Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/venture/september-2026-new-unicorns-semiconductors-ai-fintech-space/": {
+    "date": "2026-10-15T09:04:00Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/venture/seriesa-seed-gap-underrepresented-founders-ai-norman-green-black-ops/": {
@@ -3735,6 +3743,18 @@
     "date": "2026-10-14T09:00:13Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/10/14/scimplify-raises-25m-to-challenge-chinas-grip-on-critical-materials-with-ai/": {
+    "date": "2026-10-15T09:04:00Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/10/14/techcrunch-disrupt-2026-day-2/": {
+    "date": "2026-10-15T09:04:00Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/10/14/zenzap-raises-44m-for-its-ai-chat-app-that-aims-to-replace-whatsapp-in-the-workplace/": {
+    "date": "2026-10-15T09:04:00Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/": {
     "date": "2026-09-12T09:01:22Z",
     "deals_found": 0
@@ -4233,6 +4253,10 @@
   },
   "https://techfundingnews.com/british-ai-chipmaker-fractile-secures-220m-to-challenge-nvidia-gets-funding-from-accel-and-founders-fund/": {
     "date": "2026-05-14T09:40:18Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/british-business-bank-180m-six-ai-funds-evantic-intrepid-crane/": {
+    "date": "2026-10-15T09:04:00Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/british-business-bank-600m-uk-tech-portfolio/": {
@@ -5619,6 +5643,10 @@
     "date": "2026-09-11T08:56:32Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/modal-becomes-latest-decacorn-after-750m-raise-to-build-cloud-infrastructure-for-ai-agents/": {
+    "date": "2026-10-15T09:04:00Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/molten-ventures-growth-fund-175m-first-close-british-business-bank/": {
     "date": "2026-09-08T08:57:34Z",
     "deals_found": 0
@@ -5911,6 +5939,10 @@
     "date": "2026-03-04T08:52:38Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/oxford-photonics-startup-salience-labs-raises-125m-to-link-thousands-of-gpus-with-light/": {
+    "date": "2026-10-15T09:04:00Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/pado-raises-6m-to-make-data-centres-more-energy-efficient-amid-the-ai-race/": {
     "date": "2026-03-20T08:51:35Z",
     "deals_found": 0
@@ -6117,6 +6149,10 @@
   },
   "https://techfundingnews.com/rabobank-and-lumo-labs-avendars-e2-2m-round-to-give-european-governments-a-sovereign-ai-alternative-to-palantir/": {
     "date": "2026-05-07T09:38:31Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/rabot-energy-raises-50m-series-b-virtual-power-plant-endeit-capital/": {
+    "date": "2026-10-15T09:04:00Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/ramp-eyes-1b-series-g-at-60b-valuation-just-three-months-after-hitting-44b/": {
@@ -6327,6 +6363,10 @@
     "date": "2026-07-13T09:47:46Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/sheffield-spinout-silvia-bio-raises-3m-northern-gritstone-biomanufacturing/": {
+    "date": "2026-10-15T09:04:00Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/sheffields-amplisi-raises-2m-to-kill-graphite-in-lithium-ion-batteries/": {
     "date": "2026-03-13T08:54:28Z",
     "deals_found": 0
@@ -6405,6 +6445,10 @@
   },
   "https://techfundingnews.com/space-minister-unleashes-30m-for-uk-firms-building-tomorrows-satellite-networks/": {
     "date": "2026-03-04T08:52:38Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/spacemaker-alumni-raise-6m-seedcamp-ai-engineering-firm-solvera/": {
+    "date": "2026-10-15T09:04:00Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/spacex-20b-investment-grade-debt-ipo-refinance-xai-acquisition/": {
@@ -8393,6 +8437,10 @@
   },
   "https://technode.com/2026/10/14/robot-maker-agibot-nears-new-funding-round-at-rmb-50-billion-valuation/": {
     "date": "2026-10-14T09:00:13Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/10/15/scientific-simulation-and-ai-data-startup-scivisual-raises-tens-of-millions-of-rmb/": {
+    "date": "2026-10-15T09:04:00Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/-20vc-travelperks-avi-meir-on-why-2021-will-be-a-record-year-for-business-travel-the-3-priorities-for-all-founders-during-covid-what-vcs-can-do-to-really-support-their-founders-in-a-recession": {
@@ -12163,6 +12211,10 @@
     "date": "2026-02-25T23:02:34Z",
     "deals_found": 0
   },
+  "https://thetwentyminutevc.libsyn.com/20vc-the-pro-rata-battle-valar-atomics-sues-day-one-ventures-meta-returns-to-the-ai-frontier-with-muse-wonder-nvidia-eyes-30b-reflection-deal-jev-raises-870m-at-a-75b-valuation": {
+    "date": "2026-10-15T09:04:00Z",
+    "deals_found": 0
+  },
   "https://thetwentyminutevc.libsyn.com/20vc-the-radical-changes-in-public-market-expectations-the-right-way-to-assess-valuation-what-it-means-to-be-a-disciplined-diligent-investor-with-randy-glein-partner-dfj-growth": {
     "date": "2026-02-25T23:02:34Z",
     "deals_found": 0
@@ -14305,6 +14357,10 @@
   },
   "https://www.scmp.com/tech/big-tech/article/3370209/alibabas-ai-cloud-revenue-set-surge-over-50-investment-blitz-pays-analysts?utm_source=rss_feed": {
     "date": "2026-10-09T09:02:38Z",
+    "deals_found": 0
+  },
+  "https://www.scmp.com/tech/big-tech/article/3370871/chinese-memory-giant-ymtc-grow-revenue-6-times-faster-peers-ipo-nears-report?utm_source=rss_feed": {
+    "date": "2026-10-15T09:04:00Z",
     "deals_found": 0
   },
   "https://www.scmp.com/tech/big-tech/series/3356494/spacex-ipo-views-ground?utm_source=rss_feed": {
