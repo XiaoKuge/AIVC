@@ -531,6 +531,10 @@
     "date": "2026-05-29T09:53:53Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/ai/anthropic-record-ipo-ant-public-market-debut-spcx/": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/ai/biggest-funding-rounds-ai-anthropic-65b-dominates/": {
     "date": "2026-05-30T09:31:08Z",
     "deals_found": 0
@@ -557,6 +561,10 @@
   },
   "https://news.crunchbase.com/ai/legal-tech-chariot-raise-stop-hidden-fees-subscriptions-hang/": {
     "date": "2026-10-16T08:58:40Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/ai/startup-founder-diy-patents-legal-liabiity-drapkin-mutter-landfall/": {
+    "date": "2026-11-11T08:48:50Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/ai/strategies-enhancing-exit-value-acquisitions-sagie/": {
@@ -1309,6 +1317,10 @@
   },
   "https://news.crunchbase.com/venture/october-2026-lead-startup-investors/": {
     "date": "2026-11-07T08:52:42Z",
+    "deals_found": 0
+  },
+  "https://news.crunchbase.com/venture/october-2026-unicorn-board-gains-34-tops-1900-ai-defense/": {
+    "date": "2026-11-11T08:48:50Z",
     "deals_found": 0
   },
   "https://news.crunchbase.com/venture/openai-raise-largest-ai-venture-deal-ever/": {
@@ -4019,6 +4031,22 @@
     "date": "2026-11-10T08:55:43Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/11/10/all-7-anthropic-founders-will-each-cash-out-about-250m-in-ipo/": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/11/10/anthropic-sets-ipo-price-range-of-70-to-78-per-share-to-reach-an-implied-valuation-of-1-404-trillion/": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/": {
     "date": "2026-09-12T09:01:22Z",
     "deals_found": 0
@@ -4325,6 +4353,10 @@
   },
   "https://techfundingnews.com/anthropic-investors-eye-2t-ipo-valuation-after-spacexs-record-debut-report/": {
     "date": "2026-08-14T10:03:01Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/anthropic-ipo-81b-run-rate-revenue-900b-in-compute-commitments-and-a-1-4t-price-tag/": {
+    "date": "2026-11-11T08:48:50Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/anthropic-ipo-october-raise-60-billion/": {
@@ -4821,6 +4853,10 @@
   },
   "https://techfundingnews.com/ddd-invoices-1-31m-seed-global-e-invoicing-compliance-api/": {
     "date": "2026-05-14T09:40:18Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/de-shaw-monzo-300m-funding-round-7bn-valuation/": {
+    "date": "2026-11-11T08:48:50Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/debt-now-makes-up-four-in-ten-dollars-of-african-startup-funding/": {
@@ -6019,6 +6055,10 @@
     "date": "2026-07-10T09:47:26Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/mercor-doubles-valuation-to-20b-with-750m-series-d-to-train-and-test-ai-agents-for-enterprises/": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/meta-25b-bond-sale-stock-falls-ai-spending-plan/": {
     "date": "2026-05-02T09:17:24Z",
     "deals_found": 0
@@ -6217,6 +6257,10 @@
   },
   "https://techfundingnews.com/nominal-80m-1b-valuation-founders-fund/": {
     "date": "2026-03-07T08:45:09Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/nominal-raises-240m-at-3b-valuation-tripling-in-eight-months-to-put-ai-inside-hardware-engineering/": {
+    "date": "2026-11-11T08:48:50Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/nordicninja-leads-redpine-in-e6-8m-round-to-let-ai-agents-access-private-data/": {
@@ -6463,6 +6507,10 @@
     "date": "2026-07-23T09:37:24Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/path-robotics-arr-is-up-17x-in-18-months-why-georgian-is-backing-its-300m-series-e/": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/patlytics-40m-series-b-ai-patent-software/": {
     "date": "2026-04-10T09:15:53Z",
     "deals_found": 0
@@ -6621,6 +6669,10 @@
   },
   "https://techfundingnews.com/proxima-fusion-raises-411m-google-rwe/": {
     "date": "2026-07-07T09:47:50Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/puppygraph-raises-10m-so-ai-agents-can-query-3000-tables-without-a-graph-database/": {
+    "date": "2026-11-11T08:48:50Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/qdrant-raises-50m-from-avp-to-redefine-vector-search-for-production-ai/": {
@@ -6879,6 +6931,10 @@
     "date": "2026-06-04T10:05:51Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/sennder-228m-financing-positive-ebitda-1bn-revenue/": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/seprify-13-4m-series-a-cellulose-tio2-alternative/": {
     "date": "2026-03-10T08:53:28Z",
     "deals_found": 0
@@ -7029,6 +7085,10 @@
   },
   "https://techfundingnews.com/spains-pld-space-invests-e35m-in-kourou-launch-complex-as-miura-5-targets-late-2026-debut/": {
     "date": "2026-06-01T10:33:54Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/sparxity-series-a-sparse-native-ai-computing/": {
+    "date": "2026-11-11T08:48:50Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/spektr-20m-series-a-ai-compliance-agents/": {
@@ -9197,6 +9257,10 @@
   },
   "https://technode.com/2026/11/10/chinese-gpu-maker-denglin-technology-raises-hk1-41-billion-in-hong-kong-ipo/": {
     "date": "2026-11-10T08:55:43Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/11/11/alibaba-discloses-hong-kong-ipo-filing-for-chip-unit-t-head/": {
+    "date": "2026-11-11T08:48:50Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/-20vc-travelperks-avi-meir-on-why-2021-will-be-a-record-year-for-business-travel-the-3-priorities-for-all-founders-during-covid-what-vcs-can-do-to-really-support-their-founders-in-a-recession": {
@@ -14551,6 +14615,10 @@
     "date": "2026-11-06T08:50:57Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/business/china-business/article/3373949/mainland-chinese-overseas-funds-find-winners-oil-us-stocks-hong-kong-bets-struggle": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/business/china-evs/article/3353991/global-growth-evs-faces-hurdles-insurance-charging-gaps-says-bnp-paribas?utm_source=rss_feed": {
     "date": "2026-05-19T09:55:00Z",
     "deals_found": 0
@@ -15247,6 +15315,10 @@
     "date": "2026-11-10T08:55:43Z",
     "deals_found": 0
   },
+  "https://www.scmp.com/tech/big-tech/article/3374037/what-taiwanese-chip-giant-tsmc-gains-taking-stakes-openai-and-anthropics-ai-race": {
+    "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
   "https://www.scmp.com/tech/big-tech/series/3356494/spacex-ipo-views-ground?utm_source=rss_feed": {
     "date": "2026-06-09T09:51:16Z",
     "deals_found": 0
@@ -15625,6 +15697,10 @@
   },
   "https://www.theverge.com/ai-artificial-intelligence/1030328/what-could-china-get-from-jensen-huang": {
     "date": "2026-11-10T08:55:43Z",
+    "deals_found": 0
+  },
+  "https://www.theverge.com/ai-artificial-intelligence/1030703/anthropic-ipo-1-4-trillion": {
+    "date": "2026-11-11T08:48:50Z",
     "deals_found": 0
   },
   "https://www.theverge.com/ai-artificial-intelligence/885958/openai-amazon-nvidia-softback-110-billion-investment": {
