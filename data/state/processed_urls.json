@@ -1343,6 +1343,10 @@
     "date": "2026-09-02T09:01:29Z",
     "deals_found": 0
   },
+  "https://news.crunchbase.com/venture/protein-startups-raise-funding-medici/": {
+    "date": "2026-11-13T08:47:24Z",
+    "deals_found": 0
+  },
   "https://news.crunchbase.com/venture/public-private-market-innovation-gray-odin/": {
     "date": "2026-02-25T23:02:32Z",
     "deals_found": 0
@@ -4059,6 +4063,18 @@
     "date": "2026-11-12T08:56:56Z",
     "deals_found": 0
   },
+  "https://techcrunch.com/2026/11/12/jensen-huangs-exit-puts-nvidias-support-for-open-source-in-question/": {
+    "date": "2026-11-13T08:47:24Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/": {
+    "date": "2026-11-13T08:47:24Z",
+    "deals_found": 0
+  },
+  "https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/": {
+    "date": "2026-11-13T08:47:24Z",
+    "deals_found": 0
+  },
   "https://techcrunch.com/podcast/an-anthropic-researchers-doomsday-warning-comes-at-a-very-interesting-time/": {
     "date": "2026-09-12T09:01:22Z",
     "deals_found": 0
@@ -4155,6 +4171,10 @@
     "date": "2026-03-21T08:51:37Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/accel-leads-30m-series-a-in-se3-the-munich-startup-teaching-drones-to-work-without-gps/": {
+    "date": "2026-11-13T08:47:24Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/accel-raises-3-5b-across-four-funds-as-ai-reshapes-early-stage-vc/": {
     "date": "2026-08-13T09:13:23Z",
     "deals_found": 0
@@ -4201,6 +4221,10 @@
   },
   "https://techfundingnews.com/agentiq-raises-4m-from-defy-vc-to-let-fans-buy-a-stake-in-athletes-future-income/": {
     "date": "2026-10-08T09:03:47Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/agile-robots-500m-series-f-softbank-8-5b-valuation/": {
+    "date": "2026-11-13T08:47:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/agility-robotics-goes-public-at-a-2-5b-valuation-and-its-humanoid-robots-are-already-working-in-warehouses/": {
@@ -5855,6 +5879,10 @@
     "date": "2026-06-27T09:37:58Z",
     "deals_found": 0
   },
+  "https://techfundingnews.com/kindo-raises-30m-after-800-revenue-growth-can-one-control-center-tame-enterprise-ai-agents/": {
+    "date": "2026-11-13T08:47:24Z",
+    "deals_found": 0
+  },
   "https://techfundingnews.com/klarent-raises-8m-seed-mosaic-ventures-ai-software-testing/": {
     "date": "2026-10-12T09:18:44Z",
     "deals_found": 0
@@ -5977,6 +6005,10 @@
   },
   "https://techfundingnews.com/lumilens-debuts-with-700m-war-chest-and-5-5b-valuation-after-emerging-from-stealth/": {
     "date": "2026-08-08T08:49:38Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/luminal-25m-series-a-ai-inference-compiler-cloud/": {
+    "date": "2026-11-13T08:47:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/lunar-outpost-30m-series-b-moon-rovers-space-tech-industrious-ventures/": {
@@ -6153,6 +6185,10 @@
   },
   "https://techfundingnews.com/molten-ventures-growth-fund-175m-first-close-british-business-bank/": {
     "date": "2026-09-08T08:57:34Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/mondrio-3-75m-seed-ai-pricing-agents/": {
+    "date": "2026-11-13T08:47:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/monzo-7-5bn-funding-round-nubank-talks-collapse/": {
@@ -7425,6 +7461,10 @@
   },
   "https://techfundingnews.com/ucl-and-cambridge-spinout-gigaton-raises-26m-to-autonomously-control-heavy-industry-starting-with-cement/": {
     "date": "2026-06-03T09:58:24Z",
+    "deals_found": 0
+  },
+  "https://techfundingnews.com/uforce-raises-700m-at-6b-valuation-as-uk-wealth-fund-makes-its-biggest-defence-deal/": {
+    "date": "2026-11-13T08:47:24Z",
     "deals_found": 0
   },
   "https://techfundingnews.com/uk-ai-100-to-watch-founders-interview/": {
@@ -9297,6 +9337,14 @@
   },
   "https://technode.com/2026/11/11/alibaba-discloses-hong-kong-ipo-filing-for-chip-unit-t-head/": {
     "date": "2026-11-11T08:48:50Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/11/13/alibaba-t-head-chip-business-hong-kong-ipo/": {
+    "date": "2026-11-13T08:47:24Z",
+    "deals_found": 0
+  },
+  "https://technode.com/2026/11/13/metax-and-ubtech-backed-robotics-chip-startup-xilect-raises-rmb-500-million/": {
+    "date": "2026-11-13T08:47:24Z",
     "deals_found": 0
   },
   "https://thetwentyminutevc.libsyn.com/-20vc-travelperks-avi-meir-on-why-2021-will-be-a-record-year-for-business-travel-the-3-priorities-for-all-founders-during-covid-what-vcs-can-do-to-really-support-their-founders-in-a-recession": {
